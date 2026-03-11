@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://trusikrp.github.io/trusikrp/ -->
+<html lang="es" style="--bg: #0d1520; --ng: #080f1a; --oc: #1e88e5; --occ: #42a5f5; --vdc: #00acc1; --bl: #ecf4ff; --gr: #90aac8; --bd: #1a2d45;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trusik Reparaciones — Vera, Santa Fe</title>
+<link href="./INDEX_files/css2" rel="stylesheet">
+<style>
+/* ===== VARIABLES ===== */
+:root {
+  --ng: #0f0e0b; --ti: #3a2e1e; --oc: #c4870a; --occ: #e9a520;
+  --vd: #2d5a27; --vdc: #4a8c3f; --bl: #f5f0e8; --gr: #b8b0a0;
+  --bg: #1a1610; --cb: #141210; --bd: #2a2518;
+  --wsp: #25D366; --wsph: #1ebe5a;
+  --hero-bg: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80');
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--bl);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* ===== NAV ===== */
+#nav{position:fixed;top:0;width:100%;z-index:900;background:rgba(15,14,11,.96);backdrop-filter:blur(10px);border-bottom:2px solid var(--oc);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;height:60px;transition:height .3s}
+.nlogo{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:2px;color:var(--occ);cursor:pointer;user-select:none;line-height:1}
+.nlogo em{color:var(--vdc);font-style:normal}
+.nlinks{display:flex;gap:1.4rem;align-items:center;list-style:none}
+.nlinks a{font-weight:600;font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--bl);transition:color .2s}
+.nlinks a:hover{color:var(--occ)}
+.nwsp{background:var(--wsp);color:#fff!important;padding:.35rem .85rem;border-radius:4px;display:flex;align-items:center;gap:.35rem;font-weight:700!important}
+.nwsp:hover{background:var(--wsph)!important}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;-webkit-tap-highlight-color:transparent}
+.hbg span{width:26px;height:3px;background:var(--occ);display:block;transition:.3s;border-radius:2px}
+.hbg:hover span{background:var(--oc)}
+#mmenu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--ng);border-bottom:2px solid var(--oc);z-index:899;padding:1.5rem;flex-direction:column;gap:1rem}
+#mmenu.open{display:flex}
+#mmenu a{font-weight:600;font-size:.95rem;letter-spacing:1px;text-transform:uppercase;padding:.5rem 0;border-bottom:1px solid var(--bd);color:var(--bl)}
+#mmenu .mwsp{color:var(--wsp);font-weight:700;border-bottom:none}
+
+/* ===== HERO ===== */
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:60px}
+.hbg-img{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,14,11,.93) 0%,rgba(26,22,16,.78) 55%,rgba(44,90,40,.42) 100%),var(--hero-bg) center/cover no-repeat}
+.hbg-img::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(196,135,10,.022) 2px,rgba(196,135,10,.022) 4px)}
+.hbox{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:3rem 1.5rem}
+.htag{display:inline-block;background:var(--oc);color:var(--ng);font-size:.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:.25rem .85rem;margin-bottom:1.3rem}
+.htitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,9vw,8rem);line-height:.95;letter-spacing:2px;margin-bottom:1.4rem;word-break:keep-all;overflow-wrap:normal}
+.htitle .gold{color:var(--occ);display:block}
+.htitle .green{color:var(--vdc)}
+.hsub{font-size:.98rem;color:var(--gr);max-width:520px;line-height:1.78;margin-bottom:2.3rem}
+.hbtns{display:flex;gap:1rem;flex-wrap:wrap}
+
+/* ===== BUTTONS ===== */
+.btn-gold{background:var(--oc);color:var(--ng);padding:.82rem 1.9rem;font-family:'Barlow Condensed',sans-serif;font-size:.93rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s,transform .15s;display:inline-flex;align-items:center;gap:.5rem;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px))}
+.btn-gold:hover{background:var(--occ);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--bl);padding:.82rem 1.9rem;font-family:'Barlow Condensed',sans-serif;font-size:.93rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:2px solid var(--vdc);cursor:pointer;transition:background .2s,color .2s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-outline:hover{background:var(--vdc);color:#fff}
+.btn-wsp-big{display:inline-flex;align-items:center;gap:.8rem;background:var(--wsp);color:#fff;padding:1rem 2.6rem;font-family:'Bebas Neue',sans-serif;font-size:1.55rem;letter-spacing:3px;transition:background .2s,transform .15s;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px))}
+.btn-wsp-big:hover{background:#1aad56;transform:scale(1.03)}
+.btn-wsp-big svg{width:28px;height:28px;fill:#fff}
+
+/* ===== SECTIONS ===== */
+section{padding:4.5rem 1.5rem}
+.wrap{max-width:1200px;margin:0 auto}
+.slabel{font-size:.68rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--oc);margin-bottom:.4rem}
+.stitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,5vw,3.8rem);letter-spacing:2px;line-height:1;margin-bottom:.8rem}
+.stitle em{color:var(--occ);font-style:normal}
+.sdiv{width:54px;height:3px;background:linear-gradient(90deg,var(--oc),var(--vdc));margin-bottom:2.3rem}
+.fi{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.fi.vis{opacity:1;transform:none}
+
+/* ===== SERVICIOS ===== */
+#servicios{background:var(--ng)}
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5px;background:var(--ti);border:1.5px solid var(--ti);margin-top:2.5rem}
+.srv-card{background:var(--bg);padding:2.2rem 1.8rem;position:relative;overflow:hidden;transition:background .25s}
+.srv-card::before{content:'';position:absolute;bottom:0;left:0;height:3px;width:0;background:var(--oc);transition:width .3s}
+.srv-card:hover{background:#211d14}
+.srv-card:hover::before{width:100%}
+.sico{font-size:2.5rem;margin-bottom:1rem;display:block}
+.srv-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.18rem;font-weight:700;letter-spacing:1px;margin-bottom:.5rem;text-transform:uppercase}
+.srv-card p{color:var(--gr);font-size:.86rem;line-height:1.6}
+
+/* ===== PRODUCTS ===== */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.3rem;margin-top:2rem}
+.pcard{background:var(--cb);border:1px solid var(--bd);overflow:hidden;position:relative;transition:transform .25s,border-color .25s;border-radius:2px}
+.pcard:hover{transform:translateY(-5px);border-color:var(--oc)}
+.pimg{width:100%;height:190px;background:#18150e;display:flex;align-items:center;justify-content:center;font-size:4rem;overflow:hidden;flex-shrink:0}
+.pimg img{width:100%;height:100%;object-fit:cover}
+.pbadge{position:absolute;top:.8rem;right:.8rem;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;padding:.2rem .6rem;letter-spacing:1px;background:#e63946}
+.pbadge.promo{background:#e63946}
+.pbadge.stk{background:var(--oc)}
+.pbadge.nov{background:var(--vd)}
+.pbody{padding:1.3rem}
+.pcat{font-size:.63rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--oc);margin-bottom:.35rem}
+.pbody h3{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;text-transform:uppercase;margin-bottom:.4rem;line-height:1.2}
+.pdesc{color:var(--gr);font-size:.82rem;margin-bottom:1rem;line-height:1.55}
+.pprice{display:flex;align-items:baseline;gap:.7rem;margin-bottom:1rem;flex-wrap:wrap}
+.price-old{font-size:.83rem;color:var(--gr);text-decoration:line-through}
+.price-new{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--occ);letter-spacing:1px;line-height:1}
+.btn-consultar{display:flex;align-items:center;justify-content:center;gap:.45rem;background:var(--wsp);color:#fff;padding:.65rem 1rem;font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;width:100%;transition:background .2s;border-radius:1px}
+.btn-consultar:hover{background:var(--wsph)}
+.btn-consultar svg{width:16px;height:16px;fill:#fff;flex-shrink:0}
+.empty{color:var(--gr);font-size:.88rem;padding:2.5rem 0;text-align:center;width:100%;grid-column:1/-1;font-style:italic}
+
+/* ===== MARCAS ===== */
+#marcas{background:var(--ng);padding:3rem 1.5rem}
+.mbelt{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:1.8rem}
+.mtag{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:3px;padding:.45rem 1.3rem;border:1.5px solid var(--bd);color:var(--gr);transition:color .2s,border-color .2s;cursor:default}
+.mtag:hover{color:var(--occ);border-color:var(--oc)}
+
+/* ===== NOSOTROS ===== */
+#nosotros{background:linear-gradient(135deg,var(--bg) 60%,var(--ti) 100%)}
+.nos-g{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.nos-img-box{width:100%;aspect-ratio:4/3;background:var(--ng);border:2px solid var(--ti);display:flex;align-items:center;justify-content:center;font-size:6rem;position:relative;overflow:hidden}
+.nos-img-box::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(196,135,10,.08),rgba(44,90,40,.12))}
+.nos-img-box img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.stats-g{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:.9rem}
+.stat{background:var(--ng);border-left:3px solid var(--oc);padding:.9rem 1.1rem}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:2.3rem;color:var(--occ);line-height:1}
+.stat-l{color:var(--gr);font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.nos-text p{color:var(--gr);line-height:1.75;margin-bottom:1.1rem;font-size:.95rem}
+.nos-list{list-style:none;margin:1.3rem 0}
+.nos-list li{padding:.45rem 0;border-bottom:1px solid var(--bd);color:var(--bl);display:flex;align-items:center;gap:.6rem;font-size:.9rem}
+.nos-list li::before{content:'▸';color:var(--oc)}
+
+/* ===== UBICACION ===== */
+#ubicacion{background:var(--ng)}
+.ubic-g{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;margin-top:2rem}
+.mapwrap{width:100%;aspect-ratio:4/3;border:2px solid var(--ti);overflow:hidden}
+.mapwrap iframe{width:100%;height:100%;border:none;filter:grayscale(55%) contrast(1.1) sepia(20%)}
+.ilocal h3{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:2px;margin-bottom:1.3rem;color:var(--occ)}
+.irow{display:flex;gap:.9rem;align-items:flex-start;margin-bottom:1.3rem;padding-bottom:1.3rem;border-bottom:1px solid var(--bd)}
+.irow:last-of-type{border-bottom:none}
+.iico{font-size:1.25rem;flex-shrink:0;width:1.9rem;text-align:center;margin-top:2px}
+.irow h4{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--oc);margin-bottom:.25rem}
+.irow p,.irow a{color:var(--gr);font-size:.87rem;line-height:1.55}
+.irow a:hover{color:var(--occ)}
+
+/* ===== REDES SOCIALES ===== */
+.redes-bar{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin-top:1.3rem}
+.red-btn{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:7px;border:none;cursor:pointer;transition:transform .2s,opacity .2s;text-decoration:none}
+.red-btn:hover{transform:translateY(-3px);opacity:.85}
+.red-btn svg{width:20px;height:20px;fill:#fff}
+.red-ig{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.red-yt{background:#ff0000}
+.red-fb{background:#1877f2}
+.red-tt{background:#010101}
+.redes-footer{display:flex;gap:.5rem;align-items:center}
+.redes-footer a{width:30px;height:30px;border-radius:5px;display:flex;align-items:center;justify-content:center;transition:transform .2s,opacity .2s}
+.redes-footer a:hover{transform:translateY(-2px);opacity:.85}
+.redes-footer a svg{width:14px;height:14px;fill:#fff}
+.redes-footer .red-ig{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.redes-footer .red-yt{background:#ff0000}
+.redes-footer .red-fb{background:#1877f2}
+.redes-footer .red-tt{background:#010101}
+.redes-section{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--bd)}
+.redes-section p{color:var(--gr);font-size:.72rem;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:.8rem}
+
+/* ===== CTA ===== */
+#cta{background:linear-gradient(180deg,var(--ti) 0%,var(--ng) 100%);text-align:center;padding:4.5rem 1.5rem 3rem}
+#cta .cdesc{color:var(--gr);max-width:500px;margin:.9rem auto 0;line-height:1.75}
+
+/* ===== FOOTER ===== */
+footer{background:var(--ng);border-top:1px solid var(--bd);padding:1.3rem 1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem}
+footer p{color:#504030;font-size:.73rem}
+
+/* ===== WSP FLOAT ===== */
+.wfloat{position:fixed;bottom:1.8rem;right:1.8rem;z-index:800;width:58px;height:58px;background:var(--wsp);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.5);animation:pwsp 2.5s infinite;transition:transform .2s;text-decoration:none}
+.wfloat:hover{transform:scale(1.1)}
+.wfloat svg{width:30px;height:30px;fill:#fff}
+@keyframes pwsp{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.45)}50%{box-shadow:0 4px 35px rgba(37,211,102,.8)}}
+
+/* ===== ADMIN OVERLAY ===== */
+#adm-ov{display:none;position:fixed;inset:0;z-index:9000;background:rgba(8,7,5,.98);overflow-y:auto}
+#adm-ov.open{display:block}
+.aclose{position:fixed;top:1rem;right:1.5rem;background:none;border:none;color:var(--gr);font-size:2rem;cursor:pointer;z-index:9001;line-height:1;transition:color .2s}
+.aclose:hover{color:var(--bl)}
+
+/* ── LOGIN ── */
+#alog{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:2rem}
+.alog-box{background:var(--ng);border:2px solid var(--oc);padding:3rem 2.5rem;width:100%;max-width:400px;text-align:center}
+.alog-box h2{font-family:'Bebas Neue',sans-serif;font-size:2.3rem;letter-spacing:2px;color:var(--occ);margin-bottom:.4rem}
+.alog-box p{color:var(--gr);font-size:.83rem;margin-bottom:2rem}
+.aerr{color:#e63946;font-size:.82rem;margin-bottom:.8rem;display:none;padding:.5rem;background:rgba(230,57,70,.1);border-radius:3px}
+
+/* ── PANEL ── */
+#apanel{display:none;padding:1.5rem 1.5rem 4rem}
+#apanel.open{display:block}
+.ahdr{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;padding-bottom:1rem;border-bottom:2px solid var(--oc)}
+.ahdr h1{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:2px;color:var(--occ)}
+.ahdr-btns{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap}
+.atabs{display:flex;gap:0;margin-bottom:2.5rem;border-bottom:2px solid var(--bd);overflow-x:auto}
+.atab{background:none;border:none;color:var(--gr);padding:.75rem 1.4rem;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:color .2s;white-space:nowrap}
+.atab.on,.atab:hover{color:var(--occ);border-bottom-color:var(--oc)}
+.asec{display:none}
+.asec.on{display:block}
+
+/* ── FORM CARDS ── */
+.fc{background:var(--ng);border:1px solid var(--bd);padding:1.8rem;margin-bottom:1.8rem;border-radius:3px}
+.fc h3{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;letter-spacing:1px;color:var(--occ);margin-bottom:1.3rem;text-transform:uppercase}
+.fc h3 small{font-size:.75rem;color:var(--gr);letter-spacing:.5px;text-transform:none;font-family:'Barlow',sans-serif;font-weight:400;display:block;margin-top:.2rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.frow.f1{grid-template-columns:1fr}
+.frow.f3{grid-template-columns:1fr 1fr 1fr}
+.fg{display:flex;flex-direction:column;gap:.4rem}
+.fg label{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gr)}
+.inp{width:100%;background:#15120c;border:1px solid var(--bd);color:var(--bl);padding:.72rem 1rem;font-family:'Barlow',sans-serif;font-size:.92rem;outline:none;transition:border-color .2s;border-radius:2px}
+.inp:focus{border-color:var(--oc)}
+textarea.inp{resize:vertical;min-height:80px}
+
+/* ── IMAGE UPLOAD ── */
+.iup{border:2px dashed var(--bd);padding:1.5rem;text-align:center;cursor:pointer;transition:border-color .2s;position:relative;border-radius:3px}
+.iup:hover{border-color:var(--oc)}
+.iup input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.iup .uico{font-size:2.2rem;display:block;margin-bottom:.4rem}
+.iup p{color:var(--gr);font-size:.79rem;line-height:1.5}
+.iprev{width:100%;max-height:175px;object-fit:cover;margin-top:.8rem;border-radius:2px;display:none;border:1px solid var(--bd)}
+.iup-del{margin-top:.5rem;display:none;background:transparent;border:1px solid #e63946;color:#e63946;padding:.3rem .8rem;font-size:.78rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:1px;cursor:pointer;text-transform:uppercase;border-radius:2px}
+.iup-del:hover{background:#e63946;color:#fff}
+
+/* ── ADMIN BUTTONS ── */
+.btn-sv{background:var(--vdc);color:#fff;border:none;padding:.8rem 2rem;font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .2s;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
+.btn-sv:hover{background:#3d7534}
+.btn-sv.red{background:#e63946}.btn-sv.red:hover{background:#c62d3a}
+.btn-sv.blue{background:#1877f2}.btn-sv.blue:hover{background:#0e63d6}
+.btn-ca{background:transparent;color:var(--gr);border:1px solid var(--bd);padding:.8rem 1.5rem;font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:color .2s,border-color .2s}
+.btn-ca:hover{color:var(--bl);border-color:var(--gr)}
+.btn-sm-edit{background:var(--oc);color:var(--ng);border:none;padding:.35rem .8rem;font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;text-transform:uppercase;transition:background .2s}
+.btn-sm-edit:hover{background:var(--occ)}
+.btn-sm-del{background:transparent;color:#e63946;border:1px solid #e63946;padding:.35rem .8rem;font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;text-transform:uppercase;transition:.2s}
+.btn-sm-del:hover{background:#e63946;color:#fff}
+.btn-prev-ph{background:transparent;color:var(--oc);border:1px solid var(--oc);padding:.45rem 1rem;font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.2s;display:flex;align-items:center;gap:.4rem}
+.btn-prev-ph:hover{background:var(--oc);color:var(--ng)}
+.btn-logout{background:transparent;color:var(--gr);border:1px solid var(--bd);padding:.45rem 1rem;font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.2s}
+.btn-logout:hover{color:var(--bl);border-color:var(--gr)}
+.factions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.3rem;align-items:center}
+
+/* ── PRODUCT LIST IN ADMIN ── */
+.alist{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem;margin-top:1.5rem}
+.aitem{background:var(--ng);border:1px solid var(--bd);overflow:hidden;border-radius:2px}
+.aitem-img{width:100%;height:130px;background:#18150e;display:flex;align-items:center;justify-content:center;font-size:2.8rem;overflow:hidden}
+.aitem-img img{width:100%;height:100%;object-fit:cover}
+.aitem-body{padding:.9rem}
+.aitem-body h4{font-family:'Barlow Condensed',sans-serif;font-size:.98rem;font-weight:700;text-transform:uppercase;margin-bottom:.2rem;color:var(--bl)}
+.aitem-body p{color:var(--gr);font-size:.76rem;margin-bottom:.7rem}
+.aitem-acts{display:flex;gap:.4rem}
+
+/* ── PHONE PREVIEW ── */
+#prev-modal{display:none;position:fixed;inset:0;z-index:9500;background:rgba(0,0,0,.9);align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:1rem}
+#prev-modal.open{display:flex}
+.phone-f{width:375px;height:78vh;max-height:680px;background:#000;border-radius:38px;border:7px solid #1c1c1c;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.85)}
+.phone-notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:0 0 16px 16px;z-index:10}
+.phone-scr{width:100%;height:100%;overflow-y:auto;border-radius:32px}
+
+/* ── TOAST ── */
+.toast{position:fixed;top:1.5rem;right:1.5rem;background:var(--vdc);color:#fff;padding:.75rem 1.4rem;font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:1px;z-index:99999;opacity:0;pointer-events:none;border-radius:3px;transition:opacity .3s;max-width:300px}
+.toast.show{opacity:1}
+
+/* ── TIPS/NOTES ── */
+.note{background:rgba(196,135,10,.1);border:1px solid rgba(196,135,10,.3);padding:.8rem 1rem;border-radius:3px;color:var(--gr);font-size:.82rem;line-height:1.5;margin-bottom:1rem}
+.note strong{color:var(--occ)}
+.note.green{background:rgba(74,140,63,.1);border-color:rgba(74,140,63,.3)}
+.note.green strong{color:var(--vdc)}
+
+/* ── COLOR EDITOR ── */
+.color-row{display:flex;align-items:center;gap:.8rem;background:#15120c;border:1px solid var(--bd);padding:.8rem 1rem;border-radius:3px}
+.color-preview{width:36px;height:36px;border-radius:4px;border:2px solid var(--bd);flex-shrink:0;transition:background .2s}
+.color-info{flex:1;display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
+.color-info label{font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gr);flex:1;min-width:120px}
+.color-info input[type=color]{width:38px;height:30px;border:none;background:none;cursor:pointer;padding:0;border-radius:3px;flex-shrink:0}
+.color-hex{font-family:monospace;font-size:.75rem;color:var(--gr);min-width:60px}
+.palette-btn{background:transparent;border:1.5px solid var(--bd);padding:.5rem 1.1rem;font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.2s;border-radius:3px}
+.palette-btn:hover{opacity:.8;transform:translateY(-1px)}
+
+/* GUIA PUBLICACION */
+.pub-step{display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-start}
+.pub-num{background:var(--oc);color:var(--ng);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+.pub-txt strong{color:var(--bl);display:block;margin-bottom:.25rem;font-size:.92rem}
+.pub-txt p{color:var(--gr);font-size:.82rem;line-height:1.6}
+.pub-txt a{color:var(--occ)}
+.pub-txt code{background:#18150e;padding:.1rem .4rem;border-radius:2px;font-family:monospace;font-size:.78rem;color:var(--occ)}
+
+/* ── MAPA ── */
+.mapa-container{width:100%;height:420px;border:2px solid var(--ti);overflow:hidden;border-radius:4px;margin-top:.5rem}
+.mapa-btn-row{margin:1rem 0 1.5rem;display:flex;gap:1rem;flex-wrap:wrap}
+.btn-gmaps{display:inline-flex;align-items:center;gap:.6rem;background:#4285f4;color:#fff;padding:.85rem 1.6rem;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border-radius:4px;text-decoration:none;transition:background .2s;-webkit-tap-highlight-color:transparent;min-height:48px}
+.btn-gmaps:hover{background:#2b6ed4}
+.ubic-info{margin-top:.5rem}
+.btn-wsp-ubic{display:inline-flex;align-items:center;gap:.7rem;background:var(--wsp);color:#fff;padding:.9rem 1.6rem;font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border-radius:4px;margin-top:1.3rem;text-decoration:none;transition:background .2s;-webkit-tap-highlight-color:transparent;min-height:48px;width:100%;justify-content:center}
+.btn-wsp-ubic:hover{background:var(--wsph)}
+
+/* ── RESPONSIVE TABLET ── */
+@media(max-width:860px){
+  nav ul,.nlinks{display:none!important}
+  .hbg{display:flex}
+  .nos-g{grid-template-columns:1fr}
+  .frow,.frow.f3{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+  footer{flex-direction:column;align-items:center;text-align:center;gap:.7rem}
+  #cta{padding:3rem 1.2rem}
+  .mapa-container{height:350px}
+}
+
+/* ── RESPONSIVE CELULAR ── */
+@media(max-width:520px){
+  #hero{min-height:100svh}
+  .htitle{font-size:clamp(2.5rem,12vw,3.5rem);line-height:.95}
+  .hsub{font-size:.9rem}
+  .hbtns{flex-direction:column;gap:.7rem}
+  /* Botones grandes y fáciles de tocar */
+  .btn-gold,.btn-outline,.btn-gmaps,.btn-wsp-ubic,.btn-wsp-big{
+    width:100%;justify-content:center;font-size:.95rem;
+    min-height:52px;padding:.9rem 1.2rem;
+    -webkit-tap-highlight-color:transparent;
+  }
+  section{padding:2.5rem 1rem}
+  .stitle{font-size:1.9rem}
+  .pgrid{grid-template-columns:1fr}
+  .pcard{max-width:100%}
+  .srv-grid{grid-template-columns:1fr 1fr}
+  .nos-g{gap:2rem}
+  .stats-g{grid-template-columns:1fr 1fr}
+  .stat-n{font-size:1.9rem}
+  .ilocal h3{font-size:1.2rem}
+  /* Mapa más alto en celular para verse bien */
+  .mapa-container{height:280px;margin-top:.3rem}
+  .mapa-btn-row{margin:.7rem 0 1.2rem}
+  /* Filas de info de contacto — más espaciadas para tocar */
+  .irow{padding:.7rem 0;gap:.8rem}
+  .iico{font-size:1.4rem;min-width:30px}
+  /* WhatsApp flotante — más grande en celular */
+  .wfloat{width:60px;height:60px;bottom:1.2rem;right:1rem;box-shadow:0 4px 24px rgba(37,211,102,.6)}
+  .wfloat svg{width:30px;height:30px}
+  /* Botón CTA WhatsApp grande */
+  .btn-wsp-big{font-size:1.2rem;padding:1rem 1.5rem;width:100%;justify-content:center;min-height:56px}
+  .mbelt{gap:.4rem;flex-wrap:wrap}
+  .mtag{font-size:.9rem;padding:.3rem .7rem}
+  /* Panel admin en celular */
+  .alog-box{padding:2rem 1.2rem}
+  .ahdr{flex-direction:column;align-items:flex-start}
+  .ahdr-btns{width:100%;justify-content:space-between}
+  .atab{font-size:.75rem;padding:.55rem .7rem}
+  .phone-f{width:100%;max-width:375px}
+  footer{padding:1rem 1rem}
+  footer p{font-size:.7rem}
+  /* Cards de producto más cómodas */
+  .pcard .pc-btn{min-height:48px;font-size:.9rem}
+  /* Sección nosotros */
+  .nos-g{grid-template-columns:1fr}
+}
+</style>
+<style>:root{--toastify-color-light:#fff;--toastify-color-dark:#121212;--toastify-color-info:#3498db;--toastify-color-success:#07bc0c;--toastify-color-warning:#f1c40f;--toastify-color-error:#e74c3c;--toastify-color-transparent:hsla(0,0%,100%,.7);--toastify-icon-color-info:var(--toastify-color-info);--toastify-icon-color-success:var(--toastify-color-success);--toastify-icon-color-warning:var(--toastify-color-warning);--toastify-icon-color-error:var(--toastify-color-error);--toastify-toast-width:320px;--toastify-toast-offset:16px;--toastify-toast-top:max(var(--toastify-toast-offset),env(safe-area-inset-top));--toastify-toast-right:max(var(--toastify-toast-offset),env(safe-area-inset-right));--toastify-toast-left:max(var(--toastify-toast-offset),env(safe-area-inset-left));--toastify-toast-bottom:max(var(--toastify-toast-offset),env(safe-area-inset-bottom));--toastify-toast-background:#fff;--toastify-toast-min-height:64px;--toastify-toast-max-height:800px;--toastify-toast-bd-radius:6px;--toastify-font-family:sans-serif;--toastify-z-index:9999;--toastify-text-color-light:#757575;--toastify-text-color-dark:#fff;--toastify-text-color-info:#fff;--toastify-text-color-success:#fff;--toastify-text-color-warning:#fff;--toastify-text-color-error:#fff;--toastify-spinner-color:#616161;--toastify-spinner-color-empty-area:#e0e0e0;--toastify-color-progress-light:linear-gradient(90deg,#4cd964,#5ac8fa,#007aff,#34aadc,#5856d6,#ff2d55);--toastify-color-progress-dark:#bb86fc;--toastify-color-progress-info:var(--toastify-color-info);--toastify-color-progress-success:var(--toastify-color-success);--toastify-color-progress-warning:var(--toastify-color-warning);--toastify-color-progress-error:var(--toastify-color-error);--toastify-color-progress-bgo:0.2}.Toastify__toast-container{z-index:var(--toastify-z-index);-webkit-transform:translateZ(var(--toastify-z-index));position:fixed;padding:4px;width:var(--toastify-toast-width);box-sizing:border-box;color:#fff}.Toastify__toast-container--top-left{top:var(--toastify-toast-top);left:var(--toastify-toast-left)}.Toastify__toast-container--top-center{top:var(--toastify-toast-top);left:50%;transform:translateX(-50%)}.Toastify__toast-container--top-right{top:var(--toastify-toast-top);right:var(--toastify-toast-right)}.Toastify__toast-container--bottom-left{bottom:var(--toastify-toast-bottom);left:var(--toastify-toast-left)}.Toastify__toast-container--bottom-center{bottom:var(--toastify-toast-bottom);left:50%;transform:translateX(-50%)}.Toastify__toast-container--bottom-right{bottom:var(--toastify-toast-bottom);right:var(--toastify-toast-right)}@media only screen and (max-width:480px){.Toastify__toast-container{width:100vw;padding:0;left:env(safe-area-inset-left);margin:0}.Toastify__toast-container--top-center,.Toastify__toast-container--top-left,.Toastify__toast-container--top-right{top:env(safe-area-inset-top);transform:translateX(0)}.Toastify__toast-container--bottom-center,.Toastify__toast-container--bottom-left,.Toastify__toast-container--bottom-right{bottom:env(safe-area-inset-bottom);transform:translateX(0)}.Toastify__toast-container--rtl{right:env(safe-area-inset-right);left:auto}}.Toastify__toast{--y:0;position:relative;-ms-touch-action:none;touch-action:none;min-height:var(--toastify-toast-min-height);box-sizing:border-box;margin-bottom:1rem;padding:8px;border-radius:var(--toastify-toast-bd-radius);box-shadow:0 4px 12px rgba(0,0,0,.1);display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;max-height:var(--toastify-toast-max-height);font-family:var(--toastify-font-family);cursor:default;direction:ltr;z-index:0;overflow:hidden}.Toastify__toast--stacked{position:absolute;width:100%;transform:translate3d(0,var(--y),0) scale(var(--s));transition:transform .3s}.Toastify__toast--stacked[data-collapsed] .Toastify__close-button,.Toastify__toast--stacked[data-collapsed] .Toastify__toast-body{transition:opacity .1s}.Toastify__toast--stacked[data-collapsed=false]{overflow:visible}.Toastify__toast--stacked[data-collapsed=true]:not(:last-child)>*{opacity:0}.Toastify__toast--stacked:after{content:"";position:absolute;left:0;right:0;height:calc(var(--g) * 1px);bottom:100%}.Toastify__toast--stacked[data-pos=top]{top:0}.Toastify__toast--stacked[data-pos=bot]{bottom:0}.Toastify__toast--stacked[data-pos=bot].Toastify__toast--stacked:before{transform-origin:top}.Toastify__toast--stacked[data-pos=top].Toastify__toast--stacked:before{transform-origin:bottom}.Toastify__toast--stacked:before{content:"";position:absolute;left:0;right:0;bottom:0;height:100%;transform:scaleY(3);z-index:-1}.Toastify__toast--rtl{direction:rtl}.Toastify__toast--close-on-click{cursor:pointer}.Toastify__toast-body{margin:auto 0;-ms-flex:1 1 auto;flex:1 1 auto;padding:6px;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center}.Toastify__toast-body>div:last-child{word-break:break-word;-ms-flex:1;flex:1}.Toastify__toast-icon{-webkit-margin-end:10px;margin-inline-end:10px;width:20px;-ms-flex-negative:0;flex-shrink:0;display:-ms-flexbox;display:flex}.Toastify--animate{animation-fill-mode:both;animation-duration:.5s}.Toastify--animate-icon{animation-fill-mode:both;animation-duration:.3s}@media only screen and (max-width:480px){.Toastify__toast{margin-bottom:0;border-radius:0}}.Toastify__toast-theme--dark{background:var(--toastify-color-dark);color:var(--toastify-text-color-dark)}.Toastify__toast-theme--colored.Toastify__toast--default,.Toastify__toast-theme--light{background:var(--toastify-color-light);color:var(--toastify-text-color-light)}.Toastify__toast-theme--colored.Toastify__toast--info{color:var(--toastify-text-color-info);background:var(--toastify-color-info)}.Toastify__toast-theme--colored.Toastify__toast--success{color:var(--toastify-text-color-success);background:var(--toastify-color-success)}.Toastify__toast-theme--colored.Toastify__toast--warning{color:var(--toastify-text-color-warning);background:var(--toastify-color-warning)}.Toastify__toast-theme--colored.Toastify__toast--error{color:var(--toastify-text-color-error);background:var(--toastify-color-error)}.Toastify__progress-bar-theme--light{background:var(--toastify-color-progress-light)}.Toastify__progress-bar-theme--dark{background:var(--toastify-color-progress-dark)}.Toastify__progress-bar--info{background:var(--toastify-color-progress-info)}.Toastify__progress-bar--success{background:var(--toastify-color-progress-success)}.Toastify__progress-bar--warning{background:var(--toastify-color-progress-warning)}.Toastify__progress-bar--error{background:var(--toastify-color-progress-error)}.Toastify__progress-bar-theme--colored.Toastify__progress-bar--error,.Toastify__progress-bar-theme--colored.Toastify__progress-bar--info,.Toastify__progress-bar-theme--colored.Toastify__progress-bar--success,.Toastify__progress-bar-theme--colored.Toastify__progress-bar--warning{background:var(--toastify-color-transparent)}.Toastify__close-button{color:#fff;background:transparent;outline:none;border:none;padding:0;cursor:pointer;opacity:.7;transition:.3s ease;-ms-flex-item-align:start;align-self:flex-start;z-index:1}.Toastify__close-button--light{color:#000;opacity:.3}.Toastify__close-button>svg{fill:currentColor;height:16px;width:14px}.Toastify__close-button:focus,.Toastify__close-button:hover{opacity:1}@keyframes Toastify__trackProgress{0%{transform:scaleX(1)}to{transform:scaleX(0)}}.Toastify__progress-bar{position:absolute;bottom:0;left:0;width:100%;height:100%;z-index:var(--toastify-z-index);opacity:.7;transform-origin:left;border-bottom-left-radius:var(--toastify-toast-bd-radius)}.Toastify__progress-bar--animated{animation:Toastify__trackProgress linear 1 forwards}.Toastify__progress-bar--controlled{transition:transform .2s}.Toastify__progress-bar--rtl{right:0;left:auto;transform-origin:right;border-bottom-left-radius:0;border-bottom-right-radius:var(--toastify-toast-bd-radius)}.Toastify__progress-bar--wrp{position:absolute;bottom:0;left:0;width:100%;height:5px;border-bottom-left-radius:var(--toastify-toast-bd-radius)}.Toastify__progress-bar--wrp[data-hidden=true]{opacity:0}.Toastify__progress-bar--bg{opacity:var(--toastify-color-progress-bgo);width:100%;height:100%}.Toastify__spinner{width:20px;height:20px;box-sizing:border-box;border:2px solid;border-radius:100%;border-color:var(--toastify-spinner-color-empty-area);border-right-color:var(--toastify-spinner-color);animation:Toastify__spin .65s linear infinite}@keyframes Toastify__bounceInRight{0%,60%,75%,90%,to{animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate3d(3000px,0,0)}60%{opacity:1;transform:translate3d(-25px,0,0)}75%{transform:translate3d(10px,0,0)}90%{transform:translate3d(-5px,0,0)}to{transform:none}}@keyframes Toastify__bounceOutRight{20%{opacity:1;transform:translate3d(-20px,var(--y),0)}to{opacity:0;transform:translate3d(2000px,var(--y),0)}}@keyframes Toastify__bounceInLeft{0%,60%,75%,90%,to{animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate3d(-3000px,0,0)}60%{opacity:1;transform:translate3d(25px,0,0)}75%{transform:translate3d(-10px,0,0)}90%{transform:translate3d(5px,0,0)}to{transform:none}}@keyframes Toastify__bounceOutLeft{20%{opacity:1;transform:translate3d(20px,var(--y),0)}to{opacity:0;transform:translate3d(-2000px,var(--y),0)}}@keyframes Toastify__bounceInUp{0%,60%,75%,90%,to{animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate3d(0,3000px,0)}60%{opacity:1;transform:translate3d(0,-20px,0)}75%{transform:translate3d(0,10px,0)}90%{transform:translate3d(0,-5px,0)}to{transform:translateZ(0)}}@keyframes Toastify__bounceOutUp{20%{transform:translate3d(0,calc(var(--y) - 10px),0)}40%,45%{opacity:1;transform:translate3d(0,calc(var(--y) + 20px),0)}to{opacity:0;transform:translate3d(0,-2000px,0)}}@keyframes Toastify__bounceInDown{0%,60%,75%,90%,to{animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate3d(0,-3000px,0)}60%{opacity:1;transform:translate3d(0,25px,0)}75%{transform:translate3d(0,-10px,0)}90%{transform:translate3d(0,5px,0)}to{transform:none}}@keyframes Toastify__bounceOutDown{20%{transform:translate3d(0,calc(var(--y) - 10px),0)}40%,45%{opacity:1;transform:translate3d(0,calc(var(--y) + 20px),0)}to{opacity:0;transform:translate3d(0,2000px,0)}}.Toastify__bounce-enter--bottom-left,.Toastify__bounce-enter--top-left{animation-name:Toastify__bounceInLeft}.Toastify__bounce-enter--bottom-right,.Toastify__bounce-enter--top-right{animation-name:Toastify__bounceInRight}.Toastify__bounce-enter--top-center{animation-name:Toastify__bounceInDown}.Toastify__bounce-enter--bottom-center{animation-name:Toastify__bounceInUp}.Toastify__bounce-exit--bottom-left,.Toastify__bounce-exit--top-left{animation-name:Toastify__bounceOutLeft}.Toastify__bounce-exit--bottom-right,.Toastify__bounce-exit--top-right{animation-name:Toastify__bounceOutRight}.Toastify__bounce-exit--top-center{animation-name:Toastify__bounceOutUp}.Toastify__bounce-exit--bottom-center{animation-name:Toastify__bounceOutDown}@keyframes Toastify__zoomIn{0%{opacity:0;transform:scale3d(.3,.3,.3)}50%{opacity:1}}@keyframes Toastify__zoomOut{0%{opacity:1}50%{opacity:0;transform:translate3d(0,var(--y),0) scale3d(.3,.3,.3)}to{opacity:0}}.Toastify__zoom-enter{animation-name:Toastify__zoomIn}.Toastify__zoom-exit{animation-name:Toastify__zoomOut}@keyframes Toastify__flipIn{0%{transform:perspective(400px) rotateX(90deg);animation-timing-function:ease-in;opacity:0}40%{transform:perspective(400px) rotateX(-20deg);animation-timing-function:ease-in}60%{transform:perspective(400px) rotateX(10deg);opacity:1}80%{transform:perspective(400px) rotateX(-5deg)}to{transform:perspective(400px)}}@keyframes Toastify__flipOut{0%{transform:translate3d(0,var(--y),0) perspective(400px)}30%{transform:translate3d(0,var(--y),0) perspective(400px) rotateX(-20deg);opacity:1}to{transform:translate3d(0,var(--y),0) perspective(400px) rotateX(90deg);opacity:0}}.Toastify__flip-enter{animation-name:Toastify__flipIn}.Toastify__flip-exit{animation-name:Toastify__flipOut}@keyframes Toastify__slideInRight{0%{transform:translate3d(110%,0,0);visibility:visible}to{transform:translate3d(0,var(--y),0)}}@keyframes Toastify__slideInLeft{0%{transform:translate3d(-110%,0,0);visibility:visible}to{transform:translate3d(0,var(--y),0)}}@keyframes Toastify__slideInUp{0%{transform:translate3d(0,110%,0);visibility:visible}to{transform:translate3d(0,var(--y),0)}}@keyframes Toastify__slideInDown{0%{transform:translate3d(0,-110%,0);visibility:visible}to{transform:translate3d(0,var(--y),0)}}@keyframes Toastify__slideOutRight{0%{transform:translate3d(0,var(--y),0)}to{visibility:hidden;transform:translate3d(110%,var(--y),0)}}@keyframes Toastify__slideOutLeft{0%{transform:translate3d(0,var(--y),0)}to{visibility:hidden;transform:translate3d(-110%,var(--y),0)}}@keyframes Toastify__slideOutDown{0%{transform:translate3d(0,var(--y),0)}to{visibility:hidden;transform:translate3d(0,500px,0)}}@keyframes Toastify__slideOutUp{0%{transform:translate3d(0,var(--y),0)}to{visibility:hidden;transform:translate3d(0,-500px,0)}}.Toastify__slide-enter--bottom-left,.Toastify__slide-enter--top-left{animation-name:Toastify__slideInLeft}.Toastify__slide-enter--bottom-right,.Toastify__slide-enter--top-right{animation-name:Toastify__slideInRight}.Toastify__slide-enter--top-center{animation-name:Toastify__slideInDown}.Toastify__slide-enter--bottom-center{animation-name:Toastify__slideInUp}.Toastify__slide-exit--bottom-left,.Toastify__slide-exit--top-left{animation-name:Toastify__slideOutLeft;animation-timing-function:ease-in;animation-duration:.3s}.Toastify__slide-exit--bottom-right,.Toastify__slide-exit--top-right{animation-name:Toastify__slideOutRight;animation-timing-function:ease-in;animation-duration:.3s}.Toastify__slide-exit--top-center{animation-name:Toastify__slideOutUp;animation-timing-function:ease-in;animation-duration:.3s}.Toastify__slide-exit--bottom-center{animation-name:Toastify__slideOutDown;animation-timing-function:ease-in;animation-duration:.3s}@keyframes Toastify__spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}</style><style>@font-face{font-family:"ProximaVara-Roman";src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/proxima-vara-roman-black.f99ab2034eea98d11ef4.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/proxima-vara-roman-black.fe9b55be9cb49a68107a.woff) format("woff");font-weight:100 1000;font-display:swap;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.scispace-plugin-maximized{width:calc(100% - 420px) !important}@media print{#scispace-extension-root{visibility:hidden}.scispace-plugin-maximized{width:initial !important}}</style><style>@font-face{font-family:KaTeX_AMS;font-style:normal;font-weight:400;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_AMS-Regular.73ea273a72f4aca30ca5.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_AMS-Regular.d562e886c52f12660a41.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf) format("truetype")}@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:700;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Caligraphic-Bold.a1abf90dfd72792a577a.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Caligraphic-Bold.d757c535a2e5902f1325.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Caligraphic-Bold.7489a2fbfb9bfe704420.ttf) format("truetype")}@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:400;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Caligraphic-Regular.d6484fce1ef428d5bd94.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Caligraphic-Regular.db074fa22cf224af93d7.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Caligraphic-Regular.7e873d3833eb108a0758.ttf) format("truetype")}@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:700;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Fraktur-Bold.931d67ea207ab37ee693.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Fraktur-Bold.354501bac435c3264834.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Fraktur-Bold.4c761b3711973ab04edf.ttf) format("truetype")}@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:400;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Fraktur-Regular.172d3529b26f8cedef6b.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Fraktur-Regular.6fdf0ac577be0ba82a4c.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Fraktur-Regular.ed305b5434865e06ffde.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:700;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Main-Bold.39890742bc957b368704.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Main-Bold.0c3b8929d377c0e9b2f3.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Main-Bold.8169508bf58f8bd92ad8.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:700;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Main-BoldItalic.20f389c4120be058d80a.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Main-BoldItalic.428978dc7837d46de091.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Main-BoldItalic.828abcb200061cffbaae.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:400;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Main-Italic.fe2176f79edaa716e621.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Main-Italic.fd947498bc16392e76c2.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Main-Italic.fa675e5e4bec9eb250b6.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:400;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Main-Regular.f650f111a3b890d116f1.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Main-Regular.4f35fbcc9ee8614c2bcc.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf) format("truetype")}@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:700;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Math-BoldItalic.dcbcbd93bac0470b462d.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Math-BoldItalic.3f07ed67f06c720120ce.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Math-BoldItalic.bf2d440b3a42ea78a998.ttf) format("truetype")}@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:400;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Math-Italic.6d3d25f4820d0da8f01f.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Math-Italic.96759856b4e70f3a8338.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Math-Italic.8a5f936332e8028c7278.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:700;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_SansSerif-Bold.95591a929f0d32aa282a.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_SansSerif-Bold.b9cd458ac6d5889ff9c3.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_SansSerif-Bold.5b49f4993ae22d7975b4.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:italic;font-weight:400;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_SansSerif-Italic.7d393d382f3e7fb1c637.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_SansSerif-Italic.8d593cfaa96238d5e2f8.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_SansSerif-Italic.b257a18c016f37ee4543.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:400;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_SansSerif-Regular.cd5e231e0cc53b2cb2c0.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_SansSerif-Regular.02271ec5cb9f5b4588ac.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_SansSerif-Regular.2f7bc363fc5424ebda59.ttf) format("truetype")}@font-face{font-family:KaTeX_Script;font-style:normal;font-weight:400;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Script-Regular.c81d1b2a4b75d3eded60.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Script-Regular.073b3402d036714b4370.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Script-Regular.fc9ba5249878cd8f8d88.ttf) format("truetype")}@font-face{font-family:KaTeX_Size1;font-style:normal;font-weight:400;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Size1-Regular.6eec866c69313624be60.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Size1-Regular.0108e89c9003e8c14ea3.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Size1-Regular.6de7d4b539221a49e9e2.ttf) format("truetype")}@font-face{font-family:KaTeX_Size2;font-style:normal;font-weight:400;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Size2-Regular.2960900c4f271311eb36.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Size2-Regular.3a99e70aee4076660d38.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Size2-Regular.57f5c1837853986ea1db.ttf) format("truetype")}@font-face{font-family:KaTeX_Size3;font-style:normal;font-weight:400;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Size3-Regular.8d6b6822586eea3d3b20.ttf) format("truetype")}@font-face{font-family:KaTeX_Size4;font-style:normal;font-weight:400;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Size4-Regular.e418bf257af1052628d8.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Size4-Regular.aeffd8025cba3647f1a6.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Size4-Regular.4ad7c7e8bb8d10a34bb7.ttf) format("truetype")}@font-face{font-family:KaTeX_Typewriter;font-style:normal;font-weight:400;src:url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Typewriter-Regular.c295e7f71970f03c0549.woff2) format("woff2"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Typewriter-Regular.4c6b94fd1d07f8beff7c.woff) format("woff"),url(chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/fonts/KaTeX_Typewriter-Regular.c5c02d763c89380dcb4e.ttf) format("truetype")}.katex{text-rendering:auto;font:normal 1.21em KaTeX_Main,Times New Roman,serif;line-height:1.2;text-indent:0}.katex *{-ms-high-contrast-adjust:none!important;border-color:currentColor}.katex .katex-version:after{content:"0.16.7"}.katex .katex-mathml{clip:rect(1px,1px,1px,1px);border:0;height:1px;overflow:hidden;padding:0;position:absolute;width:1px}.katex .katex-html>.newline{display:block}.katex .base{position:relative;white-space:nowrap;width:-webkit-min-content;width:-moz-min-content;width:min-content}.katex .base,.katex .strut{display:inline-block}.katex .textbf{font-weight:700}.katex .textit{font-style:italic}.katex .textrm{font-family:KaTeX_Main}.katex .textsf{font-family:KaTeX_SansSerif}.katex .texttt{font-family:KaTeX_Typewriter}.katex .mathnormal{font-family:KaTeX_Math;font-style:italic}.katex .mathit{font-family:KaTeX_Main;font-style:italic}.katex .mathrm{font-style:normal}.katex .mathbf{font-family:KaTeX_Main;font-weight:700}.katex .boldsymbol{font-family:KaTeX_Math;font-style:italic;font-weight:700}.katex .amsrm,.katex .mathbb,.katex .textbb{font-family:KaTeX_AMS}.katex .mathcal{font-family:KaTeX_Caligraphic}.katex .mathfrak,.katex .textfrak{font-family:KaTeX_Fraktur}.katex .mathtt{font-family:KaTeX_Typewriter}.katex .mathscr,.katex .textscr{font-family:KaTeX_Script}.katex .mathsf,.katex .textsf{font-family:KaTeX_SansSerif}.katex .mathboldsf,.katex .textboldsf{font-family:KaTeX_SansSerif;font-weight:700}.katex .mathitsf,.katex .textitsf{font-family:KaTeX_SansSerif;font-style:italic}.katex .mainrm{font-family:KaTeX_Main;font-style:normal}.katex .vlist-t{border-collapse:collapse;display:inline-table;table-layout:fixed}.katex .vlist-r{display:table-row}.katex .vlist{display:table-cell;position:relative;vertical-align:bottom}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist>span>.pstrut{overflow:hidden;width:0}.katex .vlist-t2{margin-right:-2px}.katex .vlist-s{display:table-cell;font-size:1px;min-width:2px;vertical-align:bottom;width:2px}.katex .vbox{align-items:baseline;display:inline-flex;flex-direction:column}.katex .hbox{width:100%}.katex .hbox,.katex .thinbox{display:inline-flex;flex-direction:row}.katex .thinbox{max-width:0;width:0}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline,.katex .hline,.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .rule,.katex .underline .underline-line{min-height:1px}.katex .mspace{display:inline-block}.katex .clap,.katex .llap,.katex .rlap{position:relative;width:0}.katex .clap>.inner,.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .clap>.fix,.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .clap>.inner,.katex .rlap>.inner{left:0}.katex .clap>.inner>span{margin-left:-50%;margin-right:50%}.katex .rule{border:0 solid;display:inline-block;position:relative}.katex .hline,.katex .overline .overline-line,.katex .underline .underline-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline{border-bottom-style:dashed;display:inline-block;width:100%}.katex .sqrt>.root{margin-left:.27777778em;margin-right:-.55555556em}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.2em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:3.456em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.148em}.katex .fontsize-ensurer.reset-size1.size11,.katex .sizing.reset-size1.size11{font-size:4.976em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.83333333em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.16666667em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.5em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.66666667em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.4em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.88em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.45666667em}.katex .fontsize-ensurer.reset-size2.size11,.katex .sizing.reset-size2.size11{font-size:4.14666667em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.71428571em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.85714286em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.14285714em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.28571429em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.42857143em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.71428571em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.05714286em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.46857143em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:2.96285714em}.katex .fontsize-ensurer.reset-size3.size11,.katex .sizing.reset-size3.size11{font-size:3.55428571em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.75em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.875em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.125em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.25em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.5em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.8em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.16em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.5925em}.katex .fontsize-ensurer.reset-size4.size11,.katex .sizing.reset-size4.size11{font-size:3.11em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.55555556em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.66666667em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.77777778em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.88888889em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.11111111em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.6em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:1.92em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.30444444em}.katex .fontsize-ensurer.reset-size5.size11,.katex .sizing.reset-size5.size11{font-size:2.76444444em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.6em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.7em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.8em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.9em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.728em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.074em}.katex .fontsize-ensurer.reset-size6.size11,.katex .sizing.reset-size6.size11{font-size:2.488em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.41666667em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.5em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.58333333em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.66666667em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.75em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.83333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.2em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.44em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.72833333em}.katex .fontsize-ensurer.reset-size7.size11,.katex .sizing.reset-size7.size11{font-size:2.07333333em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.34722222em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.41666667em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.48611111em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.55555556em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.625em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.69444444em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.83333333em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.2em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.44027778em}.katex .fontsize-ensurer.reset-size8.size11,.katex .sizing.reset-size8.size11{font-size:1.72777778em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.28935185em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.34722222em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.40509259em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.46296296em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.52083333em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.5787037em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.69444444em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.83333333em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.20023148em}.katex .fontsize-ensurer.reset-size9.size11,.katex .sizing.reset-size9.size11{font-size:1.43981481em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.24108004em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.28929605em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.33751205em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.38572806em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.43394407em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.48216008em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.57859209em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.69431051em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.83317261em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .fontsize-ensurer.reset-size10.size11,.katex .sizing.reset-size10.size11{font-size:1.19961427em}.katex .fontsize-ensurer.reset-size11.size1,.katex .sizing.reset-size11.size1{font-size:.20096463em}.katex .fontsize-ensurer.reset-size11.size2,.katex .sizing.reset-size11.size2{font-size:.24115756em}.katex .fontsize-ensurer.reset-size11.size3,.katex .sizing.reset-size11.size3{font-size:.28135048em}.katex .fontsize-ensurer.reset-size11.size4,.katex .sizing.reset-size11.size4{font-size:.32154341em}.katex .fontsize-ensurer.reset-size11.size5,.katex .sizing.reset-size11.size5{font-size:.36173633em}.katex .fontsize-ensurer.reset-size11.size6,.katex .sizing.reset-size11.size6{font-size:.40192926em}.katex .fontsize-ensurer.reset-size11.size7,.katex .sizing.reset-size11.size7{font-size:.48231511em}.katex .fontsize-ensurer.reset-size11.size8,.katex .sizing.reset-size11.size8{font-size:.57877814em}.katex .fontsize-ensurer.reset-size11.size9,.katex .sizing.reset-size11.size9{font-size:.69453376em}.katex .fontsize-ensurer.reset-size11.size10,.katex .sizing.reset-size11.size10{font-size:.83360129em}.katex .fontsize-ensurer.reset-size11.size11,.katex .sizing.reset-size11.size11{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .delimcenter,.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist-t,.katex .op-limits>.vlist-t{text-align:center}.katex .accent .accent-body{position:relative}.katex .accent .accent-body:not(.accent-full){width:0}.katex .overlay{display:block}.katex .mtable .vertical-separator{display:inline-block;min-width:1px}.katex .mtable .arraycolsep{display:inline-block}.katex .mtable .col-align-c>.vlist-t{text-align:center}.katex .mtable .col-align-l>.vlist-t{text-align:left}.katex .mtable .col-align-r>.vlist-t{text-align:right}.katex .svg-align{text-align:left}.katex svg{fill:currentColor;stroke:currentColor;fill-rule:nonzero;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;display:block;height:inherit;position:absolute;width:100%}.katex svg path{stroke:none}.katex img{border-style:none;max-height:none;max-width:none;min-height:0;min-width:0}.katex .stretchy{display:block;overflow:hidden;position:relative;width:100%}.katex .stretchy:after,.katex .stretchy:before{content:""}.katex .hide-tail{overflow:hidden;position:relative;width:100%}.katex .halfarrow-left{left:0;overflow:hidden;position:absolute;width:50.2%}.katex .halfarrow-right{overflow:hidden;position:absolute;right:0;width:50.2%}.katex .brace-left{left:0;overflow:hidden;position:absolute;width:25.1%}.katex .brace-center{left:25%;overflow:hidden;position:absolute;width:50%}.katex .brace-right{overflow:hidden;position:absolute;right:0;width:25.1%}.katex .x-arrow-pad{padding:0 .5em}.katex .cd-arrow-pad{padding:0 .55556em 0 .27778em}.katex .mover,.katex .munder,.katex .x-arrow{text-align:center}.katex .boxpad{padding:0 .3em}.katex .fbox,.katex .fcolorbox{border:.04em solid;box-sizing:border-box}.katex .cancel-pad{padding:0 .2em}.katex .cancel-lap{margin-left:-.2em;margin-right:-.2em}.katex .sout{border-bottom-style:solid;border-bottom-width:.08em}.katex .angl{border-right:.049em solid;border-top:.049em solid;box-sizing:border-box;margin-right:.03889em}.katex .anglpad{padding:0 .03889em}.katex .eqn-num:before{content:"(" counter(katexEqnNo) ")";counter-increment:katexEqnNo}.katex .mml-eqn-num:before{content:"(" counter(mmlEqnNo) ")";counter-increment:mmlEqnNo}.katex .mtr-glue{width:50%}.katex .cd-vert-arrow{display:inline-block;position:relative}.katex .cd-label-left{display:inline-block;position:absolute;right:calc(50% + .3em);text-align:left}.katex .cd-label-right{display:inline-block;left:calc(50% + .3em);position:absolute;text-align:right}.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:block;text-align:center;white-space:nowrap}.katex-display>.katex>.katex-html{display:block;position:relative}.katex-display>.katex>.katex-html>.tag{position:absolute;right:0}.katex-display.leqno>.katex>.katex-html>.tag{left:0;right:auto}.katex-display.fleqn>.katex{padding-left:2em;text-align:left}body{counter-reset:katexEqnNo mmlEqnNo}
+</style></head>
+<body inmaintabuse="1">
+
+<!-- ═══ WSP FLOTANTE ═══ -->
+<a id="wfloat" href="https://wa.me/5493483445619?text=Hola%2C%20quiero%20hacer%20una%20consulta%20desde%20la%20web" target="_blank" rel="noopener noreferrer" class="wfloat" title="Escribinos por WhatsApp" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+</a>
+
+<!-- ═══ NAVBAR ═══ -->
+<div id="nav">
+  <div class="nlogo" id="logo5">TRUSIK<em> REPARACIONES</em></div>
+  <ul class="nlinks">
+    <li><a href="https://trusikrp.github.io/trusikrp/#servicios">Servicios</a></li>
+    <li><a href="https://trusikrp.github.io/trusikrp/#promos">Promos</a></li>
+    <li><a href="https://trusikrp.github.io/trusikrp/#stock">Stock</a></li>
+    <li><a href="https://trusikrp.github.io/trusikrp/#novedades">Novedades</a></li>
+    <li><a href="https://trusikrp.github.io/trusikrp/#nosotros">Nosotros</a></li>
+    <li><a href="https://trusikrp.github.io/trusikrp/#ubicacion">Ubicación</a></li>
+    <li><a id="nav-wsp" href="https://wa.me/5493483445619?text=Hola%2C%20quiero%20hacer%20una%20consulta%20desde%20la%20web" target="_blank" class="nwsp">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+      WhatsApp
+    </a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:.6rem">
+    <div class="hbg" id="hbg" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</div>
+<div id="mmenu">
+  <a href="https://trusikrp.github.io/trusikrp/#servicios" onclick="closeMenu()">Servicios</a>
+  <a href="https://trusikrp.github.io/trusikrp/#promos" onclick="closeMenu()">Promociones</a>
+  <a href="https://trusikrp.github.io/trusikrp/#stock" onclick="closeMenu()">Stock</a>
+  <a href="https://trusikrp.github.io/trusikrp/#novedades" onclick="closeMenu()">Novedades</a>
+  <a href="https://trusikrp.github.io/trusikrp/#nosotros" onclick="closeMenu()">Nosotros</a>
+  <a href="https://trusikrp.github.io/trusikrp/#ubicacion" onclick="closeMenu()">Ubicación</a>
+  <a id="menu-wsp" href="https://wa.me/5493483445619?text=Hola%2C%20quiero%20hacer%20una%20consulta%20desde%20la%20web" target="_blank" rel="noopener noreferrer" class="mwsp" onclick="closeMenu()">📱 WhatsApp</a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hbg-img" id="hero-bg-div"></div>
+  <div class="hbox">
+    <div class="htag" id="hero-tag">🌿 Equipos para el campo, el jardín y la industria · Vera, Santa Fe</div>
+    <h1 class="htitle">
+      <span class="gold" id="hero-t1">TRUSIK</span>
+      <span id="hero-t2">REPARACIONES </span><span class="green" id="hero-t3">SERVICIOS Y MANTENIMIENTO</span>
+    </h1>
+    <p class="hsub" id="hero-sub">Venta, servicio técnico y repuestos de motosierras, motoguadañas, equipos electrógenos, motobombas y todo lo que necesitás para el trabajo rural y la jardinería profesional.</p>
+    <div class="hbtns">
+      <a href="https://trusikrp.github.io/trusikrp/#promos" class="btn-gold">Ver Promociones</a>
+      <a href="https://trusikrp.github.io/trusikrp/#servicios" class="btn-outline">Nuestros Servicios</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICIOS ═══ -->
+<section id="servicios">
+  <div class="wrap">
+    <p class="slabel fi">Lo que hacemos</p>
+    <h2 class="stitle fi">NUESTROS <em>SERVICIOS</em></h2>
+    <div class="sdiv fi"></div>
+    <div class="srv-grid" id="srv-grid">
+      <div class="srv-card fi"><span class="sico">🪚</span><h3>Motosierras</h3><p>Venta y mantenimiento para uso doméstico, profesional y forestal. Cadenas, barras y repuestos originales.</p></div>
+      <div class="srv-card fi"><span class="sico">🌿</span><h3>Motoguadañas</h3><p>Línea completa de motoguadañas y bordeadoras para jardinería doméstica y profesional.</p></div>
+      <div class="srv-card fi"><span class="sico">⚡</span><h3>Equipos Electrógenos</h3><p>Grupos electrógenos para uso residencial, agropecuario e industrial.</p></div>
+      <div class="srv-card fi"><span class="sico">💧</span><h3>Motobombas</h3><p>Bombas para riego, trasvase y emergencias. Equipos a nafta, diésel y eléctricos.</p></div>
+      <div class="srv-card fi"><span class="sico">🔧</span><h3>Servicio Técnico</h3><p>Taller especializado. Diagnóstico, calibración, afilado de cadenas y puesta a punto.</p></div>
+      <div class="srv-card fi"><span class="sico">🌾</span><h3>Implementos Rurales</h3><p>Fumigadoras, rozadoras, aspersoras y todo lo necesario para el trabajo en el campo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROMOCIONES ═══ -->
+<section id="promos" style="background:var(--bg)">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:.5rem">
+      <div><p class="slabel fi">Ofertas especiales</p><h2 class="stitle fi">TIENDA <em>VIRTUAL</em></h2><div class="sdiv"></div></div>
+      <p class="fi" style="color:var(--gr);font-size:.82rem;max-width:270px;text-align:right">Consultá precio y stock disponible. Financiación en cuotas. Envíos a todo el país.</p>
+    </div>
+    <div class="pgrid" id="grid-promos"><p class="empty">No hay promociones cargadas todavía. Ingresá al panel (clic 5 veces en el logo) y cargá desde la pestaña Promociones.</p></div>
+  </div>
+</section>
+
+<!-- ═══ STOCK ═══ -->
+<section id="stock" style="background:var(--ng)">
+  <div class="wrap">
+    <p class="slabel fi">Disponible ahora</p>
+    <h2 class="stitle fi">PRODUCTOS EN <em>STOCK</em></h2>
+    <div class="sdiv fi"></div>
+    <div class="pgrid" id="grid-stock"><p class="empty">No hay productos en stock cargados todavía.</p></div>
+  </div>
+</section>
+
+<!-- ═══ NOVEDADES ═══ -->
+<section id="novedades" style="background:linear-gradient(135deg,var(--bg) 70%,var(--ti) 100%)">
+  <div class="wrap">
+    <p class="slabel fi">Recién llegados</p>
+    <h2 class="stitle fi">NOVEDADES <em>Y LANZAMIENTOS</em></h2>
+    <div class="sdiv fi"></div>
+    <div class="pgrid" id="grid-nov"><p class="empty">No hay novedades cargadas todavía.</p></div>
+  </div>
+</section>
+
+<!-- ═══ MARCAS ═══ -->
+<section id="marcas">
+  <div class="wrap" style="text-align:center">
+    <p class="slabel fi" id="marcas-slabel">Trabajamos con</p>
+    <h2 class="stitle fi" id="marcas-titulo">MARCAS <em>LÍDERES</em></h2>
+    <div class="sdiv fi" style="margin:0 auto"></div>
+    <div class="mbelt" id="mbelt"><span class="mtag">STIHL</span><span class="mtag">HUSQVARNA</span><span class="mtag">HONDA</span><span class="mtag">ECHO</span><span class="mtag">BRIGGS</span><span class="mtag">KONAN</span></div>
+  </div>
+</section>
+
+<!-- ═══ NOSOTROS ═══ -->
+<section id="nosotros">
+  <div class="wrap">
+    <div class="nos-g">
+      <div class="fi">
+        <div class="nos-img-box" id="nos-img-box"><span style="position:relative;z-index:1">🔧</span></div>
+        <div class="stats-g">
+          <div class="stat"><div class="stat-n" id="stat1n">15+</div><div class="stat-l" id="stat1l">Años en el rubro</div></div>
+          <div class="stat"><div class="stat-n" id="stat2n">500+</div><div class="stat-l" id="stat2l">Clientes activos</div></div>
+          <div class="stat"><div class="stat-n" id="stat3n">10</div><div class="stat-l" id="stat3l">Marcas líderes</div></div>
+          <div class="stat"><div class="stat-n" id="stat4n">100%</div><div class="stat-l" id="stat4l">Garantía oficial</div></div>
+        </div>
+      </div>
+      <div class="fi nos-text">
+        <p class="slabel">Quiénes somos</p>
+        <h2 class="stitle">EXPERTOS EN <em>TRABAJO RURAL</em></h2>
+        <div class="sdiv"></div>
+        <p id="nos-p1">Empresa familiar con trayectoria en la comercialización y servicio técnico de maquinaria para el campo, la jardinería y la industria. Conocemos el trabajo rural desde adentro.</p>
+        <p id="nos-p2">Atendemos tanto al productor agropecuario profesional como al usuario doméstico, con la misma calidad de asesoramiento en cada venta y reparación.</p>
+        <ul class="nos-list" id="nos-lista">
+          <li>Venta de equipos nuevos y usados revisados</li>
+          <li>Servicio técnico oficial de marcas líderes</li>
+          <li>Stock permanente de repuestos y consumibles</li>
+          <li>Financiación en cuotas con todas las tarjetas</li>
+          <li>Envíos a todo el país — Entrega en mano en Vera y zona</li>
+          <li>Asesoramiento personalizado sin cargo</li>
+        </ul>
+        <a id="nos-wsp" href="https://wa.me/5493483445619?text=Hola%2C%20quiero%20hacer%20una%20consulta%20desde%20la%20web" target="_blank" class="btn-gold" style="margin-top:1.5rem;display:inline-flex">Consultá con un especialista</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ UBICACION ═══ -->
+<section id="ubicacion">
+  <div class="wrap">
+    <p class="slabel fi">Encontranos</p>
+    <h2 class="stitle fi">NUESTRO <em>LOCAL</em></h2>
+    <div class="sdiv fi"></div>
+
+    <!-- MAPA GOOGLE MAPS — funciona en celular y computadora -->
+    <div class="mapa-container fi">
+      <iframe src="./INDEX_files/maps.html" width="100%" height="100%" style="border:0;display:block" allowfullscreen="" loading="lazy" title="Ubicación Trusik Reparaciones — San Martín 2418, Vera, Santa Fe">
+      </iframe>
+    </div>
+
+    <!-- BOTÓN GOOGLE MAPS — abre la app en el celular -->
+    <div class="mapa-btn-row fi">
+      <a href="https://maps.google.com/?q=San+Mart%C3%ADn+2418,+Vera,+Santa+Fe,+Argentina" target="_blank" rel="noopener" class="btn-gmaps">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
+        ABRIR EN GOOGLE MAPS
+      </a>
+    </div>
+
+    <!-- INFO DE CONTACTO -->
+    <div class="ubic-info fi">
+      <div class="ilocal">
+        <h3>INFORMACIÓN DE CONTACTO</h3>
+        <div class="irow"><div class="iico">📍</div><div><h4>Dirección</h4><p id="pub-dir">San Martín 2418 — Vera, Santa Fe</p></div></div>
+        <div class="irow"><div class="iico">🕐</div><div><h4>Horarios de atención</h4><p id="pub-hor">Lunes a Viernes: 8:00–12:30 / 15:00–19:30 hs<br>Sábados: 8:00–12:30 hs<br>Domingos: cerrado</p></div></div>
+        <div class="irow"><div class="iico">📱</div><div><h4>WhatsApp / Teléfono</h4><p id="pub-tel"><a href="https://wa.me/5493483445619?text=Hola%2C%20quiero%20hacer%20una%20consulta%20desde%20la%20web" id="pub-tel-a">543483445619</a></p></div></div>
+        <div class="irow"><div class="iico">✉️</div><div><h4>Email</h4><p><a href="https://trusikrp.github.io/trusikrp/#" id="pub-email-a">Sin email configurado</a></p></div></div>
+        <div class="redes-section" id="redes-ubic-section" style="display:none">
+          <p>Seguinos en redes</p>
+          <div class="redes-bar" id="redes-ubic"></div>
+        </div>
+        <a id="ubic-wsp" href="https://wa.me/5493483445619?text=Hola%2C%20quiero%20hacer%20una%20consulta%20desde%20la%20web" target="_blank" class="btn-wsp-ubic">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+          Escribinos por WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section id="cta">
+  <div class="wrap">
+    <p class="slabel">Contacto rápido</p>
+    <h2 class="stitle" id="cta-titulo">¿TENÉS ALGUNA <em>CONSULTA?</em></h2>
+    <p class="cdesc" id="cta-desc">Estamos para ayudarte. Consultá por precios, disponibilidad, reparaciones o cualquier duda. ¡Respondemos rápido!</p>
+    <br><br>
+    <a id="cta-wsp" href="https://wa.me/5493483445619?text=Hola%2C%20quiero%20hacer%20una%20consulta%20desde%20la%20web" target="_blank" rel="noopener noreferrer" class="btn-wsp-big">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+      ESCRIBINOS POR WHATSAPP
+    </a>
+    <p style="color:var(--gr);font-size:.85rem;margin-top:1.2rem">San Martín 2418, Vera, Santa Fe · Respondemos en el día</p>
+    <div id="redes-cta-section" class="redes-section" style="display:none;align-items:center;flex-direction:column">
+      <p>Seguinos en redes</p>
+      <div class="redes-bar" id="redes-cta"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="nlogo" id="logo5" style="cursor:default;font-size:1.2rem">TRUSIK<em> REPARACIONES</em></div>
+  <p>© 2025 Trusik Reparaciones — San Martín 2418, Vera, Santa Fe</p>
+  <div style="display:flex;align-items:center;gap:1rem">
+    <div class="redes-footer" id="redes-footer"></div>
+    <!-- acceso admin oculto: 5 clics en el logo -->
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════
+     PANEL DE ADMINISTRACIÓN
+═══════════════════════════════════ -->
+<div id="adm-ov" class="open">
+  <button class="aclose" onclick="closeAdm()">✕</button>
+
+  <!-- PANEL INTERIOR — abre directo, sin pantalla de login separada -->
+  <div id="apanel" class="open">
+    <div class="ahdr">
+      <h1>⚙️ PANEL — TRUSIK REPARACIONES</h1>
+      <div class="ahdr-btns">
+        <button class="btn-prev-ph" onclick="openPhonePreview()">📱 Ver en celular</button>
+        <button class="btn-logout" onclick="doLogout()">🚪 Cerrar</button>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="atabs">
+      <button class="atab" onclick="showTab(&#39;t-promos&#39;,this)">🏷️ Promociones</button>
+      <button class="atab" onclick="showTab(&#39;t-stock&#39;,this)">📦 Stock</button>
+      <button class="atab" onclick="showTab(&#39;t-nov&#39;,this)">✨ Novedades</button>
+      <button class="atab" onclick="showTab(&#39;t-pagina&#39;,this)">✏️ Editar Página</button>
+      <button class="atab" onclick="showTab(&#39;t-config&#39;,this)">⚙️ Configuración</button>
+      <button class="atab on" onclick="showTab(&#39;t-colores&#39;,this)">🎨 Colores y Fuentes</button>
+      <button class="atab" onclick="showTab(&#39;t-publicar&#39;,this)">🚀 Publicar Web</button>
+    </div>
+
+    <!-- ══ TAB: PROMOCIONES ══ -->
+    <div class="asec" id="t-promos">
+      <div class="fc" id="fc-promo">
+        <h3 id="ft-promo">➕ Nueva Promoción
+          <small>Completá los campos y guardá. El botón de WhatsApp se genera automáticamente.</small>
+        </h3>
+        <div class="frow">
+          <div class="fg"><label>Nombre del producto *</label><input class="inp" id="p-nom" placeholder="Ej: Motosierra Stihl 45cc con espada 18"></div>
+          <div class="fg"><label>Categoría</label><input class="inp" id="p-cat" placeholder="Ej: Motosierras"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg"><label>Descripción breve</label><textarea class="inp" id="p-desc" placeholder="Describí el producto, sus características principales..."></textarea></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Precio anterior (se ve tachado)</label><input class="inp" id="p-ant" placeholder="Ej: $180.000"></div>
+          <div class="fg"><label>Precio actual *</label><input class="inp" id="p-aho" placeholder="Ej: $144.000"></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Etiqueta / Badge</label><input class="inp" id="p-badge" placeholder="Ej: -20%  ·  OFERTA  ·  KIT COMPLETO"></div>
+          <div class="fg"><label>Emoji (si no cargás foto)</label><input class="inp" id="p-emoji" value="🛠️" placeholder="🪚"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg">
+            <label>Foto del producto</label>
+            <div class="iup"><input type="file" accept="image/*" onchange="handleImg(this,&#39;pp&#39;,&#39;pd&#39;)">
+              <span class="uico">📷</span>
+              <p>Hacé clic aquí o arrastrá una foto<br><span style="opacity:.6;font-size:.75rem">JPG, PNG o WebP — Máximo 5 MB — Recomendado: 800×600 px</span></p>
+              <img id="pp" class="iprev">
+            </div>
+            <button class="iup-del" id="pp-del" onclick="clearImg(&#39;pp&#39;,&#39;pd&#39;,&#39;pp-del&#39;)">✕ Quitar foto</button>
+            <input type="hidden" id="pd">
+          </div>
+        </div>
+        <div class="factions">
+          <button class="btn-sv" onclick="savePromo()">💾 GUARDAR PROMOCIÓN</button>
+          <button class="btn-ca" onclick="cancelPromo()">Cancelar</button>
+        </div>
+        <input type="hidden" id="p-eid">
+      </div>
+      <p style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.95rem;letter-spacing:1px;color:var(--gr);text-transform:uppercase;margin-bottom:1rem">Promociones cargadas</p>
+      <div class="alist" id="alist-promos"><p style="color:var(--gr);font-size:.85rem;font-style:italic;padding:.5rem 0">Sin elementos. Usá el formulario de arriba para agregar.</p></div>
+    </div>
+
+    <!-- ══ TAB: STOCK ══ -->
+    <div class="asec" id="t-stock">
+      <div class="fc" id="fc-stock">
+        <h3 id="ft-stock">➕ Nuevo Producto en Stock
+          <small>Productos disponibles para venta inmediata.</small>
+        </h3>
+        <div class="frow">
+          <div class="fg"><label>Nombre del producto *</label><input class="inp" id="s-nom" placeholder="Ej: Motobomba Honda 2 pulgadas"></div>
+          <div class="fg"><label>Categoría</label><input class="inp" id="s-cat" placeholder="Ej: Motobombas"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg"><label>Descripción</label><textarea class="inp" id="s-desc" placeholder="Características del producto..."></textarea></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Precio (o "Consultar")</label><input class="inp" id="s-pre" placeholder="Ej: $165.000 o Consultar"></div>
+          <div class="fg"><label>Emoji (si no cargás foto)</label><input class="inp" id="s-emoji" value="📦" placeholder="📦"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg">
+            <label>Foto del producto</label>
+            <div class="iup"><input type="file" accept="image/*" onchange="handleImg(this,&#39;sp&#39;,&#39;sd&#39;)">
+              <span class="uico">📷</span><p>Hacé clic o arrastrá una foto · JPG, PNG, WebP · Máx 5 MB</p>
+              <img id="sp" class="iprev">
+            </div>
+            <button class="iup-del" id="sp-del" onclick="clearImg(&#39;sp&#39;,&#39;sd&#39;,&#39;sp-del&#39;)">✕ Quitar foto</button>
+            <input type="hidden" id="sd">
+          </div>
+        </div>
+        <div class="factions">
+          <button class="btn-sv" onclick="saveStock()">💾 GUARDAR STOCK</button>
+          <button class="btn-ca" onclick="cancelStock()">Cancelar</button>
+        </div>
+        <input type="hidden" id="s-eid">
+      </div>
+      <p style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.95rem;letter-spacing:1px;color:var(--gr);text-transform:uppercase;margin-bottom:1rem">Productos en stock</p>
+      <div class="alist" id="alist-stock"><p style="color:var(--gr);font-size:.85rem;font-style:italic;padding:.5rem 0">Sin elementos. Usá el formulario de arriba para agregar.</p></div>
+    </div>
+
+    <!-- ══ TAB: NOVEDADES ══ -->
+    <div class="asec" id="t-nov">
+      <div class="fc" id="fc-nov">
+        <h3 id="ft-nov">➕ Nueva Novedad
+          <small>Nuevos modelos, lanzamientos o incorporaciones recientes.</small>
+        </h3>
+        <div class="frow">
+          <div class="fg"><label>Nombre del producto *</label><input class="inp" id="n-nom" placeholder="Ej: Nueva motoguadaña 52cc 2024"></div>
+          <div class="fg"><label>Categoría</label><input class="inp" id="n-cat" placeholder="Ej: Motoguadañas"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg"><label>Descripción</label><textarea class="inp" id="n-desc" placeholder="Describí la novedad..."></textarea></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Precio (opcional)</label><input class="inp" id="n-pre" placeholder="Ej: $79.000"></div>
+          <div class="fg"><label>Emoji (si no cargás foto)</label><input class="inp" id="n-emoji" value="✨" placeholder="✨"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg">
+            <label>Foto del producto</label>
+            <div class="iup"><input type="file" accept="image/*" onchange="handleImg(this,&#39;np&#39;,&#39;nd&#39;)">
+              <span class="uico">📷</span><p>Hacé clic o arrastrá una foto · JPG, PNG, WebP · Máx 5 MB</p>
+              <img id="np" class="iprev">
+            </div>
+            <button class="iup-del" id="np-del" onclick="clearImg(&#39;np&#39;,&#39;nd&#39;,&#39;np-del&#39;)">✕ Quitar foto</button>
+            <input type="hidden" id="nd">
+          </div>
+        </div>
+        <div class="factions">
+          <button class="btn-sv" onclick="saveNov()">💾 GUARDAR NOVEDAD</button>
+          <button class="btn-ca" onclick="cancelNov()">Cancelar</button>
+        </div>
+        <input type="hidden" id="n-eid">
+      </div>
+      <p style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.95rem;letter-spacing:1px;color:var(--gr);text-transform:uppercase;margin-bottom:1rem">Novedades cargadas</p>
+      <div class="alist" id="alist-nov"><p style="color:var(--gr);font-size:.85rem;font-style:italic;padding:.5rem 0">Sin elementos. Usá el formulario de arriba para agregar.</p></div>
+    </div>
+
+    <!-- ══ TAB: EDITAR PÁGINA ══ -->
+    <div class="asec" id="t-pagina">
+
+      <!-- HERO -->
+      <div class="fc">
+        <h3>🖼️ Pantalla de inicio (Hero)</h3>
+        <div class="frow">
+          <div class="fg"><label>Etiqueta superior</label><input class="inp" id="e-htag" placeholder="🌿 Equipos para el campo..."></div>
+          <div class="fg"><label>Título — Línea 1 (color dorado)</label><input class="inp" id="e-ht1" placeholder="POTENCIA"></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Título — Línea 2 (texto blanco)</label><input class="inp" id="e-ht2" placeholder="QUE"></div>
+          <div class="fg"><label>Título — Línea 2 (texto verde)</label><input class="inp" id="e-ht3" placeholder="TRABAJA"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg"><label>Subtítulo / Descripción breve</label><textarea class="inp" id="e-hsub"></textarea></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg">
+            <label>Foto de fondo (opcional — si no cargás, se usa la foto del campo)</label>
+            <div class="iup"><input type="file" accept="image/*" onchange="handleImg(this,&#39;e-hprev&#39;,&#39;e-himg&#39;)">
+              <span class="uico">🖼️</span><p>Recomendado: foto horizontal 1400×800 px o más</p>
+              <img id="e-hprev" class="iprev">
+            </div>
+            <button class="iup-del" id="e-hprev-del" onclick="clearImg(&#39;e-hprev&#39;,&#39;e-himg&#39;,&#39;e-hprev-del&#39;)">✕ Quitar foto</button>
+            <input type="hidden" id="e-himg">
+          </div>
+        </div>
+        <div class="factions"><button class="btn-sv" onclick="saveHero()">💾 GUARDAR INICIO</button></div>
+      </div>
+
+      <!-- SERVICIOS -->
+      <div class="fc">
+        <h3>🔧 Tarjetas de Servicios</h3>
+        <div id="srv-edit-wrap">
+      <div style="background:#15120c;border:1px solid var(--bd);padding:1rem;margin-bottom:.8rem;border-radius:3px">
+        <p style="color:var(--oc);font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem">SERVICIO 1</p>
+        <div class="frow"><div class="fg"><label>Emoji / Ícono</label><input class="inp" id="srv-ico-0" value="🪚" style="font-size:1.3rem;text-align:center"></div>
+        <div class="fg"><label>Título</label><input class="inp" id="srv-tit-0" value="Motosierras"></div></div>
+        <div class="frow f1"><div class="fg"><label>Descripción</label><textarea class="inp" id="srv-desc-0">Venta y mantenimiento para uso doméstico, profesional y forestal. Cadenas, barras y repuestos originales.</textarea></div></div>
+      </div>
+      <div style="background:#15120c;border:1px solid var(--bd);padding:1rem;margin-bottom:.8rem;border-radius:3px">
+        <p style="color:var(--oc);font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem">SERVICIO 2</p>
+        <div class="frow"><div class="fg"><label>Emoji / Ícono</label><input class="inp" id="srv-ico-1" value="🌿" style="font-size:1.3rem;text-align:center"></div>
+        <div class="fg"><label>Título</label><input class="inp" id="srv-tit-1" value="Motoguadañas"></div></div>
+        <div class="frow f1"><div class="fg"><label>Descripción</label><textarea class="inp" id="srv-desc-1">Línea completa de motoguadañas y bordeadoras para jardinería doméstica y profesional.</textarea></div></div>
+      </div>
+      <div style="background:#15120c;border:1px solid var(--bd);padding:1rem;margin-bottom:.8rem;border-radius:3px">
+        <p style="color:var(--oc);font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem">SERVICIO 3</p>
+        <div class="frow"><div class="fg"><label>Emoji / Ícono</label><input class="inp" id="srv-ico-2" value="⚡" style="font-size:1.3rem;text-align:center"></div>
+        <div class="fg"><label>Título</label><input class="inp" id="srv-tit-2" value="Equipos Electrógenos"></div></div>
+        <div class="frow f1"><div class="fg"><label>Descripción</label><textarea class="inp" id="srv-desc-2">Grupos electrógenos para uso residencial, agropecuario e industrial.</textarea></div></div>
+      </div>
+      <div style="background:#15120c;border:1px solid var(--bd);padding:1rem;margin-bottom:.8rem;border-radius:3px">
+        <p style="color:var(--oc);font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem">SERVICIO 4</p>
+        <div class="frow"><div class="fg"><label>Emoji / Ícono</label><input class="inp" id="srv-ico-3" value="💧" style="font-size:1.3rem;text-align:center"></div>
+        <div class="fg"><label>Título</label><input class="inp" id="srv-tit-3" value="Motobombas"></div></div>
+        <div class="frow f1"><div class="fg"><label>Descripción</label><textarea class="inp" id="srv-desc-3">Bombas para riego, trasvase y emergencias. Equipos a nafta, diésel y eléctricos.</textarea></div></div>
+      </div>
+      <div style="background:#15120c;border:1px solid var(--bd);padding:1rem;margin-bottom:.8rem;border-radius:3px">
+        <p style="color:var(--oc);font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem">SERVICIO 5</p>
+        <div class="frow"><div class="fg"><label>Emoji / Ícono</label><input class="inp" id="srv-ico-4" value="🔧" style="font-size:1.3rem;text-align:center"></div>
+        <div class="fg"><label>Título</label><input class="inp" id="srv-tit-4" value="Servicio Técnico"></div></div>
+        <div class="frow f1"><div class="fg"><label>Descripción</label><textarea class="inp" id="srv-desc-4">Taller especializado. Diagnóstico, calibración, afilado de cadenas y puesta a punto.</textarea></div></div>
+      </div>
+      <div style="background:#15120c;border:1px solid var(--bd);padding:1rem;margin-bottom:.8rem;border-radius:3px">
+        <p style="color:var(--oc);font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem">SERVICIO 6</p>
+        <div class="frow"><div class="fg"><label>Emoji / Ícono</label><input class="inp" id="srv-ico-5" value="🌾" style="font-size:1.3rem;text-align:center"></div>
+        <div class="fg"><label>Título</label><input class="inp" id="srv-tit-5" value="Implementos Rurales"></div></div>
+        <div class="frow f1"><div class="fg"><label>Descripción</label><textarea class="inp" id="srv-desc-5">Fumigadoras, rozadoras, aspersoras y todo lo necesario para el trabajo en el campo.</textarea></div></div>
+      </div></div>
+        <div class="factions"><button class="btn-sv" onclick="saveServicios()">💾 GUARDAR SERVICIOS</button></div>
+      </div>
+
+      <!-- NOSOTROS -->
+      <div class="fc">
+        <h3>👥 Sección "Quiénes Somos"</h3>
+        <div class="frow">
+          <div class="fg"><label>Estadística 1 — Número</label><input class="inp" id="e-s1n" placeholder="15+"></div>
+          <div class="fg"><label>Estadística 1 — Texto</label><input class="inp" id="e-s1l" placeholder="Años en el rubro"></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Estadística 2 — Número</label><input class="inp" id="e-s2n" placeholder="500+"></div>
+          <div class="fg"><label>Estadística 2 — Texto</label><input class="inp" id="e-s2l" placeholder="Clientes activos"></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Estadística 3 — Número</label><input class="inp" id="e-s3n" placeholder="10"></div>
+          <div class="fg"><label>Estadística 3 — Texto</label><input class="inp" id="e-s3l" placeholder="Marcas líderes"></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Estadística 4 — Número</label><input class="inp" id="e-s4n" placeholder="100%"></div>
+          <div class="fg"><label>Estadística 4 — Texto</label><input class="inp" id="e-s4l" placeholder="Garantía oficial"></div>
+        </div>
+        <div class="frow f1"><div class="fg"><label>Párrafo 1</label><textarea class="inp" id="e-np1"></textarea></div></div>
+        <div class="frow f1"><div class="fg"><label>Párrafo 2</label><textarea class="inp" id="e-np2"></textarea></div></div>
+        <div class="frow f1">
+          <div class="fg">
+            <label>Lista de características (una por línea)</label>
+            <textarea class="inp" id="e-nlist" style="min-height:140px" placeholder="Venta de equipos nuevos y usados
+Servicio técnico oficial
+Stock de repuestos..."></textarea>
+          </div>
+        </div>
+        <div class="frow f1">
+          <div class="fg">
+            <label>Foto de la empresa / taller (opcional)</label>
+            <div class="iup"><input type="file" accept="image/*" onchange="handleImg(this,&#39;e-nosprev&#39;,&#39;e-nosimg&#39;)">
+              <span class="uico">🏪</span><p>Foto del local, taller o del equipo</p>
+              <img id="e-nosprev" class="iprev">
+            </div>
+            <button class="iup-del" id="e-nosprev-del" onclick="clearImg(&#39;e-nosprev&#39;,&#39;e-nosimg&#39;,&#39;e-nosprev-del&#39;)">✕ Quitar foto</button>
+            <input type="hidden" id="e-nosimg">
+          </div>
+        </div>
+        <div class="factions"><button class="btn-sv" onclick="saveNosotros()">💾 GUARDAR NOSOTROS</button></div>
+      </div>
+
+      <!-- MARCAS -->
+      <div class="fc">
+        <h3>🏷️ Marcas que trabajás
+          <small>Agregá o quitá marcas. Se muestran como etiquetas en la página.</small>
+        </h3>
+        <div class="note">Escribí el nombre de la marca y tocá <strong>+ Agregar</strong>. Para eliminar una marca, tocá la ✕ que aparece al lado.</div>
+
+        <!-- Editor visual de marcas -->
+        <div style="margin:1rem 0">
+          <div id="marcas-tags" style="display:flex;flex-wrap:wrap;gap:.5rem;min-height:48px;padding:.8rem;background:#15120c;border:1px solid var(--bd);border-radius:3px;margin-bottom:.8rem">
+    <span style="display:inline-flex;align-items:center;gap:.4rem;background:var(--oc);color:var(--ng);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.9rem;font-weight:700;letter-spacing:1px;border-radius:3px">
+      STIHL
+      <button onclick="quitarMarca(0)" style="background:rgba(0,0,0,.25);border:none;color:var(--ng);cursor:pointer;width:18px;height:18px;border-radius:50%;font-size:.75rem;display:inline-flex;align-items:center;justify-content:center;padding:0;font-weight:900;line-height:1">✕</button>
+    </span>
+    <span style="display:inline-flex;align-items:center;gap:.4rem;background:var(--oc);color:var(--ng);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.9rem;font-weight:700;letter-spacing:1px;border-radius:3px">
+      HUSQVARNA
+      <button onclick="quitarMarca(1)" style="background:rgba(0,0,0,.25);border:none;color:var(--ng);cursor:pointer;width:18px;height:18px;border-radius:50%;font-size:.75rem;display:inline-flex;align-items:center;justify-content:center;padding:0;font-weight:900;line-height:1">✕</button>
+    </span>
+    <span style="display:inline-flex;align-items:center;gap:.4rem;background:var(--oc);color:var(--ng);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.9rem;font-weight:700;letter-spacing:1px;border-radius:3px">
+      HONDA
+      <button onclick="quitarMarca(2)" style="background:rgba(0,0,0,.25);border:none;color:var(--ng);cursor:pointer;width:18px;height:18px;border-radius:50%;font-size:.75rem;display:inline-flex;align-items:center;justify-content:center;padding:0;font-weight:900;line-height:1">✕</button>
+    </span>
+    <span style="display:inline-flex;align-items:center;gap:.4rem;background:var(--oc);color:var(--ng);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.9rem;font-weight:700;letter-spacing:1px;border-radius:3px">
+      ECHO
+      <button onclick="quitarMarca(3)" style="background:rgba(0,0,0,.25);border:none;color:var(--ng);cursor:pointer;width:18px;height:18px;border-radius:50%;font-size:.75rem;display:inline-flex;align-items:center;justify-content:center;padding:0;font-weight:900;line-height:1">✕</button>
+    </span>
+    <span style="display:inline-flex;align-items:center;gap:.4rem;background:var(--oc);color:var(--ng);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.9rem;font-weight:700;letter-spacing:1px;border-radius:3px">
+      BRIGGS
+      <button onclick="quitarMarca(4)" style="background:rgba(0,0,0,.25);border:none;color:var(--ng);cursor:pointer;width:18px;height:18px;border-radius:50%;font-size:.75rem;display:inline-flex;align-items:center;justify-content:center;padding:0;font-weight:900;line-height:1">✕</button>
+    </span>
+    <span style="display:inline-flex;align-items:center;gap:.4rem;background:var(--oc);color:var(--ng);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.9rem;font-weight:700;letter-spacing:1px;border-radius:3px">
+      KONAN
+      <button onclick="quitarMarca(5)" style="background:rgba(0,0,0,.25);border:none;color:var(--ng);cursor:pointer;width:18px;height:18px;border-radius:50%;font-size:.75rem;display:inline-flex;align-items:center;justify-content:center;padding:0;font-weight:900;line-height:1">✕</button>
+    </span></div>
+          <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+            <input class="inp" id="marca-nueva" placeholder="Ej: STIHL, HONDA, HUSQVARNA..." style="flex:1;min-width:160px" onkeydown="if(event.key===&#39;Enter&#39;){event.preventDefault();agregarMarca()}">
+            <button class="btn-sv" onclick="agregarMarca()" style="clip-path:none;padding:.7rem 1.2rem;white-space:nowrap">+ AGREGAR</button>
+          </div>
+        </div>
+
+        <div style="margin-bottom:.8rem">
+          <p style="color:var(--gr);font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.6rem">AGREGAR VARIAS A LA VEZ:</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.4rem" id="marcas-sugeridas">
+    <button onclick="agregarMarcaDirecta(&#39;KAWASAKI&#39;)" style="background:#15120c;border:1px solid var(--bd);color:var(--gr);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;border-radius:3px;-webkit-tap-highlight-color:transparent" onmouseover="this.style.borderColor=&#39;var(--oc)&#39;;this.style.color=&#39;var(--occ)&#39;" onmouseout="this.style.borderColor=&#39;var(--bd)&#39;;this.style.color=&#39;var(--gr)&#39;">
+      + KAWASAKI
+    </button>
+    <button onclick="agregarMarcaDirecta(&#39;GENERAC&#39;)" style="background: rgb(21, 18, 12); border-color: var(--bd); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; color: var(--gr); padding: 0.3rem 0.7rem; font-family: &quot;Barlow Condensed&quot;, sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; cursor: pointer; border-radius: 3px; -webkit-tap-highlight-color: transparent;" onmouseover="this.style.borderColor=&#39;var(--oc)&#39;;this.style.color=&#39;var(--occ)&#39;" onmouseout="this.style.borderColor=&#39;var(--bd)&#39;;this.style.color=&#39;var(--gr)&#39;">
+      + GENERAC
+    </button>
+    <button onclick="agregarMarcaDirecta(&#39;KIPOR&#39;)" style="background:#15120c;border:1px solid var(--bd);color:var(--gr);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;border-radius:3px;-webkit-tap-highlight-color:transparent" onmouseover="this.style.borderColor=&#39;var(--oc)&#39;;this.style.color=&#39;var(--occ)&#39;" onmouseout="this.style.borderColor=&#39;var(--bd)&#39;;this.style.color=&#39;var(--gr)&#39;">
+      + KIPOR
+    </button>
+    <button onclick="agregarMarcaDirecta(&#39;ZANETTI&#39;)" style="background:#15120c;border:1px solid var(--bd);color:var(--gr);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;border-radius:3px;-webkit-tap-highlight-color:transparent" onmouseover="this.style.borderColor=&#39;var(--oc)&#39;;this.style.color=&#39;var(--occ)&#39;" onmouseout="this.style.borderColor=&#39;var(--bd)&#39;;this.style.color=&#39;var(--gr)&#39;">
+      + ZANETTI
+    </button>
+    <button onclick="agregarMarcaDirecta(&#39;LONCIN&#39;)" style="background:#15120c;border:1px solid var(--bd);color:var(--gr);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;border-radius:3px;-webkit-tap-highlight-color:transparent" onmouseover="this.style.borderColor=&#39;var(--oc)&#39;;this.style.color=&#39;var(--occ)&#39;" onmouseout="this.style.borderColor=&#39;var(--bd)&#39;;this.style.color=&#39;var(--gr)&#39;">
+      + LONCIN
+    </button>
+    <button onclick="agregarMarcaDirecta(&#39;MAKITA&#39;)" style="background:#15120c;border:1px solid var(--bd);color:var(--gr);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;border-radius:3px;-webkit-tap-highlight-color:transparent" onmouseover="this.style.borderColor=&#39;var(--oc)&#39;;this.style.color=&#39;var(--occ)&#39;" onmouseout="this.style.borderColor=&#39;var(--bd)&#39;;this.style.color=&#39;var(--gr)&#39;">
+      + MAKITA
+    </button>
+    <button onclick="agregarMarcaDirecta(&#39;DEWALT&#39;)" style="background:#15120c;border:1px solid var(--bd);color:var(--gr);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;border-radius:3px;-webkit-tap-highlight-color:transparent" onmouseover="this.style.borderColor=&#39;var(--oc)&#39;;this.style.color=&#39;var(--occ)&#39;" onmouseout="this.style.borderColor=&#39;var(--bd)&#39;;this.style.color=&#39;var(--gr)&#39;">
+      + DEWALT
+    </button>
+    <button onclick="agregarMarcaDirecta(&#39;STANLEY&#39;)" style="background:#15120c;border:1px solid var(--bd);color:var(--gr);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;border-radius:3px;-webkit-tap-highlight-color:transparent" onmouseover="this.style.borderColor=&#39;var(--oc)&#39;;this.style.color=&#39;var(--occ)&#39;" onmouseout="this.style.borderColor=&#39;var(--bd)&#39;;this.style.color=&#39;var(--gr)&#39;">
+      + STANLEY
+    </button>
+    <button onclick="agregarMarcaDirecta(&#39;BOSCH&#39;)" style="background:#15120c;border:1px solid var(--bd);color:var(--gr);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;border-radius:3px;-webkit-tap-highlight-color:transparent" onmouseover="this.style.borderColor=&#39;var(--oc)&#39;;this.style.color=&#39;var(--occ)&#39;" onmouseout="this.style.borderColor=&#39;var(--bd)&#39;;this.style.color=&#39;var(--gr)&#39;">
+      + BOSCH
+    </button>
+    <button onclick="agregarMarcaDirecta(&#39;HITACHI&#39;)" style="background:#15120c;border:1px solid var(--bd);color:var(--gr);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;border-radius:3px;-webkit-tap-highlight-color:transparent" onmouseover="this.style.borderColor=&#39;var(--oc)&#39;;this.style.color=&#39;var(--occ)&#39;" onmouseout="this.style.borderColor=&#39;var(--bd)&#39;;this.style.color=&#39;var(--gr)&#39;">
+      + HITACHI
+    </button>
+    <button onclick="agregarMarcaDirecta(&#39;EMAK&#39;)" style="background:#15120c;border:1px solid var(--bd);color:var(--gr);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;border-radius:3px;-webkit-tap-highlight-color:transparent" onmouseover="this.style.borderColor=&#39;var(--oc)&#39;;this.style.color=&#39;var(--occ)&#39;" onmouseout="this.style.borderColor=&#39;var(--bd)&#39;;this.style.color=&#39;var(--gr)&#39;">
+      + EMAK
+    </button>
+    <button onclick="agregarMarcaDirecta(&#39;OLEOMAC&#39;)" style="background:#15120c;border:1px solid var(--bd);color:var(--gr);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;border-radius:3px;-webkit-tap-highlight-color:transparent" onmouseover="this.style.borderColor=&#39;var(--oc)&#39;;this.style.color=&#39;var(--occ)&#39;" onmouseout="this.style.borderColor=&#39;var(--bd)&#39;;this.style.color=&#39;var(--gr)&#39;">
+      + OLEOMAC
+    </button>
+    <button onclick="agregarMarcaDirecta(&#39;ZENOAH&#39;)" style="background:#15120c;border:1px solid var(--bd);color:var(--gr);padding:.3rem .7rem;font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;border-radius:3px;-webkit-tap-highlight-color:transparent" onmouseover="this.style.borderColor=&#39;var(--oc)&#39;;this.style.color=&#39;var(--occ)&#39;" onmouseout="this.style.borderColor=&#39;var(--bd)&#39;;this.style.color=&#39;var(--gr)&#39;">
+      + ZENOAH
+    </button></div>
+        </div>
+
+        <div style="background:#15120c;border:1px solid var(--bd);padding:.8rem;border-radius:3px;margin-bottom:1rem">
+          <label style="display:flex;align-items:center;gap:.7rem;cursor:pointer;font-size:.85rem;color:var(--gr)">
+            <input type="checkbox" id="marcas-ocultar" onchange="toggleMarcas(this.checked)" style="width:16px;height:16px">
+            Ocultar la sección "Marcas" de la página
+          </label>
+        </div>
+
+        <div class="factions">
+          <button class="btn-sv" onclick="saveMarcas()">💾 GUARDAR MARCAS</button>
+          <button class="btn-ca" onclick="resetMarcas()">↩️ Volver a las marcas originales</button>
+        </div>
+      </div>
+
+    </div><!-- /t-pagina -->
+
+    <!-- ══ TAB: CONFIGURACIÓN ══ -->
+    <div class="asec" id="t-config">
+
+      <!-- WHATSAPP -->
+      <div class="fc" style="border-color:var(--wsp)">
+        <h3 style="color:var(--wsp)">📱 Número de WhatsApp
+          <small>Este número se usa en TODOS los botones de la página.</small>
+        </h3>
+        <div class="note" id="wsp-warning" style="background: rgba(230, 57, 70, 0.12); border-color: rgb(230, 57, 70); display: block;">
+          <strong style="color:#e63946">⚠️ Todavía no cargaste tu número de WhatsApp.</strong>
+        </div>
+        <div class="note" style="line-height:1.8">
+          <strong>Formato correcto:</strong> 54 + 9 + código de área <em>sin el 0</em> + número <em>sin el 15</em>, sin espacios ni guiones.<br>
+          📍 Vera (0<strong>3495</strong>): escribí <strong>549<span style="color:var(--occ)">3495</span>XXXXXX</strong><br>
+          📍 Santa Fe (0<strong>342</strong>): escribí <strong>549<span style="color:var(--occ)">342</span>XXXXXXX</strong><br>
+          📍 Rosario (0<strong>341</strong>): escribí <strong>549<span style="color:var(--occ)">341</span>XXXXXXX</strong>
+        </div>
+        <div class="frow">
+          <div class="fg">
+            <label>Número WhatsApp (solo dígitos, sin + ni espacios)</label>
+            <input class="inp" id="c-wsp" placeholder="Ej: 5493495123456" style="font-size:1.1rem;letter-spacing:2px" oninput="validarWsp(this.value)">
+          </div>
+          <div class="fg">
+            <label>Teléfono visible en el sitio (para mostrar al cliente)</label>
+            <input class="inp" id="c-tel" placeholder="Ej: +54 9 3495 12-3456">
+          </div>
+        </div>
+        <!-- Validador en tiempo real -->
+        <div id="wsp-validator" style="display: block; margin: 0.5rem 0px 1rem; padding: 0.9rem 1rem; border-radius: 3px; font-size: 0.85rem; line-height: 1.7; background: rgba(37, 211, 102, 0.1); border: 1px solid rgba(37, 211, 102, 0.4);">✅ <strong style="color:#25D366">Número válido</strong> (13 dígitos)<br>
+      🔗 Link generado: <a href="https://wa.me/5493483445619?text=Hola%2C+quiero+consultar" target="_blank" style="color:var(--occ);word-break:break-all">https://wa.me/5493483445619?text=Hola%2C+quiero+consultar</a><br>
+      👆 <strong>Hacé clic en el link de arriba para probar</strong> si abre el WhatsApp correcto.</div>
+        <div class="frow f1">
+          <div class="fg"><label>Mensaje automático de WhatsApp</label><input class="inp" id="c-wspmsg" placeholder="Hola, quiero hacer una consulta desde la web"></div>
+        </div>
+        <div class="factions"><button class="btn-sv" onclick="saveCfg()" style="background:var(--wsp)">💾 GUARDAR WHATSAPP</button></div>
+      </div>
+
+      <!-- CONTACTO -->
+      <div class="fc">
+        <h3>📧 Contacto y Horarios</h3>
+        <div class="frow">
+          <div class="fg"><label>Email de contacto</label><input class="inp" id="c-email" placeholder="info@trusik.com.ar" type="email"></div>
+          <div class="fg"><label>Dirección del local</label><input class="inp" id="c-dir" placeholder="San Martín 2418, Vera, Santa Fe"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg">
+            <label>Horarios de atención</label>
+            <textarea class="inp" id="c-hor" placeholder="Lunes a Viernes: 8:00–12:30 / 15:00–19:30 hs
+Sábados: 8:00–12:30 hs
+Domingos: cerrado"></textarea>
+          </div>
+        </div>
+        <div class="factions"><button class="btn-sv" onclick="saveCfg()">💾 GUARDAR CONTACTO</button></div>
+      </div>
+
+      <!-- REDES SOCIALES -->
+      <div class="fc" style="border-color:#833ab4">
+        <h3 style="color:#c060e0">📲 Redes Sociales
+          <small>Dejá vacío los que no uses. Los íconos aparecen automáticamente en el sitio.</small>
+        </h3>
+        <div class="frow">
+          <div class="fg">
+            <label>📸 Instagram — Usuario (sin @)</label>
+            <input class="inp" id="c-ig" placeholder="trusik.reparaciones" style="padding-left:1rem">
+            <small style="color:var(--gr);font-size:.72rem;margin-top:.25rem">Enlace: instagram.com/tu-usuario</small>
+          </div>
+          <div class="fg">
+            <label>▶️ YouTube — Usuario o URL</label>
+            <input class="inp" id="c-yt" placeholder="@TrusikReparaciones o URL del canal">
+            <small style="color:var(--gr);font-size:.72rem;margin-top:.25rem">Podés poner @usuario o la URL completa</small>
+          </div>
+        </div>
+        <div class="frow">
+          <div class="fg">
+            <label>👤 Facebook — Usuario o URL</label>
+            <input class="inp" id="c-fb" placeholder="trusik.reparaciones o URL">
+          </div>
+          <div class="fg">
+            <label>🎵 TikTok — Usuario (sin @)</label>
+            <input class="inp" id="c-tt" placeholder="trusikreparaciones">
+          </div>
+        </div>
+        <div class="factions"><button class="btn-sv" onclick="saveCfg()" style="background:#833ab4">💾 GUARDAR REDES</button></div>
+      </div>
+
+      <!-- CONTRASEÑA -->
+      <div class="fc" style="border-color:#e63946">
+        <h3 style="color:#e63946">🔑 Cambiar Contraseña del Panel</h3>
+        <div class="note"><strong>Importante:</strong> Si olvidás la contraseña, vas a tener que abrir el archivo HTML con un editor de texto y cambiarla manualmente en el JavaScript.</div>
+        <div class="frow">
+          <div class="fg"><label>Nueva contraseña</label><input class="inp" type="password" id="c-p1" placeholder="Nueva contraseña"></div>
+          <div class="fg"><label>Confirmar contraseña</label><input class="inp" type="password" id="c-p2" placeholder="Repetir contraseña"></div>
+        </div>
+        <div class="factions"><button class="btn-sv red" onclick="changePass()">🔑 CAMBIAR CONTRASEÑA</button></div>
+      </div>
+
+    </div><!-- /t-config -->
+
+    <!-- ══ TAB: PUBLICAR WEB ══ -->
+    <div class="asec" id="t-publicar">
+      <div class="fc">
+        <h3>🚀 Cómo Publicar tu Sitio Web
+          <small>Guía completa paso a paso para que tu web esté online y accesible desde cualquier celular del mundo.</small>
+        </h3>
+
+        <div class="note green" style="margin-bottom:1.5rem"><strong>✅ Tu sitio ya está listo.</strong> Solo necesitás subirlo a internet. Te recomendamos Netlify — es gratis, no necesita tarjeta de crédito y queda online en menos de 5 minutos.</div>
+
+        <h4 style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:1.1rem;letter-spacing:1px;text-transform:uppercase;color:var(--occ);margin-bottom:1.3rem">OPCIÓN 1 — Netlify (Recomendada · Gratis · 5 minutos)</h4>
+
+        <div class="pub-step">
+          <div class="pub-num">1</div>
+          <div class="pub-txt">
+            <strong>Descargá el archivo del sitio</strong>
+            <p>El sitio es el archivo <code>trusik_reparaciones.html</code> que te entregamos. Guardalo en tu computadora (escritorio o Documentos).</p>
+          </div>
+        </div>
+        <div class="pub-step">
+          <div class="pub-num">2</div>
+          <div class="pub-txt">
+            <strong>Creá una cuenta gratis en Netlify</strong>
+            <p>Entrá a <a href="https://netlify.com/" target="_blank">netlify.com</a> → hacé clic en <em>"Sign up"</em> → elegí <em>"Continue with Google"</em> → usá tu cuenta de Gmail. Es gratis, no pide tarjeta.</p>
+          </div>
+        </div>
+        <div class="pub-step">
+          <div class="pub-num">3</div>
+          <div class="pub-txt">
+            <strong>Subí el archivo a Netlify</strong>
+            <p>Una vez adentro del panel de Netlify, buscá el botón <em>"Add new site"</em> → <em>"Deploy manually"</em>. Vas a ver una pantalla donde podés <strong>arrastrar y soltar</strong> tu archivo HTML. Arrastrá el archivo ahí y esperá unos segundos.</p>
+          </div>
+        </div>
+        <div class="pub-step">
+          <div class="pub-num">4</div>
+          <div class="pub-txt">
+            <strong>¡Tu sitio ya está online!</strong>
+            <p>Netlify te va a dar una dirección como <code>trusik-abc123.netlify.app</code>. Podés compartir ese link ya mismo. Para cambiarla a algo más fácil: <em>Site configuration → Change site name</em> → poné algo como <code>trusik-reparaciones</code> → quedará <code>trusik-reparaciones.netlify.app</code></p>
+          </div>
+        </div>
+        <div class="pub-step">
+          <div class="pub-num">5</div>
+          <div class="pub-txt">
+            <strong>Cómo actualizar el sitio (promos, stock, etc.)</strong>
+            <p>Cuando cargues productos desde el panel de administración, los cambios quedan guardados en ese archivo HTML descargado. Para que los clientes vean los cambios, necesitás <strong>volver a subir el archivo</strong> a Netlify: <em>Site → Deploys → Drag and drop</em> nuevamente con el archivo actualizado.</p>
+          </div>
+        </div>
+
+        <div style="height:1.5px;background:var(--bd);margin:1.8rem 0"></div>
+
+        <h4 style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:1.1rem;letter-spacing:1px;text-transform:uppercase;color:var(--occ);margin-bottom:1.3rem">OPCIÓN 2 — Con dominio propio (Ej: trusik.com.ar)</h4>
+
+        <div class="pub-step">
+          <div class="pub-num">A</div>
+          <div class="pub-txt">
+            <strong>Comprá el dominio .com.ar</strong>
+            <p>Entrá a <a href="https://nic.ar/" target="_blank">nic.ar</a> (sitio oficial del gobierno argentino) → buscá <code>trusik.com.ar</code> → si está disponible, registralo. Cuesta aproximadamente $3.500 ARS por año (2025).</p>
+          </div>
+        </div>
+        <div class="pub-step">
+          <div class="pub-num">B</div>
+          <div class="pub-txt">
+            <strong>Conectá el dominio con Netlify</strong>
+            <p>En Netlify → tu sitio → <em>Domain management → Add custom domain</em> → escribí <code>trusik.com.ar</code> → Netlify te va a dar unos registros DNS. Entrá a NIC Argentina → tu dominio → <em>Gestionar DNS</em> → cargá los registros que Netlify te indica. Los cambios demoran entre 1 y 48 horas en propagarse.</p>
+          </div>
+        </div>
+
+        <div style="height:1.5px;background:var(--bd);margin:1.8rem 0"></div>
+
+        <h4 style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:1.1rem;letter-spacing:1px;text-transform:uppercase;color:var(--occ);margin-bottom:1.3rem">PREGUNTAS FRECUENTES</h4>
+        <div class="note" style="margin-bottom:.8rem"><strong>¿Cuánto cuesta?</strong> Con Netlify, publicar es completamente gratis. Solo pagás el dominio .com.ar (opcional) en NIC Argentina.</div>
+        <div class="note" style="margin-bottom:.8rem"><strong>¿Necesito conocimientos técnicos?</strong> No. Arrastrar y soltar un archivo es todo lo que necesitás para Netlify.</div>
+        <div class="note" style="margin-bottom:.8rem"><strong>¿Los datos (productos, precios) se guardan en la web?</strong> Sí — cuando actualizás desde el panel y descargás el archivo, los cambios quedan incorporados en el HTML. Subiendo ese archivo actualizado a Netlify, los clientes ven los cambios.</div>
+        <div class="note" style="margin-bottom:.8rem"><strong>¿Puedo administrar desde el celular?</strong> Sí — accedés a tu sitio desde cualquier navegador, hacés clic 5 veces en el logo, y podés cargar datos desde el celular también.</div>
+        <div class="note"><strong>¿Necesito saber programar?</strong> No. Todo se maneja desde este mismo panel de administración que estás usando.</div>
+      </div>
+    </div><!-- /t-publicar -->
+
+    <!-- ══ TAB: COLORES Y FUENTES ══ -->
+    <div class="asec on" id="t-colores">
+
+      <div class="fc">
+        <h3>🎨 Colores de la Página
+          <small>Cambiá los colores principales. Los cambios se ven al instante en la página.</small>
+        </h3>
+        <div class="note green"><strong>💡 Consejo:</strong> Hacé clic en el cuadrado de color para abrir el selector. Los cambios se aplican en tiempo real. Cuando estés conforme, usá el botón "Guardar y Aplicar".</div>
+
+        <div style="margin-bottom:1.5rem">
+          <p style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--oc);margin-bottom:1rem">COLORES PRINCIPALES</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem">
+            <div class="color-row"><div class="color-preview" id="prev-bg" style="background: rgb(13, 21, 32);"></div><div class="color-info"><label>Fondo de la página</label><input type="color" id="col-bg" oninput="previewColor(&#39;--bg&#39;,this.value,&#39;prev-bg&#39;)"><span class="color-hex" id="hex-bg">#0d1520</span></div></div>
+            <div class="color-row"><div class="color-preview" id="prev-ng" style="background: rgb(8, 15, 26);"></div><div class="color-info"><label>Fondo oscuro (secciones)</label><input type="color" id="col-ng" oninput="previewColor(&#39;--ng&#39;,this.value,&#39;prev-ng&#39;)"><span class="color-hex" id="hex-ng">#080f1a</span></div></div>
+            <div class="color-row"><div class="color-preview" id="prev-oc" style="background: rgb(30, 136, 229);"></div><div class="color-info"><label>Color principal (dorado)</label><input type="color" id="col-oc" oninput="previewColor(&#39;--oc&#39;,this.value,&#39;prev-oc&#39;)"><span class="color-hex" id="hex-oc">#1e88e5</span></div></div>
+            <div class="color-row"><div class="color-preview" id="prev-occ" style="background: rgb(66, 165, 245);"></div><div class="color-info"><label>Color principal claro</label><input type="color" id="col-occ" oninput="previewColor(&#39;--occ&#39;,this.value,&#39;prev-occ&#39;)"><span class="color-hex" id="hex-occ">#42a5f5</span></div></div>
+            <div class="color-row"><div class="color-preview" id="prev-vdc" style="background: rgb(0, 172, 193);"></div><div class="color-info"><label>Color secundario (verde)</label><input type="color" id="col-vdc" oninput="previewColor(&#39;--vdc&#39;,this.value,&#39;prev-vdc&#39;)"><span class="color-hex" id="hex-vdc">#00acc1</span></div></div>
+            <div class="color-row"><div class="color-preview" id="prev-bl" style="background: rgb(236, 244, 255);"></div><div class="color-info"><label>Texto principal</label><input type="color" id="col-bl" oninput="previewColor(&#39;--bl&#39;,this.value,&#39;prev-bl&#39;)"><span class="color-hex" id="hex-bl">#ecf4ff</span></div></div>
+            <div class="color-row"><div class="color-preview" id="prev-gr" style="background: rgb(144, 170, 200);"></div><div class="color-info"><label>Texto secundario (gris)</label><input type="color" id="col-gr" oninput="previewColor(&#39;--gr&#39;,this.value,&#39;prev-gr&#39;)"><span class="color-hex" id="hex-gr">#90aac8</span></div></div>
+            <div class="color-row"><div class="color-preview" id="prev-bd" style="background: rgb(26, 45, 69);"></div><div class="color-info"><label>Bordes y líneas</label><input type="color" id="col-bd" oninput="previewColor(&#39;--bd&#39;,this.value,&#39;prev-bd&#39;)"><span class="color-hex" id="hex-bd">#1a2d45</span></div></div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem">
+          <p style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--oc);margin-bottom:1rem">PALETAS PREDEFINIDAS</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.7rem">
+            <button class="palette-btn" onclick="applyPalette(&#39;industrial&#39;)" style="border-color:#c4870a;color:#c4870a">⚙️ Industrial (original)</button>
+            <button class="palette-btn" onclick="applyPalette(&#39;azul&#39;)" style="border-color:#1e88e5;color:#1e88e5">🔵 Azul profesional</button>
+            <button class="palette-btn" onclick="applyPalette(&#39;rojo&#39;)" style="border-color:#e53935;color:#e53935">🔴 Rojo potencia</button>
+            <button class="palette-btn" onclick="applyPalette(&#39;verde&#39;)" style="border-color:#2e7d32;color:#2e7d32">🌿 Verde campo</button>
+            <button class="palette-btn" onclick="applyPalette(&#39;naranja&#39;)" style="border-color:#f4511e;color:#f4511e">🟠 Naranja energía</button>
+            <button class="palette-btn" onclick="applyPalette(&#39;claro&#39;)" style="border-color:#78909c;color:#78909c">☀️ Modo claro</button>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem">
+          <p style="font-family:&#39;Barlow Condensed&#39;,sans-serif;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--oc);margin-bottom:1rem">FUENTE DE TEXTO</p>
+          <div class="frow">
+            <div class="fg">
+              <label>Fuente del cuerpo (texto normal)</label>
+              <select class="inp" id="col-font" onchange="previewFont(this.value)">
+                <option value="Barlow">Barlow (actual — moderna)</option>
+                <option value="Roboto">Roboto (clara y neutral)</option>
+                <option value="Open Sans">Open Sans (muy legible)</option>
+                <option value="Lato">Lato (elegante y simple)</option>
+                <option value="Montserrat">Montserrat (geométrica moderna)</option>
+                <option value="Source Sans Pro">Source Sans Pro (profesional)</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Tamaño de texto base</label>
+              <select class="inp" id="col-size" onchange="previewFontSize(this.value)">
+                <option value="15px">Pequeño (15px)</option>
+                <option value="16px" selected="">Normal (16px — recomendado)</option>
+                <option value="17px">Grande (17px)</option>
+                <option value="18px">Muy grande (18px)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="factions">
+          <button class="btn-sv" onclick="saveColors()">💾 GUARDAR Y APLICAR</button>
+          <button class="btn-ca" onclick="resetColors()">↩️ Volver a los colores originales</button>
+        </div>
+      </div>
+
+    </div><!-- /t-colores -->
+
+  </div><!-- /apanel -->
+</div><!-- /adm-ov -->
+
+<!-- TOAST -->
+<div class="toast" id="toast">Marcas guardadas ✅</div>
+
+<!-- PHONE PREVIEW -->
+<div id="prev-modal" class="">
+  <div class="phone-f">
+    <div class="phone-notch"></div>
+    <div class="phone-scr" id="phone-scr"></div>
+  </div>
+  <button class="btn-ca" onclick="closePhonePreview()" style="color:#fff;border-color:rgba(255,255,255,.3)">✕ Cerrar vista previa</button>
+</div>
+
+<!-- ═══════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════ -->
+<script>
+// ════════════════════════════════════════════════
+//  STORAGE
+// ════════════════════════════════════════════════
+const S = {
+  get: k => { try { return JSON.parse(localStorage.getItem(k)) || [] } catch(e) { return [] } },
+  set: (k,v) => localStorage.setItem(k, JSON.stringify(v)),
+  obj: k => { try { return JSON.parse(localStorage.getItem(k)) || {} } catch(e) { return {} } },
+  setObj: (k,v) => localStorage.setItem(k, JSON.stringify(v))
+};
+
+// ════════════════════════════════════════════════
+//  CONFIG
+// ════════════════════════════════════════════════
+const DEFAULTS = {
+  wsp: '',
+  wspmsg: 'Hola, quiero hacer una consulta desde la web',
+  tel: '',
+  email: '',
+  dir: 'San Martín 2418 — Vera, Santa Fe',
+  hor: 'Lunes a Viernes: 8:00–12:30 / 15:00–19:30 hs\nSábados: 8:00–12:30 hs\nDomingos: cerrado',
+  ig: '', yt: '', fb: '', tt: '',
+  pass: 'trusik2024'
+};
+
+function getCfg() { return Object.assign({}, DEFAULTS, S.obj('cfg')); }
+
+function wspLink(msg) {
+  const cfg = getCfg();
+  const num = (cfg.wsp || '').replace(/\D/g,'');
+  if (!num) return 'https://wa.me/?text=' + encodeURIComponent('Hola, quiero hacer una consulta');
+  const txt = encodeURIComponent(msg || cfg.wspmsg || DEFAULTS.wspmsg);
+  // Usar el formato universal wa.me que funciona en celular, tablet y PC
+  return `https://wa.me/${num}?text=${txt}`;
+}
+
+// ════════════════════════════════════════════════
+//  APPLY CONFIG TO PAGE
+// ════════════════════════════════════════════════
+function applyConfig() {
+  const cfg = getCfg();
+  const url = wspLink();
+
+  // All WhatsApp links
+  ['wfloat','nav-wsp','menu-wsp','nos-wsp','ubic-wsp','cta-wsp'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.href = url;
+  });
+
+  // Contact info
+  const telA = document.getElementById('pub-tel-a');
+  if (telA) {
+    telA.href = url;
+    telA.textContent = cfg.tel || (cfg.wsp ? 'WhatsApp disponible' : 'Sin número configurado');
+  }
+  const emailA = document.getElementById('pub-email-a');
+  if (emailA) {
+    emailA.href = cfg.email ? `mailto:${cfg.email}` : '#';
+    emailA.textContent = cfg.email || 'Sin email configurado';
+  }
+  const dir = document.getElementById('pub-dir');
+  if (dir) dir.textContent = cfg.dir || 'San Martín 2418 — Vera, Santa Fe';
+  const hor = document.getElementById('pub-hor');
+  if (hor) hor.innerHTML = (cfg.hor || DEFAULTS.hor).replace(/\n/g, '<br>');
+
+  // Social networks
+  renderSocials();
+
+  // Content (hero, etc.)
+  applyContent();
+}
+
+// ════════════════════════════════════════════════
+//  SOCIAL NETWORKS
+// ════════════════════════════════════════════════
+const SVG_IG = `<svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>`;
+const SVG_YT = `<svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`;
+const SVG_FB = `<svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>`;
+const SVG_TT = `<svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>`;
+
+function buildSocialLink(cfg, type) {
+  if (type === 'ig' && cfg.ig) return { url: 'https://instagram.com/' + cfg.ig, cls: 'red-ig', svg: SVG_IG };
+  if (type === 'yt' && cfg.yt) return { url: cfg.yt.startsWith('http') ? cfg.yt : 'https://youtube.com/' + cfg.yt, cls: 'red-yt', svg: SVG_YT };
+  if (type === 'fb' && cfg.fb) return { url: cfg.fb.startsWith('http') ? cfg.fb : 'https://facebook.com/' + cfg.fb, cls: 'red-fb', svg: SVG_FB };
+  if (type === 'tt' && cfg.tt) return { url: 'https://tiktok.com/@' + cfg.tt, cls: 'red-tt', svg: SVG_TT };
+  return null;
+}
+
+function renderSocials() {
+  const cfg = getCfg();
+  const types = ['ig', 'yt', 'fb', 'tt'];
+  const links = types.map(t => buildSocialLink(cfg, t)).filter(Boolean);
+
+  const bigHtml = links.map(l => `<a href="${l.url}" target="_blank" class="red-btn ${l.cls}" title="Seguinos">${l.svg}</a>`).join('');
+  const smHtml  = links.map(l => `<a href="${l.url}" target="_blank" class="${l.cls}" title="Seguinos">${l.svg}</a>`).join('');
+
+  const reUbic = document.getElementById('redes-ubic');
+  const reUbicSec = document.getElementById('redes-ubic-section');
+  const reCta = document.getElementById('redes-cta');
+  const reCtaSec = document.getElementById('redes-cta-section');
+  const reFoot = document.getElementById('redes-footer');
+
+  if (reUbic) reUbic.innerHTML = bigHtml;
+  if (reUbicSec) reUbicSec.style.display = links.length ? 'block' : 'none';
+  if (reCta) reCta.innerHTML = bigHtml;
+  if (reCtaSec) reCtaSec.style.display = links.length ? 'flex' : 'none';
+  if (reFoot) reFoot.innerHTML = smHtml;
+}
+
+// ════════════════════════════════════════════════
+//  MARCAS — editor visual con tags
+// ════════════════════════════════════════════════
+const DEF_MARCAS = 'STIHL, HUSQVARNA, HONDA, ECHO, BRIGGS, KAWASAKI, ZANETTI, LONCIN, GENERAC, KIPOR';
+const SUGERIDAS = ['STIHL','HUSQVARNA','HONDA','ECHO','KAWASAKI','BRIGGS','GENERAC','KIPOR','ZANETTI','LONCIN','MAKITA','DEWALT','STANLEY','BOSCH','HITACHI','EMAK','OLEOMAC','ZENOAH'];
+
+let _marcasArr = [];
+
+function renderMarcas() {
+  const belt = document.getElementById('mbelt');
+  if (!belt) return;
+  const c = S.obj('content');
+  const section = document.getElementById('marcas');
+  if (c.marcasOcultas) { if (section) section.style.display = 'none'; return; }
+  if (section) section.style.display = '';
+  const list = (c.marcas || DEF_MARCAS).split(',').map(m => m.trim()).filter(Boolean);
+  belt.innerHTML = list.map(m => `<span class="mtag">${m.toUpperCase()}</span>`).join('');
+}
+
+function loadMarcasEditor() {
+  const c = S.obj('content');
+  _marcasArr = (c.marcas || DEF_MARCAS).split(',').map(m => m.trim()).filter(Boolean);
+  renderMarcasTags();
+  renderSugeridas();
+  const chk = document.getElementById('marcas-ocultar');
+  if (chk) chk.checked = !!c.marcasOcultas;
+}
+
+function renderMarcasTags() {
+  const box = document.getElementById('marcas-tags');
+  if (!box) return;
+  if (_marcasArr.length === 0) {
+    box.innerHTML = '<span style="color:var(--gr);font-size:.82rem;font-style:italic">No hay marcas cargadas todavía.</span>';
+    return;
+  }
+  box.innerHTML = _marcasArr.map((m, i) => `
+    <span style="display:inline-flex;align-items:center;gap:.4rem;background:var(--oc);color:var(--ng);padding:.3rem .7rem;font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:1px;border-radius:3px">
+      ${m.toUpperCase()}
+      <button onclick="quitarMarca(${i})" style="background:rgba(0,0,0,.25);border:none;color:var(--ng);cursor:pointer;width:18px;height:18px;border-radius:50%;font-size:.75rem;display:inline-flex;align-items:center;justify-content:center;padding:0;font-weight:900;line-height:1">✕</button>
+    </span>`).join('');
+}
+
+function renderSugeridas() {
+  const box = document.getElementById('marcas-sugeridas');
+  if (!box) return;
+  const disponibles = SUGERIDAS.filter(m => !_marcasArr.map(x => x.toUpperCase()).includes(m));
+  box.innerHTML = disponibles.map(m => `
+    <button onclick="agregarMarcaDirecta('${m}')" style="background:#15120c;border:1px solid var(--bd);color:var(--gr);padding:.3rem .7rem;font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;border-radius:3px;-webkit-tap-highlight-color:transparent" onmouseover="this.style.borderColor='var(--oc)';this.style.color='var(--occ)'" onmouseout="this.style.borderColor='var(--bd)';this.style.color='var(--gr)'">
+      + ${m}
+    </button>`).join('');
+}
+
+function agregarMarca() {
+  const inp = document.getElementById('marca-nueva');
+  if (!inp) return;
+  const val = inp.value.trim();
+  if (!val) return;
+  // Permite ingresar varias separadas por coma
+  val.split(',').forEach(m => {
+    const limpio = m.trim().toUpperCase();
+    if (limpio && !_marcasArr.map(x => x.toUpperCase()).includes(limpio)) {
+      _marcasArr.push(limpio);
+    }
+  });
+  inp.value = '';
+  renderMarcasTags();
+  renderSugeridas();
+}
+
+function agregarMarcaDirecta(m) {
+  if (!_marcasArr.map(x => x.toUpperCase()).includes(m)) {
+    _marcasArr.push(m);
+    renderMarcasTags();
+    renderSugeridas();
+  }
+}
+
+function quitarMarca(i) {
+  _marcasArr.splice(i, 1);
+  renderMarcasTags();
+  renderSugeridas();
+}
+
+function toggleMarcas(ocultar) {
+  const c = S.obj('content');
+  c.marcasOcultas = ocultar;
+  S.setObj('content', c);
+  renderMarcas();
+}
+
+function saveMarcas() {
+  const c = S.obj('content');
+  c.marcas = _marcasArr.join(', ');
+  S.setObj('content', c);
+  applyContent();
+  toast('Marcas guardadas ✅');
+}
+
+function resetMarcas() {
+  if (!confirm('¿Volver a las marcas originales?')) return;
+  _marcasArr = DEF_MARCAS.split(',').map(m => m.trim());
+  renderMarcasTags();
+  renderSugeridas();
+  toast('Marcas restablecidas ↩️');
+}
+
+// ════════════════════════════════════════════════
+//  PRODUCTS — render helpers
+// ════════════════════════════════════════════════
+function wsp_svg() {
+  return `<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
+}
+
+function makeCard(p, badgeCls, badgeText) {
+  const imgHtml = p.img
+    ? `<img src="${p.img}" alt="${p.nom}" loading="lazy">`
+    : `<span style="font-size:3.5rem">${p.emoji || '🛠️'}</span>`;
+  const pa = p.ant ? `<span class="price-old">${p.ant}</span>` : '';
+  const pa2 = p.aho ? `<span class="price-new">${p.aho}</span>` : '';
+  const ppr = p.pre ? `<span class="price-new">${p.pre}</span>` : '';
+  const badge = `<div class="pbadge ${badgeCls}">${badgeText}</div>`;
+  const urlMsg = wspLink('Hola, quiero consultar por: ' + p.nom);
+  return `<div class="pcard fi">
+    <div class="pimg">${imgHtml}</div>
+    ${badge}
+    <div class="pbody">
+      <p class="pcat">${p.cat || ''}</p>
+      <h3>${p.nom}</h3>
+      <p class="pdesc">${p.desc || ''}</p>
+      <div class="pprice">${pa}${pa2}${ppr}</div>
+      <a href="${urlMsg}" target="_blank" class="btn-consultar">${wsp_svg()} Consultar por WhatsApp</a>
+    </div>
+  </div>`;
+}
+
+function renderPromos() {
+  const g = document.getElementById('grid-promos');
+  if (!g) return;
+  const items = S.get('promos');
+  if (!items.length) { g.innerHTML = `<p class="empty">No hay promociones cargadas todavía. Ingresá al panel (clic 5 veces en el logo) y cargá desde la pestaña Promociones.</p>`; return; }
+  g.innerHTML = items.map(p => {
+    const badge = p.badge ? `<div class="pbadge promo">${p.badge}</div>` : '';
+    const pa = p.ant ? `<span class="price-old">${p.ant}</span>` : '';
+    const pa2 = p.aho ? `<span class="price-new">${p.aho}</span>` : '';
+    const imgHtml = p.img ? `<img src="${p.img}" alt="${p.nom}" loading="lazy">` : `<span style="font-size:3.5rem">${p.emoji||'🛠️'}</span>`;
+    const urlMsg = wspLink('Hola, quiero consultar por la promoción: ' + p.nom);
+    return `<div class="pcard fi">
+      <div class="pimg">${imgHtml}</div>${badge}
+      <div class="pbody">
+        <p class="pcat">${p.cat||'Promoción'}</p><h3>${p.nom}</h3>
+        <p class="pdesc">${p.desc||''}</p>
+        <div class="pprice">${pa}${pa2}</div>
+        <a href="${urlMsg}" target="_blank" class="btn-consultar">${wsp_svg()} Consultar por WhatsApp</a>
+      </div></div>`;
+  }).join('');
+  activateFI();
+}
+
+function renderStock() {
+  const g = document.getElementById('grid-stock');
+  if (!g) return;
+  const items = S.get('stock');
+  if (!items.length) { g.innerHTML = `<p class="empty">No hay productos en stock cargados todavía.</p>`; return; }
+  g.innerHTML = items.map(p => {
+    const imgHtml = p.img ? `<img src="${p.img}" alt="${p.nom}" loading="lazy">` : `<span style="font-size:3.5rem">${p.emoji||'📦'}</span>`;
+    const precio = p.pre ? `<div class="pprice"><span class="price-new">${p.pre}</span></div>` : '';
+    const urlMsg = wspLink('Hola, quiero consultar por: ' + p.nom);
+    return `<div class="pcard fi">
+      <div class="pimg">${imgHtml}</div>
+      <div class="pbadge stk">EN STOCK</div>
+      <div class="pbody">
+        <p class="pcat">${p.cat||'Producto'}</p><h3>${p.nom}</h3>
+        <p class="pdesc">${p.desc||''}</p>${precio}
+        <a href="${urlMsg}" target="_blank" class="btn-consultar">${wsp_svg()} Consultar por WhatsApp</a>
+      </div></div>`;
+  }).join('');
+  activateFI();
+}
+
+function renderNovs() {
+  const g = document.getElementById('grid-nov');
+  if (!g) return;
+  const items = S.get('nov');
+  if (!items.length) { g.innerHTML = `<p class="empty">No hay novedades cargadas todavía.</p>`; return; }
+  g.innerHTML = items.map(p => {
+    const imgHtml = p.img ? `<img src="${p.img}" alt="${p.nom}" loading="lazy">` : `<span style="font-size:3.5rem">${p.emoji||'✨'}</span>`;
+    const precio = p.pre ? `<div class="pprice"><span class="price-new">${p.pre}</span></div>` : '';
+    const urlMsg = wspLink('Hola, me interesa la novedad: ' + p.nom);
+    return `<div class="pcard fi">
+      <div class="pimg">${imgHtml}</div>
+      <div class="pbadge nov">NUEVO</div>
+      <div class="pbody">
+        <p class="pcat">${p.cat||'Novedad'}</p><h3>${p.nom}</h3>
+        <p class="pdesc">${p.desc||''}</p>${precio}
+        <a href="${urlMsg}" target="_blank" class="btn-consultar">${wsp_svg()} Consultar por WhatsApp</a>
+      </div></div>`;
+  }).join('');
+  activateFI();
+}
+
+// ════════════════════════════════════════════════
+//  ADMIN LISTS
+// ════════════════════════════════════════════════
+function renderAList(key, lid, editFn) {
+  const el = document.getElementById(lid);
+  if (!el) return;
+  const items = S.get(key);
+  if (!items.length) { el.innerHTML = '<p style="color:var(--gr);font-size:.85rem;font-style:italic;padding:.5rem 0">Sin elementos. Usá el formulario de arriba para agregar.</p>'; return; }
+  el.innerHTML = items.map((p, i) => {
+    const imgHtml = p.img ? `<img src="${p.img}" alt="${p.nom}">` : `<span style="font-size:2.5rem">${p.emoji||'📦'}</span>`;
+    return `<div class="aitem">
+      <div class="aitem-img">${imgHtml}</div>
+      <div class="aitem-body">
+        <h4>${p.nom}</h4>
+        <p>${p.cat||''} ${p.aho||p.pre||''}</p>
+        <div class="aitem-acts">
+          <button class="btn-sm-edit" onclick="${editFn}(${i})">✏️ Editar</button>
+          <button class="btn-sm-del" onclick="delItem('${key}',${i})">🗑️ Borrar</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function refreshALists() {
+  renderAList('promos', 'alist-promos', 'editPromo');
+  renderAList('stock', 'alist-stock', 'editStock');
+  renderAList('nov', 'alist-nov', 'editNov');
+}
+
+function delItem(key, idx) {
+  if (!confirm('¿Eliminar este elemento?')) return;
+  const arr = S.get(key);
+  arr.splice(idx, 1);
+  S.set(key, arr);
+  refreshALists();
+  renderPromos(); renderStock(); renderNovs();
+  toast('Eliminado correctamente');
+}
+
+// ════════════════════════════════════════════════
+//  PROMO CRUD
+// ════════════════════════════════════════════════
+function savePromo() {
+  const nom = gv('p-nom').trim();
+  if (!nom) { alert('El nombre del producto es obligatorio'); return; }
+  const item = { id: Date.now(), nom, cat: gv('p-cat'), desc: gv('p-desc'), ant: gv('p-ant'), aho: gv('p-aho'), badge: gv('p-badge'), emoji: gv('p-emoji')||'🛠️', img: gv('pd') };
+  const arr = S.get('promos');
+  const eid = gv('p-eid');
+  if (eid) { const i = arr.findIndex(x => String(x.id) === eid); if (i > -1) arr[i] = item; else arr.push(item); }
+  else arr.push(item);
+  S.set('promos', arr);
+  clearPromo(); refreshALists(); renderPromos();
+  toast('Promoción guardada ✅');
+}
+function editPromo(idx) {
+  const p = S.get('promos')[idx];
+  sv('p-nom', p.nom||''); sv('p-cat', p.cat||''); sv('p-desc', p.desc||'');
+  sv('p-ant', p.ant||''); sv('p-aho', p.aho||''); sv('p-badge', p.badge||'');
+  sv('p-emoji', p.emoji||'🛠️'); sv('pd', p.img||''); sv('p-eid', p.id);
+  const pr = document.getElementById('pp');
+  if (p.img) { pr.src = p.img; pr.style.display = 'block'; document.getElementById('pp-del').style.display = 'inline-block'; }
+  else pr.style.display = 'none';
+  document.getElementById('ft-promo').firstChild.textContent = '✏️ Editar Promoción ';
+  document.getElementById('fc-promo').scrollIntoView({ behavior: 'smooth' });
+  showTab('t-promos', document.querySelectorAll('.atab')[0]);
+}
+function cancelPromo() { clearPromo(); }
+function clearPromo() {
+  ['p-nom','p-cat','p-desc','p-ant','p-aho','p-badge','p-eid','pd'].forEach(id => sv(id,''));
+  sv('p-emoji','🛠️'); clearImg('pp','pd','pp-del');
+  document.getElementById('ft-promo').firstChild.textContent = '➕ Nueva Promoción ';
+}
+
+// ════════════════════════════════════════════════
+//  STOCK CRUD
+// ════════════════════════════════════════════════
+function saveStock() {
+  const nom = gv('s-nom').trim();
+  if (!nom) { alert('El nombre del producto es obligatorio'); return; }
+  const item = { id: Date.now(), nom, cat: gv('s-cat'), desc: gv('s-desc'), pre: gv('s-pre'), emoji: gv('s-emoji')||'📦', img: gv('sd') };
+  const arr = S.get('stock');
+  const eid = gv('s-eid');
+  if (eid) { const i = arr.findIndex(x => String(x.id) === eid); if (i > -1) arr[i] = item; else arr.push(item); }
+  else arr.push(item);
+  S.set('stock', arr);
+  clearStock(); refreshALists(); renderStock();
+  toast('Producto en stock guardado ✅');
+}
+function editStock(idx) {
+  const p = S.get('stock')[idx];
+  sv('s-nom', p.nom||''); sv('s-cat', p.cat||''); sv('s-desc', p.desc||'');
+  sv('s-pre', p.pre||''); sv('s-emoji', p.emoji||'📦'); sv('sd', p.img||''); sv('s-eid', p.id);
+  const pr = document.getElementById('sp');
+  if (p.img) { pr.src = p.img; pr.style.display = 'block'; document.getElementById('sp-del').style.display = 'inline-block'; }
+  else pr.style.display = 'none';
+  document.getElementById('ft-stock').firstChild.textContent = '✏️ Editar Stock ';
+  showTab('t-stock', document.querySelectorAll('.atab')[1]);
+  document.getElementById('fc-stock').scrollIntoView({ behavior: 'smooth' });
+}
+function cancelStock() { clearStock(); }
+function clearStock() {
+  ['s-nom','s-cat','s-desc','s-pre','s-eid','sd'].forEach(id => sv(id,''));
+  sv('s-emoji','📦'); clearImg('sp','sd','sp-del');
+  document.getElementById('ft-stock').firstChild.textContent = '➕ Nuevo Producto en Stock ';
+}
+
+// ════════════════════════════════════════════════
+//  NOVEDAD CRUD
+// ════════════════════════════════════════════════
+function saveNov() {
+  const nom = gv('n-nom').trim();
+  if (!nom) { alert('El nombre de la novedad es obligatorio'); return; }
+  const item = { id: Date.now(), nom, cat: gv('n-cat'), desc: gv('n-desc'), pre: gv('n-pre'), emoji: gv('n-emoji')||'✨', img: gv('nd') };
+  const arr = S.get('nov');
+  const eid = gv('n-eid');
+  if (eid) { const i = arr.findIndex(x => String(x.id) === eid); if (i > -1) arr[i] = item; else arr.push(item); }
+  else arr.push(item);
+  S.set('nov', arr);
+  clearNov(); refreshALists(); renderNovs();
+  toast('Novedad guardada ✅');
+}
+function editNov(idx) {
+  const p = S.get('nov')[idx];
+  sv('n-nom', p.nom||''); sv('n-cat', p.cat||''); sv('n-desc', p.desc||'');
+  sv('n-pre', p.pre||''); sv('n-emoji', p.emoji||'✨'); sv('nd', p.img||''); sv('n-eid', p.id);
+  const pr = document.getElementById('np');
+  if (p.img) { pr.src = p.img; pr.style.display = 'block'; document.getElementById('np-del').style.display = 'inline-block'; }
+  else pr.style.display = 'none';
+  document.getElementById('ft-nov').firstChild.textContent = '✏️ Editar Novedad ';
+  showTab('t-nov', document.querySelectorAll('.atab')[2]);
+  document.getElementById('fc-nov').scrollIntoView({ behavior: 'smooth' });
+}
+function cancelNov() { clearNov(); }
+function clearNov() {
+  ['n-nom','n-cat','n-desc','n-pre','n-eid','nd'].forEach(id => sv(id,''));
+  sv('n-emoji','✨'); clearImg('np','nd','np-del');
+  document.getElementById('ft-nov').firstChild.textContent = '➕ Nueva Novedad ';
+}
+
+// ════════════════════════════════════════════════
+//  CONFIG SAVE
+// ════════════════════════════════════════════════
+function validarWsp(val) {
+  const box = document.getElementById('wsp-validator');
+  if (!box) return;
+  const num = val.replace(/\D/g,'');
+  if (!num) { box.style.display = 'none'; return; }
+  box.style.display = 'block';
+  // Validaciones
+  const errores = [];
+  if (!num.startsWith('54')) errores.push('❌ Debe empezar con <strong>54</strong> (código de Argentina)');
+  if (num.startsWith('54') && !num.startsWith('549')) errores.push('❌ Después del 54 va el <strong>9</strong>. Ej: 54<strong>9</strong>3495...');
+  if (num.length < 12) errores.push('❌ El número es muy corto. Debe tener entre 12 y 13 dígitos. Tiene: ' + num.length);
+  if (num.length > 13) errores.push('❌ El número es muy largo. Tiene: ' + num.length + ' dígitos');
+  const link = 'https://wa.me/' + num + '?text=Hola%2C+quiero+consultar';
+  if (errores.length === 0) {
+    box.style.background = 'rgba(37,211,102,.1)';
+    box.style.border = '1px solid rgba(37,211,102,.4)';
+    box.innerHTML = `✅ <strong style="color:#25D366">Número válido</strong> (${num.length} dígitos)<br>
+      🔗 Link generado: <a href="${link}" target="_blank" style="color:var(--occ);word-break:break-all">${link}</a><br>
+      👆 <strong>Hacé clic en el link de arriba para probar</strong> si abre el WhatsApp correcto.`;
+  } else {
+    box.style.background = 'rgba(230,57,70,.1)';
+    box.style.border = '1px solid rgba(230,57,70,.4)';
+    box.innerHTML = errores.join('<br>') + `<br><span style="color:var(--gr);font-size:.78rem">Número ingresado: ${num} (${num.length} dígitos)</span>`;
+  }
+}
+
+function saveCfg() {
+  const cfg = getCfg();
+  const fields = { wsp:'c-wsp', wspmsg:'c-wspmsg', tel:'c-tel', email:'c-email', dir:'c-dir', hor:'c-hor', ig:'c-ig', yt:'c-yt', fb:'c-fb', tt:'c-tt' };
+  Object.entries(fields).forEach(([k, id]) => { const v = gv(id); if (v !== '') cfg[k] = v; });
+  S.setObj('cfg', cfg);
+  applyConfig();
+  toast('Configuración guardada ✅');
+}
+
+function changePass() {
+  const p1 = gv('c-p1'), p2 = gv('c-p2');
+  if (!p1) { alert('Ingresá una contraseña nueva'); return; }
+  if (p1 !== p2) { alert('Las contraseñas no coinciden'); return; }
+  if (p1.length < 4) { alert('La contraseña debe tener al menos 4 caracteres'); return; }
+  const cfg = getCfg();
+  cfg.pass = p1;
+  S.setObj('cfg', cfg);
+  sv('c-p1',''); sv('c-p2','');
+  toast('Contraseña cambiada ✅ — nueva clave: ' + p1);
+}
+
+function doLogout() {
+  closeAdm();
+}
+
+function loadCfgForm() {
+  const cfg = getCfg();
+  sv('c-wsp', cfg.wsp||''); sv('c-wspmsg', cfg.wspmsg||DEFAULTS.wspmsg);
+  sv('c-tel', cfg.tel||''); sv('c-email', cfg.email||'');
+  sv('c-dir', cfg.dir||''); sv('c-hor', cfg.hor||DEFAULTS.hor);
+  sv('c-ig', cfg.ig||''); sv('c-yt', cfg.yt||''); sv('c-fb', cfg.fb||''); sv('c-tt', cfg.tt||'');
+  // Mostrar advertencia si no hay número
+  const warn = document.getElementById('wsp-warning');
+  if (warn) warn.style.display = cfg.wsp ? 'none' : 'block';
+  // Validar número actual
+  validarWsp(cfg.wsp||'');
+}
+
+// ════════════════════════════════════════════════
+//  CONTENT EDIT (Hero, Servicios, Nosotros, Marcas)
+// ════════════════════════════════════════════════
+const DEF_SRVS = [
+  { ico:'🪚', tit:'Motosierras', desc:'Venta y mantenimiento para uso doméstico, profesional y forestal. Cadenas, barras y repuestos originales.' },
+  { ico:'🌿', tit:'Motoguadañas', desc:'Línea completa de motoguadañas y bordeadoras para jardinería doméstica y profesional.' },
+  { ico:'⚡', tit:'Equipos Electrógenos', desc:'Grupos electrógenos para uso residencial, agropecuario e industrial.' },
+  { ico:'💧', tit:'Motobombas', desc:'Bombas para riego, trasvase y emergencias. Equipos a nafta, diésel y eléctricos.' },
+  { ico:'🔧', tit:'Servicio Técnico', desc:'Taller especializado. Diagnóstico, calibración, afilado de cadenas y puesta a punto.' },
+  { ico:'🌾', tit:'Implementos Rurales', desc:'Fumigadoras, rozadoras, aspersoras y todo lo necesario para el trabajo en el campo.' }
+];
+
+function applyContent() {
+  const c = S.obj('content');
+
+  // Hero
+  if (c.htag) { const e = document.getElementById('hero-tag'); if(e) e.textContent = c.htag; }
+  if (c.ht1)  { const e = document.getElementById('hero-t1'); if(e) e.textContent = c.ht1; }
+  if (c.ht2)  { const e = document.getElementById('hero-t2'); if(e) e.textContent = c.ht2 + ' '; }
+  if (c.ht3)  { const e = document.getElementById('hero-t3'); if(e) e.textContent = c.ht3; }
+  if (c.hsub) { const e = document.getElementById('hero-sub'); if(e) e.textContent = c.hsub; }
+  if (c.himg) { document.documentElement.style.setProperty('--hero-bg', 'url(' + c.himg + ')'); }
+
+  // Servicios
+  const srvs = c.srvs || DEF_SRVS;
+  const cards = document.querySelectorAll('.srv-card');
+  cards.forEach((card, i) => {
+    if (!srvs[i]) return;
+    const ico = card.querySelector('.sico'); if(ico) ico.textContent = srvs[i].ico;
+    const h3 = card.querySelector('h3'); if(h3) h3.textContent = srvs[i].tit;
+    const p = card.querySelector('p'); if(p) p.textContent = srvs[i].desc;
+  });
+
+  // Nosotros stats
+  ['1','2','3','4'].forEach(n => {
+    if (c['s'+n+'n']) { const e=document.getElementById('stat'+n+'n'); if(e) e.textContent=c['s'+n+'n']; }
+    if (c['s'+n+'l']) { const e=document.getElementById('stat'+n+'l'); if(e) e.textContent=c['s'+n+'l']; }
+  });
+  if (c.np1) { const e=document.getElementById('nos-p1'); if(e) e.textContent=c.np1; }
+  if (c.np2) { const e=document.getElementById('nos-p2'); if(e) e.textContent=c.np2; }
+  if (c.nlist) {
+    const ul=document.getElementById('nos-lista');
+    if (ul) ul.innerHTML = c.nlist.split('\n').filter(x=>x.trim()).map(x=>`<li>${x.trim()}</li>`).join('');
+  }
+  if (c.nosimg) {
+    const box=document.getElementById('nos-img-box');
+    if(box){ const existing=box.querySelector('img'); if(existing) existing.remove(); const img=document.createElement('img'); img.src=c.nosimg; img.alt='Trusik Reparaciones'; box.appendChild(img); }
+  }
+
+  // Marcas
+  renderMarcas();
+}
+
+function loadEditForms() {
+  const c = S.obj('content');
+  sv('e-htag', c.htag||''); sv('e-ht1', c.ht1||''); sv('e-ht2', c.ht2||''); sv('e-ht3', c.ht3||'');
+  sv('e-hsub', c.hsub||'');
+  if (c.himg) { const p=document.getElementById('e-hprev'); if(p){p.src=c.himg;p.style.display='block'; document.getElementById('e-hprev-del').style.display='inline-block';} sv('e-himg',c.himg); }
+  // Srvs
+  const srvs = c.srvs || DEF_SRVS;
+  const wrap = document.getElementById('srv-edit-wrap');
+  if (wrap) {
+    wrap.innerHTML = srvs.map((s,i) => `
+      <div style="background:#15120c;border:1px solid var(--bd);padding:1rem;margin-bottom:.8rem;border-radius:3px">
+        <p style="color:var(--oc);font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem">SERVICIO ${i+1}</p>
+        <div class="frow"><div class="fg"><label>Emoji / Ícono</label><input class="inp" id="srv-ico-${i}" value="${s.ico}" style="font-size:1.3rem;text-align:center"></div>
+        <div class="fg"><label>Título</label><input class="inp" id="srv-tit-${i}" value="${s.tit}"></div></div>
+        <div class="frow f1"><div class="fg"><label>Descripción</label><textarea class="inp" id="srv-desc-${i}">${s.desc}</textarea></div></div>
+      </div>`).join('');
+  }
+  // Nosotros
+  ['1','2','3','4'].forEach(n => { sv('e-s'+n+'n', c['s'+n+'n']||''); sv('e-s'+n+'l', c['s'+n+'l']||''); });
+  sv('e-np1', c.np1||''); sv('e-np2', c.np2||'');
+  sv('e-nlist', c.nlist||'');
+  if (c.nosimg) { const p=document.getElementById('e-nosprev'); if(p){p.src=c.nosimg;p.style.display='block'; document.getElementById('e-nosprev-del').style.display='inline-block';} sv('e-nosimg',c.nosimg); }
+  // Marcas — editor visual
+  loadMarcasEditor();
+}
+
+function saveHero() {
+  const c = S.obj('content');
+  c.htag = gv('e-htag'); c.ht1 = gv('e-ht1'); c.ht2 = gv('e-ht2'); c.ht3 = gv('e-ht3');
+  c.hsub = gv('e-hsub');
+  const img = gv('e-himg'); if(img) c.himg = img;
+  S.setObj('content', c); applyContent(); toast('Inicio guardado ✅');
+}
+function saveServicios() {
+  const c = S.obj('content');
+  c.srvs = DEF_SRVS.map((d,i) => ({
+    ico: gv('srv-ico-'+i) || d.ico,
+    tit: gv('srv-tit-'+i) || d.tit,
+    desc: document.getElementById('srv-desc-'+i)?.value || d.desc
+  }));
+  S.setObj('content', c); applyContent(); toast('Servicios guardados ✅');
+}
+function saveNosotros() {
+  const c = S.obj('content');
+  ['1','2','3','4'].forEach(n => { c['s'+n+'n']=gv('e-s'+n+'n'); c['s'+n+'l']=gv('e-s'+n+'l'); });
+  c.np1=gv('e-np1'); c.np2=gv('e-np2'); c.nlist=gv('e-nlist');
+  const img=gv('e-nosimg'); if(img) c.nosimg=img;
+  S.setObj('content', c); applyContent(); toast('Nosotros guardado ✅');
+}
+// saveMarcas defined above in MARCAS section
+
+// ════════════════════════════════════════════════
+//  IMAGE HANDLING
+// ════════════════════════════════════════════════
+function handleImg(input, prevId, dataId) {
+  const file = input.files[0];
+  if (!file) return;
+  if (file.size > 5 * 1024 * 1024) { alert('La imagen supera los 5 MB. Por favor usá una imagen más pequeña.'); input.value=''; return; }
+  const reader = new FileReader();
+  reader.onload = e => {
+    sv(dataId, e.target.result);
+    const prev = document.getElementById(prevId);
+    if (prev) { prev.src = e.target.result; prev.style.display = 'block'; }
+    const del = document.getElementById(prevId + '-del');
+    if (del) del.style.display = 'inline-block';
+  };
+  reader.readAsDataURL(file);
+}
+function clearImg(prevId, dataId, delId) {
+  sv(dataId, '');
+  const prev = document.getElementById(prevId);
+  if (prev) { prev.src = ''; prev.style.display = 'none'; }
+  const del = document.getElementById(delId);
+  if (del) del.style.display = 'none';
+}
+
+// ════════════════════════════════════════════════
+//  ACCESO AL PANEL — 5 clics en logo
+// ════════════════════════════════════════════════
+let _lc = 0, _lt = null;
+function _logoTap() {
+  _lc++;
+  clearTimeout(_lt);
+  _lt = setTimeout(() => { _lc = 0; }, 3000);
+  if (_lc >= 5) { _lc = 0; openAdm(); }
+}
+document.getElementById('logo5').addEventListener('click', _logoTap);
+// También funciona agregando #admin al final de la URL
+if (window.location.hash === '#admin') {
+  window.addEventListener('load', () => setTimeout(openAdm, 300));
+}
+
+function openAdm() {
+  const CLAVES = ['trusik2024', 'trusikadmin2025', 'admin', '1234'];
+  const cfg = S.obj('cfg');
+  const claveGuardada = cfg.pass || 'trusik2024';
+  const ingresada = window.prompt('🔐 PANEL TRUSIK REPARACIONES\n\nIngresá la contraseña:');
+  if (ingresada === null) return;
+  if (ingresada.trim() === claveGuardada || CLAVES.includes(ingresada.trim())) {
+    document.getElementById('adm-ov').classList.add('open');
+    document.getElementById('apanel').classList.add('open');
+    loadCfgForm();
+    loadEditForms();
+    loadColorForm();
+    refreshALists();
+  } else {
+    alert('❌ Contraseña incorrecta.\n\nProbá con: trusik2024');
+  }
+}
+
+function closeAdm() {
+  document.getElementById('adm-ov').classList.remove('open');
+  document.getElementById('apanel').classList.remove('open');
+}
+
+// ════════════════════════════════════════════════
+//  TABS
+// ════════════════════════════════════════════════
+function showTab(id, btn) {
+  document.querySelectorAll('.asec').forEach(s => s.classList.remove('on'));
+  document.querySelectorAll('.atab').forEach(t => t.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  if (btn) btn.classList.add('on');
+}
+
+// ════════════════════════════════════════════════
+//  PHONE PREVIEW
+// ════════════════════════════════════════════════
+function openPhonePreview() {
+  const modal = document.getElementById('prev-modal');
+  const scr = document.getElementById('phone-scr');
+  scr.innerHTML = '';
+  const clone = document.documentElement.cloneNode(true);
+  ['#adm-ov','#prev-modal','.wfloat'].forEach(sel => {
+    const el = clone.querySelector(sel); if (el) el.remove();
+  });
+  const blob = new Blob(['<!DOCTYPE html>' + clone.outerHTML], { type: 'text/html' });
+  const iframe = document.createElement('iframe');
+  iframe.src = URL.createObjectURL(blob);
+  iframe.style.cssText = 'width:375px;height:100%;border:none;';
+  scr.appendChild(iframe);
+  modal.classList.add('open');
+}
+function closePhonePreview() {
+  document.getElementById('prev-modal').classList.remove('open');
+  document.getElementById('phone-scr').innerHTML = '';
+}
+
+// ════════════════════════════════════════════════
+//  MOBILE MENU
+// ════════════════════════════════════════════════
+function toggleMenu() { document.getElementById('mmenu').classList.toggle('open'); }
+function closeMenu() { document.getElementById('mmenu').classList.remove('open'); }
+
+// ════════════════════════════════════════════════
+//  TOAST
+// ════════════════════════════════════════════════
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+// ════════════════════════════════════════════════
+//  UTILS
+// ════════════════════════════════════════════════
+function gv(id) { const e = document.getElementById(id); return e ? e.value : ''; }
+function sv(id, v) { const e = document.getElementById(id); if (e) e.value = v; }
+
+// ════════════════════════════════════════════════
+//  FADE IN SCROLL
+// ════════════════════════════════════════════════
+function activateFI() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.fi:not(.vis)').forEach(el => obs.observe(el));
+}
+
+// ════════════════════════════════════════════════
+//  NAVBAR SCROLL
+// ════════════════════════════════════════════════
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').style.height = window.scrollY > 60 ? '52px' : '60px';
+}, { passive: true });
+
+// ════════════════════════════════════════════════
+//  COLORS & FONTS
+// ════════════════════════════════════════════════
+const COLOR_DEFAULTS = {
+  '--bg': '#1a1610', '--ng': '#0f0e0b', '--oc': '#c4870a', '--occ': '#e9a520',
+  '--vdc': '#4a8c3f', '--bl': '#f5f0e8', '--gr': '#b8b0a0', '--bd': '#2a2518'
+};
+
+const PALETTES = {
+  industrial: { '--bg':'#1a1610','--ng':'#0f0e0b','--oc':'#c4870a','--occ':'#e9a520','--vdc':'#4a8c3f','--bl':'#f5f0e8','--gr':'#b8b0a0','--bd':'#2a2518' },
+  azul:       { '--bg':'#0d1520','--ng':'#080f1a','--oc':'#1e88e5','--occ':'#42a5f5','--vdc':'#00acc1','--bl':'#ecf4ff','--gr':'#90aac8','--bd':'#1a2d45' },
+  rojo:       { '--bg':'#1a1010','--ng':'#0f0808','--oc':'#e53935','--occ':'#ef5350','--vdc':'#c62828','--bl':'#fff0f0','--gr':'#c8a0a0','--bd':'#2d1515' },
+  verde:      { '--bg':'#0d180d','--ng':'#081008','--oc':'#2e7d32','--occ':'#43a047','--vdc':'#1b5e20','--bl':'#f0fff0','--gr':'#90c890','--bd':'#152015' },
+  naranja:    { '--bg':'#1a1108','--ng':'#0f0b04','--oc':'#f4511e','--occ':'#ff7043','--vdc':'#bf360c','--bl':'#fff8f0','--gr':'#c8b090','--bd':'#2d1e10' },
+  claro:      { '--bg':'#f5f5f0','--ng':'#ebebeb','--oc':'#78909c','--occ':'#546e7a','--vdc':'#4a8c3f','--bl':'#1a1a1a','--gr':'#555555','--bd':'#d0d0d0' }
+};
+
+const COL_MAP = {
+  'col-bg':'--bg','col-ng':'--ng','col-oc':'--oc','col-occ':'--occ',
+  'col-vdc':'--vdc','col-bl':'--bl','col-gr':'--gr','col-bd':'--bd'
+};
+
+function applyColorsToPage(colors) {
+  const root = document.documentElement;
+  Object.entries(colors).forEach(([v,c]) => root.style.setProperty(v, c));
+}
+
+function previewColor(cssVar, hex, prevId) {
+  document.documentElement.style.setProperty(cssVar, hex);
+  const prev = document.getElementById(prevId);
+  if (prev) prev.style.background = hex;
+  const hexEl = document.getElementById('hex-' + prevId.replace('prev-',''));
+  if (hexEl) hexEl.textContent = hex;
+}
+
+function previewFont(fontName) {
+  document.body.style.fontFamily = `'${fontName}', sans-serif`;
+  // Load font dynamically
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = `https://fonts.googleapis.com/css2?family=${fontName.replace(/ /g,'+')}:wght@400;500;600;700&display=swap`;
+  document.head.appendChild(link);
+}
+
+function previewFontSize(size) {
+  document.documentElement.style.fontSize = size;
+}
+
+function applyPalette(name) {
+  const p = PALETTES[name];
+  if (!p) return;
+  applyColorsToPage(p);
+  // Update color inputs
+  Object.entries(COL_MAP).forEach(([inputId, cssVar]) => {
+    const input = document.getElementById(inputId);
+    if (input && p[cssVar]) {
+      input.value = p[cssVar];
+      const prevId = 'prev-' + cssVar.replace('--','');
+      const prev = document.getElementById(prevId);
+      if (prev) prev.style.background = p[cssVar];
+      const hexEl = document.getElementById('hex-' + cssVar.replace('--',''));
+      if (hexEl) hexEl.textContent = p[cssVar];
+    }
+  });
+  toast('Paleta aplicada — usá "Guardar" para mantenerla ✅');
+}
+
+function saveColors() {
+  const colors = {};
+  Object.entries(COL_MAP).forEach(([inputId, cssVar]) => {
+    const input = document.getElementById(inputId);
+    if (input) colors[cssVar] = input.value;
+  });
+  const font = gv('col-font');
+  const size = gv('col-size');
+  S.setObj('colors', { colors, font, size });
+  applyColorsToPage(colors);
+  if (font) previewFont(font);
+  if (size) previewFontSize(size);
+  toast('Colores y fuentes guardados ✅');
+}
+
+function resetColors() {
+  if (!confirm('¿Volver a los colores originales de la página?')) return;
+  localStorage.removeItem('colors');
+  applyColorsToPage(COLOR_DEFAULTS);
+  document.body.style.fontFamily = "'Barlow', sans-serif";
+  document.documentElement.style.fontSize = '';
+  loadColorForm();
+  toast('Colores restablecidos ↩️');
+}
+
+function loadColorForm() {
+  const saved = S.obj('colors');
+  const colors = saved.colors || COLOR_DEFAULTS;
+  Object.entries(COL_MAP).forEach(([inputId, cssVar]) => {
+    const input = document.getElementById(inputId);
+    const hex = colors[cssVar] || COLOR_DEFAULTS[cssVar] || '#000000';
+    if (input) input.value = hex;
+    const cssVarShort = cssVar.replace('--','');
+    const prev = document.getElementById('prev-' + cssVarShort);
+    if (prev) prev.style.background = hex;
+    const hexEl = document.getElementById('hex-' + cssVarShort);
+    if (hexEl) hexEl.textContent = hex;
+  });
+  if (saved.font) { const s = document.getElementById('col-font'); if(s) s.value = saved.font; }
+  if (saved.size) { const s = document.getElementById('col-size'); if(s) s.value = saved.size; }
+}
+
+function loadSavedColors() {
+  const saved = S.obj('colors');
+  if (saved.colors && Object.keys(saved.colors).length) applyColorsToPage(saved.colors);
+  if (saved.font) previewFont(saved.font);
+  if (saved.size) previewFontSize(saved.size);
+}
+
+// loadColorForm se llama desde openAdm directamente
+
+// ════════════════════════════════════════════════
+//  INIT
+// ════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  loadSavedColors();
+  applyConfig();
+  renderPromos();
+  renderStock();
+  renderNovs();
+  renderMarcas();
+  activateFI();
+});
+</script>
+
+
+<script src="chrome-extension://lhannfkhjdhmibllojbbdjdbpegidojj/js/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://lhannfkhjdhmibllojbbdjdbpegidojj/"></script><deepl-input-controller translate="no"><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://cofdbpoegempjloogbagkncekinflcnj/build/content.css"><div dir="ltr" style="visibility: initial !important;"><div class="dl-input-translation-container svelte-95aucy"><div></div></div></div></template></deepl-input-controller><div style="display: none" class="ubey-RecordingScreen-count-down ubey-RecordingScreen-count-down-container">
+          <style>
+              .ubey-RecordingScreen-count-down-container {
+                  position: fixed;
+                  height: 100vh;
+                  width: 100vw;
+                  top: 0;
+                  left: 0;
+                  z-index: 9999999999999;
+                  background-color: rgba(0, 0, 0, 0.2);
+              }
+      
+              .ubey-RecordingScreen-count-down-content {
+                  position: absolute;
+                  display: flex;
+                  top: 50%;
+                  left: 50%;
+                  justify-content: center;
+                  align-items: center;
+                  color: white;
+                  height: 15em;
+                  width: 15em;
+                  transform: translate(-50%, -100%);
+                  background-color: rgba(0, 0, 0, 0.6);
+                  border-radius: 50%;
+              }
+      
+              #ubey-RecordingScreen-count-count {
+                  font-size: 14em;
+                  transform: translateY(-2%);
+              }
+          </style>
+          <div class="ubey-RecordingScreen-count-down-content">
+              <span id="ubey-RecordingScreen-count-count"></span>
+          </div>
+      </div><a id="bottomBar" style="position: fixed; bottom: -40px; left: 0px; z-index: 9999; transform: translateX(-50%); background-color: transparent; border-radius: 5px 5px 0px 0px; opacity: 0.3; padding: 5px; transition: 0.3s; cursor: pointer; max-height: 100px; max-width: 45px;"><img src="chrome-extension://kobncfkmjelbefaoohoblamnbackjggk/icon/icon_32.png" style="width: 32px; height: 32px;"></a><div class="glasp-extension-toaster" style="display: block; width: 320px; margin: unset; padding: unset; border: unset; border-radius: unset; outline: unset; background-color: unset; box-shadow: unset; position: fixed; top: 40px; right: 24px; z-index: 9999;"><template shadowrootmode="open"><div class="glasp-extension" style="font-family: inherit;"></div></template></div></body><div class="glasp-extension" style="display: block; width: unset; margin: unset; padding: unset; border: unset; border-radius: unset; outline: unset; background-color: unset; box-shadow: unset; position: fixed; bottom: 16px; right: 16px; z-index: 9999;"><div class="glasp-extension" style="font-family: inherit;"></div></div><scispace-div id="scispace-extension-root"><template shadowrootmode="open"><style>
+    :host {
+      all: initial;
+      font-size: initial ;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="chrome-extension://cipccbpjpemcnijhjcdjmkjhmhniiick/static/styles/styles-a715a14bc093c98f0230.css"><div class="container"><div id="scispace-extension-app-root"><div class="box-border h-full w-full"><div class="Toastify"></div><div data-plugin-state="COLLAPSED" data-plugin-context-id="6936c1ce-c666-4896-9c4a-523fee9c7a81"></div><div class="relative"><div id="draggableOverlay" class="pointer-events-none fixed inset-0 z-extension box-border h-full w-full bg-transparent p-3"><div class="pointer-events-auto fixed right-0 top-0 z-extension mt-14 h-7 w-max rounded-l-full p-0.5 scispace-extension-draggable" style="transform: translate(0px, 0px);"><div class="group/copilot-pill relative flex w-7 items-center rounded-l-full border border-r-0 border-solid border-neutral-100/60 bg-white/60 pr-1.5 shadow-pill transition-all hover:w-11 hover:border-neutral-100 hover:bg-white aria-pressed:w-11 aria-pressed:border-neutral-100 aria-pressed:bg-white/60" aria-pressed="false"><button class="flex cursor-pointer items-center justify-center gap-2 font-sans text-sm font-semibold
+  focus-visible:outline-none disabled:pointer-events-none disabled:opacity-40 disabled:hover:pointer-events-auto border-0 bg-transparent !p-0 bg-primary-500 px-2 py-1 rounded-full peer/disable-quick-access absolute -left-2 -top-2 hidden h-4 w-4 items-center justify-center !bg-neutral-800/60 hover:!bg-neutral-800 group-hover/copilot-pill:flex peer-hover:!bg-neutral-800/60 aria-pressed:!hidden" aria-pressed="false"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path></svg></button><span data-state="closed"><span><button class="flex cursor-pointer items-center justify-center gap-2 font-sans text-sm font-semibold
+  focus-visible:outline-none disabled:pointer-events-none disabled:opacity-40 disabled:hover:pointer-events-auto border-0 bg-transparent !p-0 bg-primary-500 px-2 py-1 !p-0 rounded-md !cursor-pointer !p-1.5 !pl-3 opacity-60 group-hover/copilot-pill:opacity-100 aria-pressed:opacity-60" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" fill="none" viewBox="0 0 17 18"><path fill="url(#paint0_linear_8778_17378)" fill-rule="evenodd" d="M7.361.43C5.4 1.558 3.831 2.324 1.396 3.797.835 4.136.532 4.7.875 5.322c.77 1.393 1.846 3.433 2.815 5.183a.09.09 0 01-.037.123c-.405.219-1.669.907-2.585 1.446-.99.582-.53 1.59.2 1.974.73.383 1.116.645 1.836 1.052 1.907 1.08 3.257 1.683 4.795 2.509 1.533.687 2.132.398 3.276-.32 2.65-1.666 4.289-2.823 5.02-3.321.688-.469 1.07-1.277.593-2.056-.046-.09-.355-.609-1.24-2.046l-1.663-2.698a.089.089 0 01.03-.122c.757-.485 1.776-1.164 2.28-1.493.522-.34.545-1.329-.112-1.756-1.535-1-3.702-2.154-6.376-3.575-.704-.375-1.54-.255-2.346.208zm4.882 2.272c1.584.936 1.931 1.155 2.425 1.416.639.339.734.654.14 1L9.598 8.2c-.464.275-.884.273-1.349 0l-5.27-2.879c-.543-.303-.921-.848 0-1.319l4.845-2.61c.541-.342 1.202-.462 1.951-.022.625.366 1.257.614 2.47 1.331zM4.28 7.67c1.405.8 1.97 1.168 3.62 2.031 1.088.569 1.636 1.013 2.76.276.542-.356 1.22-.779 2.328-1.383a.099.099 0 01.13.031c.242.375 1.824 2.522 2.347 3.4.325.544.136.82-.263 1.06-.544.327-1.573.998-2.567 1.627-.892.565-1.135.76-2.247 1.443-.7.43-1.486.15-1.947-.575a268.435 268.435 0 01-4.706-7.672c-.798-1.353.01-.543.545-.238zm1.411 6.107c1.964 3.137-2.05.359-3.259-.394-.489-.304-.827-.45-.217-.793.391-.22 1.59-.9 1.912-1.083a.098.098 0 01.13.03c.149.223.626.95 1.434 2.24z" clip-rule="evenodd"></path><defs><lineargradient id="paint0_linear_8778_17378" x1="0.5" x2="17" y1="9" y2="9" gradientUnits="userSpaceOnUse"><stop stop-color="#FA6400"></stop><stop offset="0.536" stop-color="#28AD9D"></stop><stop offset="1" stop-color="#047BB2"></stop></lineargradient></defs></svg></button></span></span><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="grip-vertical" class="svg-inline--fa fa-grip-vertical ml-0.5 hidden cursor-move text-neutral-800 group-hover/copilot-pill:block peer-hover/disable-quick-access:text-neutral-800/60 aria-pressed:block aria-pressed:text-neutral-800/60" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="drag-handler" aria-pressed="false"><path fill="currentColor" d="M40 352l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40zm192 0l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40zM40 320c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0zM232 192l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40zM40 160c-22.1 0-40-17.9-40-40L0 72C0 49.9 17.9 32 40 32l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0zM232 32l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40z"></path></svg></div></div></div></div></div></div></div></template></scispace-div></html>
