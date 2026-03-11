@@ -567,10 +567,9 @@ textarea.inp{resize:vertical;min-height:80px}
 <!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="nlogo" id="logo5" style="cursor:default;font-size:1.2rem">TRUSIK<em> REPARACIONES</em></div>
-  <p>© 2025 Trusik Reparaciones — San Martín 2418, Vera, Santa Fe</p>
+  <p>© 2025 Trusik Reparaciones — San Martín 2418, Vera, Santa Fe <span id="admin-dot" onclick="openAdm()" title="" style="cursor:default;color:transparent;user-select:none;font-size:.5rem">●</span></p>
   <div style="display:flex;align-items:center;gap:1rem">
     <div class="redes-footer" id="redes-footer"></div>
-    <!-- acceso admin oculto: 5 clics en el logo -->
   </div>
 </footer>
 
@@ -931,78 +930,61 @@ textarea.inp{resize:vertical;min-height:80px}
 
     <!-- ══ TAB: PUBLICAR WEB ══ -->
     <div class="asec" id="t-publicar">
-      <div class="fc">
-        <h3>🚀 Cómo Publicar tu Sitio Web
-          <small>Guía completa paso a paso para que tu web esté online y accesible desde cualquier celular del mundo.</small>
+      <div class="fc" style="border-color:var(--vdc)">
+        <h3 style="color:var(--vdc)">📥 Descargar sitio con todos los cambios
+          <small>Este botón genera un archivo con TODO incluido — productos, precios, configuración. Subilo a GitHub y todos lo ven.</small>
         </h3>
 
-        <div class="note green" style="margin-bottom:1.5rem"><strong>✅ Tu sitio ya está listo.</strong> Solo necesitás subirlo a internet. Te recomendamos Netlify — es gratis, no necesita tarjeta de crédito y queda online en menos de 5 minutos.</div>
-
-        <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;letter-spacing:1px;text-transform:uppercase;color:var(--occ);margin-bottom:1.3rem">OPCIÓN 1 — Netlify (Recomendada · Gratis · 5 minutos)</h4>
-
-        <div class="pub-step">
-          <div class="pub-num">1</div>
-          <div class="pub-txt">
-            <strong>Descargá el archivo del sitio</strong>
-            <p>El sitio es el archivo <code>trusik_reparaciones.html</code> que te entregamos. Guardalo en tu computadora (escritorio o Documentos).</p>
-          </div>
-        </div>
-        <div class="pub-step">
-          <div class="pub-num">2</div>
-          <div class="pub-txt">
-            <strong>Creá una cuenta gratis en Netlify</strong>
-            <p>Entrá a <a href="https://netlify.com" target="_blank">netlify.com</a> → hacé clic en <em>"Sign up"</em> → elegí <em>"Continue with Google"</em> → usá tu cuenta de Gmail. Es gratis, no pide tarjeta.</p>
-          </div>
-        </div>
-        <div class="pub-step">
-          <div class="pub-num">3</div>
-          <div class="pub-txt">
-            <strong>Subí el archivo a Netlify</strong>
-            <p>Una vez adentro del panel de Netlify, buscá el botón <em>"Add new site"</em> → <em>"Deploy manually"</em>. Vas a ver una pantalla donde podés <strong>arrastrar y soltar</strong> tu archivo HTML. Arrastrá el archivo ahí y esperá unos segundos.</p>
-          </div>
-        </div>
-        <div class="pub-step">
-          <div class="pub-num">4</div>
-          <div class="pub-txt">
-            <strong>¡Tu sitio ya está online!</strong>
-            <p>Netlify te va a dar una dirección como <code>trusik-abc123.netlify.app</code>. Podés compartir ese link ya mismo. Para cambiarla a algo más fácil: <em>Site configuration → Change site name</em> → poné algo como <code>trusik-reparaciones</code> → quedará <code>trusik-reparaciones.netlify.app</code></p>
-          </div>
-        </div>
-        <div class="pub-step">
-          <div class="pub-num">5</div>
-          <div class="pub-txt">
-            <strong>Cómo actualizar el sitio (promos, stock, etc.)</strong>
-            <p>Cuando cargues productos desde el panel de administración, los cambios quedan guardados en ese archivo HTML descargado. Para que los clientes vean los cambios, necesitás <strong>volver a subir el archivo</strong> a Netlify: <em>Site → Deploys → Drag and drop</em> nuevamente con el archivo actualizado.</p>
-          </div>
+        <div class="note green">
+          <strong>⭐ Esta es la forma correcta de actualizar el sitio.</strong><br>
+          Hacé todos tus cambios en el panel → tocá este botón → subí el archivo a GitHub. Listo.
         </div>
 
-        <div style="height:1.5px;background:var(--bd);margin:1.8rem 0"></div>
-
-        <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;letter-spacing:1px;text-transform:uppercase;color:var(--occ);margin-bottom:1.3rem">OPCIÓN 2 — Con dominio propio (Ej: trusik.com.ar)</h4>
-
-        <div class="pub-step">
-          <div class="pub-num">A</div>
-          <div class="pub-txt">
-            <strong>Comprá el dominio .com.ar</strong>
-            <p>Entrá a <a href="https://nic.ar" target="_blank">nic.ar</a> (sitio oficial del gobierno argentino) → buscá <code>trusik.com.ar</code> → si está disponible, registralo. Cuesta aproximadamente $3.500 ARS por año (2025).</p>
-          </div>
-        </div>
-        <div class="pub-step">
-          <div class="pub-num">B</div>
-          <div class="pub-txt">
-            <strong>Conectá el dominio con Netlify</strong>
-            <p>En Netlify → tu sitio → <em>Domain management → Add custom domain</em> → escribí <code>trusik.com.ar</code> → Netlify te va a dar unos registros DNS. Entrá a NIC Argentina → tu dominio → <em>Gestionar DNS</em> → cargá los registros que Netlify te indica. Los cambios demoran entre 1 y 48 horas en propagarse.</p>
-          </div>
+        <div style="text-align:center;padding:1.5rem 0">
+          <button onclick="descargarSitio()" style="background:var(--vdc);color:#fff;border:none;padding:1.2rem 2.5rem;font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:3px;cursor:pointer;border-radius:6px;display:inline-flex;align-items:center;gap:.8rem;transition:background .2s;width:100%;justify-content:center;max-width:500px" onmouseover="this.style.background='var(--vdc)'" >
+            📥 DESCARGAR SITIO ACTUALIZADO
+          </button>
+          <p style="color:var(--gr);font-size:.8rem;margin-top:.8rem">Se descarga el archivo <strong>index.html</strong> con todos tus datos adentro</p>
         </div>
 
-        <div style="height:1.5px;background:var(--bd);margin:1.8rem 0"></div>
+        <div style="background:#15120c;border:1px solid var(--bd);border-radius:6px;padding:1.2rem;margin-top:.5rem">
+          <p style="font-family:'Barlow Condensed',sans-serif;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--oc);margin-bottom:1rem">PASOS PARA ACTUALIZAR EL SITIO</p>
 
-        <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;letter-spacing:1px;text-transform:uppercase;color:var(--occ);margin-bottom:1.3rem">PREGUNTAS FRECUENTES</h4>
-        <div class="note" style="margin-bottom:.8rem"><strong>¿Cuánto cuesta?</strong> Con Netlify, publicar es completamente gratis. Solo pagás el dominio .com.ar (opcional) en NIC Argentina.</div>
-        <div class="note" style="margin-bottom:.8rem"><strong>¿Necesito conocimientos técnicos?</strong> No. Arrastrar y soltar un archivo es todo lo que necesitás para Netlify.</div>
-        <div class="note" style="margin-bottom:.8rem"><strong>¿Los datos (productos, precios) se guardan en la web?</strong> Sí — cuando actualizás desde el panel y descargás el archivo, los cambios quedan incorporados en el HTML. Subiendo ese archivo actualizado a Netlify, los clientes ven los cambios.</div>
-        <div class="note" style="margin-bottom:.8rem"><strong>¿Puedo administrar desde el celular?</strong> Sí — accedés a tu sitio desde cualquier navegador, hacés clic 5 veces en el logo, y podés cargar datos desde el celular también.</div>
-        <div class="note"><strong>¿Necesito saber programar?</strong> No. Todo se maneja desde este mismo panel de administración que estás usando.</div>
+          <div class="pub-step">
+            <div class="pub-num">1</div>
+            <div class="pub-txt">
+              <strong>Hacé todos los cambios en el panel</strong>
+              <p>Cargá productos, precios, marcas, configuración. Tocá "Guardar" en cada sección.</p>
+            </div>
+          </div>
+          <div class="pub-step">
+            <div class="pub-num">2</div>
+            <div class="pub-txt">
+              <strong>Tocá el botón verde "Descargar sitio"</strong>
+              <p>Se descarga automáticamente el archivo <code>index.html</code> con todos los datos incluidos.</p>
+            </div>
+          </div>
+          <div class="pub-step">
+            <div class="pub-num">3</div>
+            <div class="pub-txt">
+              <strong>Subí el archivo a GitHub</strong>
+              <p>Entrá a <strong>github.com</strong> → tu repositorio → <strong>Add file → Upload files</strong> → arrastrá el index.html → <strong>Commit changes</strong>.</p>
+            </div>
+          </div>
+          <div class="pub-step">
+            <div class="pub-num">4</div>
+            <div class="pub-txt">
+              <strong>¡Todos ven los cambios en 2 minutos!</strong>
+              <p>Cualquier persona que entre a tu sitio desde cualquier dispositivo ve los cambios actualizados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fc" style="margin-top:1.5rem">
+        <h3>⚙️ Tu sitio en GitHub</h3>
+        <div class="note">Tu sitio está en: <strong style="color:var(--occ)">https://trusikrp.github.io</strong> — reemplazá <em>trusikrp</em> por tu username de GitHub.</div>
+        <p style="color:var(--gr);font-size:.85rem;margin-top:.5rem">Para subir actualizaciones: <strong>github.com → tu repositorio → Add file → Upload files → Commit changes</strong></p>
       </div>
     </div><!-- /t-publicar -->
 
@@ -1122,10 +1104,24 @@ function getCfg() { return Object.assign({}, DEFAULTS, S.obj('cfg')); }
 
 function wspLink(msg) {
   const cfg = getCfg();
-  const num = (cfg.wsp || '').replace(/\D/g,'');
-  if (!num) return 'https://wa.me/?text=' + encodeURIComponent('Hola, quiero hacer una consulta');
+  let num = (cfg.wsp || '').replace(/\D/g, '');
+  
+  // Auto-corregir errores comunes de formato argentino
+  if (num.length > 0) {
+    // Si empieza con 0 (ej: 03495...) → quitar el 0 y agregar 549
+    if (num.startsWith('0')) num = '54' + num.substring(1);
+    // Si empieza con 54 pero no tiene el 9 (ej: 543495...) → insertar el 9
+    if (num.startsWith('54') && !num.startsWith('549') && num.length >= 12) {
+      num = '549' + num.substring(2);
+    }
+    // Si empieza directo con código de área (ej: 3495...) → agregar 549
+    if (!num.startsWith('54') && num.length <= 10) {
+      num = '549' + num;
+    }
+  }
+
+  if (!num) return '#';
   const txt = encodeURIComponent(msg || cfg.wspmsg || DEFAULTS.wspmsg);
-  // Usar el formato universal wa.me que funciona en celular, tablet y PC
   return `https://wa.me/${num}?text=${txt}`;
 }
 
@@ -1964,7 +1960,57 @@ function loadSavedColors() {
   if (saved.size) previewFontSize(saved.size);
 }
 
-// loadColorForm se llama desde openAdm directamente
+// ════════════════════════════════════════════════
+//  DESCARGAR SITIO CON DATOS INCRUSTADOS
+// ════════════════════════════════════════════════
+function descargarSitio() {
+  // Recolectar todos los datos del localStorage
+  const datos = {
+    cfg:     localStorage.getItem('cfg')     || '{}',
+    content: localStorage.getItem('content') || '{}',
+    promos:  localStorage.getItem('promos')  || '[]',
+    stock:   localStorage.getItem('stock')   || '[]',
+    nov:     localStorage.getItem('nov')     || '[]',
+    colors:  localStorage.getItem('colors')  || '{}'
+  };
+
+  // Script que inyecta los datos al cargar la página
+  const scriptDatos = `
+<script id="datos-incrustados">
+(function(){
+  var d=${JSON.stringify(datos)};
+  if(d.cfg     && d.cfg     !== '{}') localStorage.setItem('cfg',d.cfg);
+  if(d.content && d.content !== '{}') localStorage.setItem('content',d.content);
+  if(d.promos  && d.promos  !== '[]') localStorage.setItem('promos',d.promos);
+  if(d.stock   && d.stock   !== '[]') localStorage.setItem('stock',d.stock);
+  if(d.nov     && d.nov     !== '[]') localStorage.setItem('nov',d.nov);
+  if(d.colors  && d.colors  !== '{}') localStorage.setItem('colors',d.colors);
+})();
+<\/script>`;
+
+  // Obtener el HTML actual y remover datos anteriores si existen
+  let html = document.documentElement.outerHTML;
+  html = '<!DOCTYPE html>\n' + html;
+
+  // Eliminar script de datos anteriores si ya existe
+  html = html.replace(/<script id="datos-incrustados">[\s\S]*?<\/script>/g, '');
+
+  // Insertar justo antes del cierre de </head>
+  html = html.replace('</head>', scriptDatos + '\n</head>');
+
+  // Crear y descargar el archivo
+  const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'index.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  toast('✅ Sitio descargado con todos los datos. Ahora subilo a GitHub.');
+}
 
 // ════════════════════════════════════════════════
 //  INIT
