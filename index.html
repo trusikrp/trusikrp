@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trusik Reparaciones — Vera, Santa Fe</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== VARIABLES ===== */
+:root {
+  --ng: #0f0e0b; --ti: #3a2e1e; --oc: #c4870a; --occ: #e9a520;
+  --vd: #2d5a27; --vdc: #4a8c3f; --bl: #f5f0e8; --gr: #b8b0a0;
+  --bg: #1a1610; --cb: #141210; --bd: #2a2518;
+  --wsp: #25D366; --wsph: #1ebe5a;
+  --hero-bg: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80');
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--bl);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* ===== NAV ===== */
+#nav{position:fixed;top:0;width:100%;z-index:900;background:rgba(15,14,11,.96);backdrop-filter:blur(10px);border-bottom:2px solid var(--oc);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;height:60px;transition:height .3s}
+.nlogo{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:2px;color:var(--occ);cursor:pointer;user-select:none;line-height:1}
+.nlogo em{color:var(--vdc);font-style:normal}
+.nlinks{display:flex;gap:1.4rem;align-items:center;list-style:none}
+.nlinks a{font-weight:600;font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--bl);transition:color .2s}
+.nlinks a:hover{color:var(--occ)}
+.nwsp{background:var(--wsp);color:#fff!important;padding:.35rem .85rem;border-radius:4px;display:flex;align-items:center;gap:.35rem;font-weight:700!important}
+.nwsp:hover{background:var(--wsph)!important}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;-webkit-tap-highlight-color:transparent}
+.hbg span{width:26px;height:3px;background:var(--occ);display:block;transition:.3s;border-radius:2px}
+.hbg:hover span{background:var(--oc)}
+#mmenu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--ng);border-bottom:2px solid var(--oc);z-index:899;padding:1.5rem;flex-direction:column;gap:1rem}
+#mmenu.open{display:flex}
+#mmenu a{font-weight:600;font-size:.95rem;letter-spacing:1px;text-transform:uppercase;padding:.5rem 0;border-bottom:1px solid var(--bd);color:var(--bl)}
+#mmenu .mwsp{color:var(--wsp);font-weight:700;border-bottom:none}
+
+/* ===== HERO ===== */
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:60px}
+.hbg-img{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,14,11,.93) 0%,rgba(26,22,16,.78) 55%,rgba(44,90,40,.42) 100%),var(--hero-bg) center/cover no-repeat}
+.hbg-img::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(196,135,10,.022) 2px,rgba(196,135,10,.022) 4px)}
+.hbox{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:3rem 1.5rem}
+.htag{display:inline-block;background:var(--oc);color:var(--ng);font-size:.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:.25rem .85rem;margin-bottom:1.3rem}
+.htitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,9vw,8rem);line-height:.95;letter-spacing:2px;margin-bottom:1.4rem;word-break:keep-all;overflow-wrap:normal}
+.htitle .gold{color:var(--occ);display:block}
+.htitle .green{color:var(--vdc)}
+.hsub{font-size:.98rem;color:var(--gr);max-width:520px;line-height:1.78;margin-bottom:2.3rem}
+.hbtns{display:flex;gap:1rem;flex-wrap:wrap}
+
+/* ===== BUTTONS ===== */
+.btn-gold{background:var(--oc);color:var(--ng);padding:.82rem 1.9rem;font-family:'Barlow Condensed',sans-serif;font-size:.93rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s,transform .15s;display:inline-flex;align-items:center;gap:.5rem;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px))}
+.btn-gold:hover{background:var(--occ);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--bl);padding:.82rem 1.9rem;font-family:'Barlow Condensed',sans-serif;font-size:.93rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:2px solid var(--vdc);cursor:pointer;transition:background .2s,color .2s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-outline:hover{background:var(--vdc);color:#fff}
+.btn-wsp-big{display:inline-flex;align-items:center;gap:.8rem;background:var(--wsp);color:#fff;padding:1rem 2.6rem;font-family:'Bebas Neue',sans-serif;font-size:1.55rem;letter-spacing:3px;transition:background .2s,transform .15s;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px))}
+.btn-wsp-big:hover{background:#1aad56;transform:scale(1.03)}
+.btn-wsp-big svg{width:28px;height:28px;fill:#fff}
+
+/* ===== SECTIONS ===== */
+section{padding:4.5rem 1.5rem}
+.wrap{max-width:1200px;margin:0 auto}
+.slabel{font-size:.68rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--oc);margin-bottom:.4rem}
+.stitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,5vw,3.8rem);letter-spacing:2px;line-height:1;margin-bottom:.8rem}
+.stitle em{color:var(--occ);font-style:normal}
+.sdiv{width:54px;height:3px;background:linear-gradient(90deg,var(--oc),var(--vdc));margin-bottom:2.3rem}
+.fi{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.fi.vis{opacity:1;transform:none}
+
+/* ===== SERVICIOS ===== */
+#servicios{background:var(--ng)}
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5px;background:var(--ti);border:1.5px solid var(--ti);margin-top:2.5rem}
+.srv-card{background:var(--bg);padding:2.2rem 1.8rem;position:relative;overflow:hidden;transition:background .25s}
+.srv-card::before{content:'';position:absolute;bottom:0;left:0;height:3px;width:0;background:var(--oc);transition:width .3s}
+.srv-card:hover{background:#211d14}
+.srv-card:hover::before{width:100%}
+.sico{font-size:2.5rem;margin-bottom:1rem;display:block}
+.srv-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.18rem;font-weight:700;letter-spacing:1px;margin-bottom:.5rem;text-transform:uppercase}
+.srv-card p{color:var(--gr);font-size:.86rem;line-height:1.6}
+
+/* ===== PRODUCTS ===== */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.3rem;margin-top:2rem}
+.pcard{background:var(--cb);border:1px solid var(--bd);overflow:hidden;position:relative;transition:transform .25s,border-color .25s;border-radius:2px}
+.pcard:hover{transform:translateY(-5px);border-color:var(--oc)}
+.pimg{width:100%;height:190px;background:#18150e;display:flex;align-items:center;justify-content:center;font-size:4rem;overflow:hidden;flex-shrink:0}
+.pimg img{width:100%;height:100%;object-fit:cover}
+.pbadge{position:absolute;top:.8rem;right:.8rem;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;padding:.2rem .6rem;letter-spacing:1px;background:#e63946}
+.pbadge.promo{background:#e63946}
+.pbadge.stk{background:var(--oc)}
+.pbadge.nov{background:var(--vd)}
+.pbody{padding:1.3rem}
+.pcat{font-size:.63rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--oc);margin-bottom:.35rem}
+.pbody h3{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;text-transform:uppercase;margin-bottom:.4rem;line-height:1.2}
+.pdesc{color:var(--gr);font-size:.82rem;margin-bottom:1rem;line-height:1.55}
+.pprice{display:flex;align-items:baseline;gap:.7rem;margin-bottom:1rem;flex-wrap:wrap}
+.price-old{font-size:.83rem;color:var(--gr);text-decoration:line-through}
+.price-new{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--occ);letter-spacing:1px;line-height:1}
+.btn-consultar{display:flex;align-items:center;justify-content:center;gap:.45rem;background:var(--wsp);color:#fff;padding:.65rem 1rem;font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;width:100%;transition:background .2s;border-radius:1px}
+.btn-consultar:hover{background:var(--wsph)}
+.btn-consultar svg{width:16px;height:16px;fill:#fff;flex-shrink:0}
+.empty{color:var(--gr);font-size:.88rem;padding:2.5rem 0;text-align:center;width:100%;grid-column:1/-1;font-style:italic}
+
+/* ===== MARCAS ===== */
+#marcas{background:var(--ng);padding:3rem 1.5rem}
+.mbelt{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:1.8rem}
+.mtag{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:3px;padding:.45rem 1.3rem;border:1.5px solid var(--bd);color:var(--gr);transition:color .2s,border-color .2s;cursor:default}
+.mtag:hover{color:var(--occ);border-color:var(--oc)}
+
+/* ===== NOSOTROS ===== */
+#nosotros{background:linear-gradient(135deg,var(--bg) 60%,var(--ti) 100%)}
+.nos-g{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.nos-img-box{width:100%;aspect-ratio:4/3;background:var(--ng);border:2px solid var(--ti);display:flex;align-items:center;justify-content:center;font-size:6rem;position:relative;overflow:hidden}
+.nos-img-box::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(196,135,10,.08),rgba(44,90,40,.12))}
+.nos-img-box img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.stats-g{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:.9rem}
+.stat{background:var(--ng);border-left:3px solid var(--oc);padding:.9rem 1.1rem}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:2.3rem;color:var(--occ);line-height:1}
+.stat-l{color:var(--gr);font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.nos-text p{color:var(--gr);line-height:1.75;margin-bottom:1.1rem;font-size:.95rem}
+.nos-list{list-style:none;margin:1.3rem 0}
+.nos-list li{padding:.45rem 0;border-bottom:1px solid var(--bd);color:var(--bl);display:flex;align-items:center;gap:.6rem;font-size:.9rem}
+.nos-list li::before{content:'▸';color:var(--oc)}
+
+/* ===== UBICACION ===== */
+#ubicacion{background:var(--ng)}
+.ubic-g{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;margin-top:2rem}
+.mapwrap{width:100%;aspect-ratio:4/3;border:2px solid var(--ti);overflow:hidden}
+.mapwrap iframe{width:100%;height:100%;border:none;filter:grayscale(55%) contrast(1.1) sepia(20%)}
+.ilocal h3{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:2px;margin-bottom:1.3rem;color:var(--occ)}
+.irow{display:flex;gap:.9rem;align-items:flex-start;margin-bottom:1.3rem;padding-bottom:1.3rem;border-bottom:1px solid var(--bd)}
+.irow:last-of-type{border-bottom:none}
+.iico{font-size:1.25rem;flex-shrink:0;width:1.9rem;text-align:center;margin-top:2px}
+.irow h4{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--oc);margin-bottom:.25rem}
+.irow p,.irow a{color:var(--gr);font-size:.87rem;line-height:1.55}
+.irow a:hover{color:var(--occ)}
+
+/* ===== REDES SOCIALES ===== */
+.redes-bar{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin-top:1.3rem}
+.red-btn{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:7px;border:none;cursor:pointer;transition:transform .2s,opacity .2s;text-decoration:none}
+.red-btn:hover{transform:translateY(-3px);opacity:.85}
+.red-btn svg{width:20px;height:20px;fill:#fff}
+.red-ig{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.red-yt{background:#ff0000}
+.red-fb{background:#1877f2}
+.red-tt{background:#010101}
+.redes-footer{display:flex;gap:.5rem;align-items:center}
+.redes-footer a{width:30px;height:30px;border-radius:5px;display:flex;align-items:center;justify-content:center;transition:transform .2s,opacity .2s}
+.redes-footer a:hover{transform:translateY(-2px);opacity:.85}
+.redes-footer a svg{width:14px;height:14px;fill:#fff}
+.redes-footer .red-ig{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.redes-footer .red-yt{background:#ff0000}
+.redes-footer .red-fb{background:#1877f2}
+.redes-footer .red-tt{background:#010101}
+.redes-section{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--bd)}
+.redes-section p{color:var(--gr);font-size:.72rem;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:.8rem}
+
+/* ===== CTA ===== */
+#cta{background:linear-gradient(180deg,var(--ti) 0%,var(--ng) 100%);text-align:center;padding:4.5rem 1.5rem 3rem}
+#cta .cdesc{color:var(--gr);max-width:500px;margin:.9rem auto 0;line-height:1.75}
+
+/* ===== FOOTER ===== */
+footer{background:var(--ng);border-top:1px solid var(--bd);padding:1.3rem 1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem}
+footer p{color:#504030;font-size:.73rem}
+
+/* ===== WSP FLOAT ===== */
+.wfloat{position:fixed;bottom:1.8rem;right:1.8rem;z-index:800;width:58px;height:58px;background:var(--wsp);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.5);animation:pwsp 2.5s infinite;transition:transform .2s;text-decoration:none}
+.wfloat:hover{transform:scale(1.1)}
+.wfloat svg{width:30px;height:30px;fill:#fff}
+@keyframes pwsp{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.45)}50%{box-shadow:0 4px 35px rgba(37,211,102,.8)}}
+
+/* ===== ADMIN OVERLAY ===== */
+#adm-ov{display:none;position:fixed;inset:0;z-index:9000;background:rgba(8,7,5,.98);overflow-y:auto}
+#adm-ov.open{display:block}
+.aclose{position:fixed;top:1rem;right:1.5rem;background:none;border:none;color:var(--gr);font-size:2rem;cursor:pointer;z-index:9001;line-height:1;transition:color .2s}
+.aclose:hover{color:var(--bl)}
+
+/* ── LOGIN ── */
+#alog{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:2rem}
+.alog-box{background:var(--ng);border:2px solid var(--oc);padding:3rem 2.5rem;width:100%;max-width:400px;text-align:center}
+.alog-box h2{font-family:'Bebas Neue',sans-serif;font-size:2.3rem;letter-spacing:2px;color:var(--occ);margin-bottom:.4rem}
+.alog-box p{color:var(--gr);font-size:.83rem;margin-bottom:2rem}
+.aerr{color:#e63946;font-size:.82rem;margin-bottom:.8rem;display:none;padding:.5rem;background:rgba(230,57,70,.1);border-radius:3px}
+
+/* ── PANEL ── */
+#apanel{display:none;padding:1.5rem 1.5rem 4rem}
+#apanel.open{display:block}
+.ahdr{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;padding-bottom:1rem;border-bottom:2px solid var(--oc)}
+.ahdr h1{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:2px;color:var(--occ)}
+.ahdr-btns{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap}
+.atabs{display:flex;gap:0;margin-bottom:2.5rem;border-bottom:2px solid var(--bd);overflow-x:auto}
+.atab{background:none;border:none;color:var(--gr);padding:.75rem 1.4rem;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:color .2s;white-space:nowrap}
+.atab.on,.atab:hover{color:var(--occ);border-bottom-color:var(--oc)}
+.asec{display:none}
+.asec.on{display:block}
+
+/* ── FORM CARDS ── */
+.fc{background:var(--ng);border:1px solid var(--bd);padding:1.8rem;margin-bottom:1.8rem;border-radius:3px}
+.fc h3{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;letter-spacing:1px;color:var(--occ);margin-bottom:1.3rem;text-transform:uppercase}
+.fc h3 small{font-size:.75rem;color:var(--gr);letter-spacing:.5px;text-transform:none;font-family:'Barlow',sans-serif;font-weight:400;display:block;margin-top:.2rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.frow.f1{grid-template-columns:1fr}
+.frow.f3{grid-template-columns:1fr 1fr 1fr}
+.fg{display:flex;flex-direction:column;gap:.4rem}
+.fg label{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gr)}
+.inp{width:100%;background:#15120c;border:1px solid var(--bd);color:var(--bl);padding:.72rem 1rem;font-family:'Barlow',sans-serif;font-size:.92rem;outline:none;transition:border-color .2s;border-radius:2px}
+.inp:focus{border-color:var(--oc)}
+textarea.inp{resize:vertical;min-height:80px}
+
+/* ── IMAGE UPLOAD ── */
+.iup{border:2px dashed var(--bd);padding:1.5rem;text-align:center;cursor:pointer;transition:border-color .2s;position:relative;border-radius:3px}
+.iup:hover{border-color:var(--oc)}
+.iup input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.iup .uico{font-size:2.2rem;display:block;margin-bottom:.4rem}
+.iup p{color:var(--gr);font-size:.79rem;line-height:1.5}
+.iprev{width:100%;max-height:175px;object-fit:cover;margin-top:.8rem;border-radius:2px;display:none;border:1px solid var(--bd)}
+.iup-del{margin-top:.5rem;display:none;background:transparent;border:1px solid #e63946;color:#e63946;padding:.3rem .8rem;font-size:.78rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:1px;cursor:pointer;text-transform:uppercase;border-radius:2px}
+.iup-del:hover{background:#e63946;color:#fff}
+
+/* ── ADMIN BUTTONS ── */
+.btn-sv{background:var(--vdc);color:#fff;border:none;padding:.8rem 2rem;font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .2s;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
+.btn-sv:hover{background:#3d7534}
+.btn-sv.red{background:#e63946}.btn-sv.red:hover{background:#c62d3a}
+.btn-sv.blue{background:#1877f2}.btn-sv.blue:hover{background:#0e63d6}
+.btn-ca{background:transparent;color:var(--gr);border:1px solid var(--bd);padding:.8rem 1.5rem;font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:color .2s,border-color .2s}
+.btn-ca:hover{color:var(--bl);border-color:var(--gr)}
+.btn-sm-edit{background:var(--oc);color:var(--ng);border:none;padding:.35rem .8rem;font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;text-transform:uppercase;transition:background .2s}
+.btn-sm-edit:hover{background:var(--occ)}
+.btn-sm-del{background:transparent;color:#e63946;border:1px solid #e63946;padding:.35rem .8rem;font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;text-transform:uppercase;transition:.2s}
+.btn-sm-del:hover{background:#e63946;color:#fff}
+.btn-prev-ph{background:transparent;color:var(--oc);border:1px solid var(--oc);padding:.45rem 1rem;font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.2s;display:flex;align-items:center;gap:.4rem}
+.btn-prev-ph:hover{background:var(--oc);color:var(--ng)}
+.btn-logout{background:transparent;color:var(--gr);border:1px solid var(--bd);padding:.45rem 1rem;font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.2s}
+.btn-logout:hover{color:var(--bl);border-color:var(--gr)}
+.factions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.3rem;align-items:center}
+
+/* ── PRODUCT LIST IN ADMIN ── */
+.alist{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem;margin-top:1.5rem}
+.aitem{background:var(--ng);border:1px solid var(--bd);overflow:hidden;border-radius:2px}
+.aitem-img{width:100%;height:130px;background:#18150e;display:flex;align-items:center;justify-content:center;font-size:2.8rem;overflow:hidden}
+.aitem-img img{width:100%;height:100%;object-fit:cover}
+.aitem-body{padding:.9rem}
+.aitem-body h4{font-family:'Barlow Condensed',sans-serif;font-size:.98rem;font-weight:700;text-transform:uppercase;margin-bottom:.2rem;color:var(--bl)}
+.aitem-body p{color:var(--gr);font-size:.76rem;margin-bottom:.7rem}
+.aitem-acts{display:flex;gap:.4rem}
+
+/* ── PHONE PREVIEW ── */
+#prev-modal{display:none;position:fixed;inset:0;z-index:9500;background:rgba(0,0,0,.9);align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:1rem}
+#prev-modal.open{display:flex}
+.phone-f{width:375px;height:78vh;max-height:680px;background:#000;border-radius:38px;border:7px solid #1c1c1c;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.85)}
+.phone-notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:0 0 16px 16px;z-index:10}
+.phone-scr{width:100%;height:100%;overflow-y:auto;border-radius:32px}
+
+/* ── TOAST ── */
+.toast{position:fixed;top:1.5rem;right:1.5rem;background:var(--vdc);color:#fff;padding:.75rem 1.4rem;font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:1px;z-index:99999;opacity:0;pointer-events:none;border-radius:3px;transition:opacity .3s;max-width:300px}
+.toast.show{opacity:1}
+
+/* ── TIPS/NOTES ── */
+.note{background:rgba(196,135,10,.1);border:1px solid rgba(196,135,10,.3);padding:.8rem 1rem;border-radius:3px;color:var(--gr);font-size:.82rem;line-height:1.5;margin-bottom:1rem}
+.note strong{color:var(--occ)}
+.note.green{background:rgba(74,140,63,.1);border-color:rgba(74,140,63,.3)}
+.note.green strong{color:var(--vdc)}
+
+/* ── COLOR EDITOR ── */
+.color-row{display:flex;align-items:center;gap:.8rem;background:#15120c;border:1px solid var(--bd);padding:.8rem 1rem;border-radius:3px}
+.color-preview{width:36px;height:36px;border-radius:4px;border:2px solid var(--bd);flex-shrink:0;transition:background .2s}
+.color-info{flex:1;display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
+.color-info label{font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gr);flex:1;min-width:120px}
+.color-info input[type=color]{width:38px;height:30px;border:none;background:none;cursor:pointer;padding:0;border-radius:3px;flex-shrink:0}
+.color-hex{font-family:monospace;font-size:.75rem;color:var(--gr);min-width:60px}
+.palette-btn{background:transparent;border:1.5px solid var(--bd);padding:.5rem 1.1rem;font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.2s;border-radius:3px}
+.palette-btn:hover{opacity:.8;transform:translateY(-1px)}
+
+/* GUIA PUBLICACION */
+.pub-step{display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-start}
+.pub-num{background:var(--oc);color:var(--ng);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+.pub-txt strong{color:var(--bl);display:block;margin-bottom:.25rem;font-size:.92rem}
+.pub-txt p{color:var(--gr);font-size:.82rem;line-height:1.6}
+.pub-txt a{color:var(--occ)}
+.pub-txt code{background:#18150e;padding:.1rem .4rem;border-radius:2px;font-family:monospace;font-size:.78rem;color:var(--occ)}
+
+/* ── MAPA ── */
+.mapa-container{width:100%;height:420px;border:2px solid var(--ti);overflow:hidden;border-radius:4px;margin-top:.5rem}
+.mapa-btn-row{margin:1rem 0 1.5rem;display:flex;gap:1rem;flex-wrap:wrap}
+.btn-gmaps{display:inline-flex;align-items:center;gap:.6rem;background:#4285f4;color:#fff;padding:.85rem 1.6rem;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border-radius:4px;text-decoration:none;transition:background .2s;-webkit-tap-highlight-color:transparent;min-height:48px}
+.btn-gmaps:hover{background:#2b6ed4}
+.ubic-info{margin-top:.5rem}
+.btn-wsp-ubic{display:inline-flex;align-items:center;gap:.7rem;background:var(--wsp);color:#fff;padding:.9rem 1.6rem;font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border-radius:4px;margin-top:1.3rem;text-decoration:none;transition:background .2s;-webkit-tap-highlight-color:transparent;min-height:48px;width:100%;justify-content:center}
+.btn-wsp-ubic:hover{background:var(--wsph)}
+
+/* ── RESPONSIVE TABLET ── */
+@media(max-width:860px){
+  nav ul,.nlinks{display:none!important}
+  .hbg{display:flex}
+  .nos-g{grid-template-columns:1fr}
+  .frow,.frow.f3{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+  footer{flex-direction:column;align-items:center;text-align:center;gap:.7rem}
+  #cta{padding:3rem 1.2rem}
+  .mapa-container{height:350px}
+}
+
+/* ── RESPONSIVE CELULAR ── */
+@media(max-width:520px){
+  #hero{min-height:100svh}
+  .htitle{font-size:clamp(2.5rem,12vw,3.5rem);line-height:.95}
+  .hsub{font-size:.9rem}
+  .hbtns{flex-direction:column;gap:.7rem}
+  /* Botones grandes y fáciles de tocar */
+  .btn-gold,.btn-outline,.btn-gmaps,.btn-wsp-ubic,.btn-wsp-big{
+    width:100%;justify-content:center;font-size:.95rem;
+    min-height:52px;padding:.9rem 1.2rem;
+    -webkit-tap-highlight-color:transparent;
+  }
+  section{padding:2.5rem 1rem}
+  .stitle{font-size:1.9rem}
+  .pgrid{grid-template-columns:1fr}
+  .pcard{max-width:100%}
+  .srv-grid{grid-template-columns:1fr 1fr}
+  .nos-g{gap:2rem}
+  .stats-g{grid-template-columns:1fr 1fr}
+  .stat-n{font-size:1.9rem}
+  .ilocal h3{font-size:1.2rem}
+  /* Mapa más alto en celular para verse bien */
+  .mapa-container{height:280px;margin-top:.3rem}
+  .mapa-btn-row{margin:.7rem 0 1.2rem}
+  /* Filas de info de contacto — más espaciadas para tocar */
+  .irow{padding:.7rem 0;gap:.8rem}
+  .iico{font-size:1.4rem;min-width:30px}
+  /* WhatsApp flotante — más grande en celular */
+  .wfloat{width:60px;height:60px;bottom:1.2rem;right:1rem;box-shadow:0 4px 24px rgba(37,211,102,.6)}
+  .wfloat svg{width:30px;height:30px}
+  /* Botón CTA WhatsApp grande */
+  .btn-wsp-big{font-size:1.2rem;padding:1rem 1.5rem;width:100%;justify-content:center;min-height:56px}
+  .mbelt{gap:.4rem;flex-wrap:wrap}
+  .mtag{font-size:.9rem;padding:.3rem .7rem}
+  /* Panel admin en celular */
+  .alog-box{padding:2rem 1.2rem}
+  .ahdr{flex-direction:column;align-items:flex-start}
+  .ahdr-btns{width:100%;justify-content:space-between}
+  .atab{font-size:.75rem;padding:.55rem .7rem}
+  .phone-f{width:100%;max-width:375px}
+  footer{padding:1rem 1rem}
+  footer p{font-size:.7rem}
+  /* Cards de producto más cómodas */
+  .pcard .pc-btn{min-height:48px;font-size:.9rem}
+  /* Sección nosotros */
+  .nos-g{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ WSP FLOTANTE ═══ -->
+<a id="wfloat" href="#" target="_blank" rel="noopener noreferrer" class="wfloat" title="Escribinos por WhatsApp" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ═══ NAVBAR ═══ -->
+<div id="nav">
+  <div class="nlogo" id="logo5">TRUSIK<em> REPARACIONES</em></div>
+  <ul class="nlinks">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#promos">Promos</a></li>
+    <li><a href="#stock">Stock</a></li>
+    <li><a href="#novedades">Novedades</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#ubicacion">Ubicación</a></li>
+    <li><a id="nav-wsp" href="#" target="_blank" class="nwsp">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:.6rem">
+    <div class="hbg" id="hbg" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</div>
+<div id="mmenu">
+  <a href="#servicios" onclick="closeMenu()">Servicios</a>
+  <a href="#promos" onclick="closeMenu()">Promociones</a>
+  <a href="#stock" onclick="closeMenu()">Stock</a>
+  <a href="#novedades" onclick="closeMenu()">Novedades</a>
+  <a href="#nosotros" onclick="closeMenu()">Nosotros</a>
+  <a href="#ubicacion" onclick="closeMenu()">Ubicación</a>
+  <a id="menu-wsp" href="#" target="_blank" rel="noopener noreferrer" class="mwsp" onclick="closeMenu()">📱 WhatsApp</a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hbg-img" id="hero-bg-div"></div>
+  <div class="hbox">
+    <div class="htag" id="hero-tag">🌿 Equipos para el campo, el jardín y la industria · Vera, Santa Fe</div>
+    <h1 class="htitle">
+      <span class="gold" id="hero-t1">POTENCIA</span>
+      <span id="hero-t2">QUE </span><span class="green" id="hero-t3">TRABAJA</span>
+    </h1>
+    <p class="hsub" id="hero-sub">Venta, servicio técnico y repuestos de motosierras, motoguadañas, equipos electrógenos, motobombas y todo lo que necesitás para el trabajo rural y la jardinería profesional.</p>
+    <div class="hbtns">
+      <a href="#promos" class="btn-gold">Ver Promociones</a>
+      <a href="#servicios" class="btn-outline">Nuestros Servicios</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICIOS ═══ -->
+<section id="servicios">
+  <div class="wrap">
+    <p class="slabel fi">Lo que hacemos</p>
+    <h2 class="stitle fi">NUESTROS <em>SERVICIOS</em></h2>
+    <div class="sdiv fi"></div>
+    <div class="srv-grid" id="srv-grid">
+      <div class="srv-card fi"><span class="sico">🪚</span><h3>Motosierras</h3><p>Venta y mantenimiento para uso doméstico, profesional y forestal. Cadenas, barras y repuestos originales.</p></div>
+      <div class="srv-card fi"><span class="sico">🌿</span><h3>Motoguadañas</h3><p>Línea completa de motoguadañas y bordeadoras para jardinería doméstica y profesional.</p></div>
+      <div class="srv-card fi"><span class="sico">⚡</span><h3>Equipos Electrógenos</h3><p>Grupos electrógenos para uso residencial, agropecuario e industrial. Venta y servicio.</p></div>
+      <div class="srv-card fi"><span class="sico">💧</span><h3>Motobombas</h3><p>Bombas para riego, trasvase y emergencias. Equipos a nafta, diésel y eléctricos.</p></div>
+      <div class="srv-card fi"><span class="sico">🔧</span><h3>Servicio Técnico</h3><p>Taller especializado. Diagnóstico, calibración, afilado de cadenas y puesta a punto.</p></div>
+      <div class="srv-card fi"><span class="sico">🌾</span><h3>Implementos Rurales</h3><p>Fumigadoras, rozadoras, aspersoras y todo lo necesario para el trabajo en el campo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROMOCIONES ═══ -->
+<section id="promos" style="background:var(--bg)">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:.5rem">
+      <div><p class="slabel fi">Ofertas especiales</p><h2 class="stitle fi">TIENDA <em>VIRTUAL</em></h2><div class="sdiv"></div></div>
+      <p class="fi" style="color:var(--gr);font-size:.82rem;max-width:270px;text-align:right">Consultá precio y stock disponible. Financiación en cuotas. Envíos a todo el país.</p>
+    </div>
+    <div class="pgrid" id="grid-promos"></div>
+  </div>
+</section>
+
+<!-- ═══ STOCK ═══ -->
+<section id="stock" style="background:var(--ng)">
+  <div class="wrap">
+    <p class="slabel fi">Disponible ahora</p>
+    <h2 class="stitle fi">PRODUCTOS EN <em>STOCK</em></h2>
+    <div class="sdiv fi"></div>
+    <div class="pgrid" id="grid-stock"></div>
+  </div>
+</section>
+
+<!-- ═══ NOVEDADES ═══ -->
+<section id="novedades" style="background:linear-gradient(135deg,var(--bg) 70%,var(--ti) 100%)">
+  <div class="wrap">
+    <p class="slabel fi">Recién llegados</p>
+    <h2 class="stitle fi">NOVEDADES <em>Y LANZAMIENTOS</em></h2>
+    <div class="sdiv fi"></div>
+    <div class="pgrid" id="grid-nov"></div>
+  </div>
+</section>
+
+<!-- ═══ MARCAS ═══ -->
+<section id="marcas">
+  <div class="wrap" style="text-align:center">
+    <p class="slabel fi" id="marcas-slabel">Trabajamos con</p>
+    <h2 class="stitle fi" id="marcas-titulo">MARCAS <em>LÍDERES</em></h2>
+    <div class="sdiv fi" style="margin:0 auto"></div>
+    <div class="mbelt" id="mbelt"></div>
+  </div>
+</section>
+
+<!-- ═══ NOSOTROS ═══ -->
+<section id="nosotros">
+  <div class="wrap">
+    <div class="nos-g">
+      <div class="fi">
+        <div class="nos-img-box" id="nos-img-box"><span style="position:relative;z-index:1">🔧</span></div>
+        <div class="stats-g">
+          <div class="stat"><div class="stat-n" id="stat1n">15+</div><div class="stat-l" id="stat1l">Años en el rubro</div></div>
+          <div class="stat"><div class="stat-n" id="stat2n">500+</div><div class="stat-l" id="stat2l">Clientes activos</div></div>
+          <div class="stat"><div class="stat-n" id="stat3n">10</div><div class="stat-l" id="stat3l">Marcas líderes</div></div>
+          <div class="stat"><div class="stat-n" id="stat4n">100%</div><div class="stat-l" id="stat4l">Garantía oficial</div></div>
+        </div>
+      </div>
+      <div class="fi nos-text">
+        <p class="slabel">Quiénes somos</p>
+        <h2 class="stitle">EXPERTOS EN <em>TRABAJO RURAL</em></h2>
+        <div class="sdiv"></div>
+        <p id="nos-p1">Empresa familiar con trayectoria en la comercialización y servicio técnico de maquinaria para el campo, la jardinería y la industria. Conocemos el trabajo rural desde adentro.</p>
+        <p id="nos-p2">Atendemos tanto al productor agropecuario profesional como al usuario doméstico, con la misma calidad de asesoramiento en cada venta y reparación.</p>
+        <ul class="nos-list" id="nos-lista">
+          <li>Venta de equipos nuevos y usados revisados</li>
+          <li>Servicio técnico oficial de marcas líderes</li>
+          <li>Stock permanente de repuestos y consumibles</li>
+          <li>Financiación en cuotas con todas las tarjetas</li>
+          <li>Envíos a todo el país — Entrega en mano en Vera y zona</li>
+          <li>Asesoramiento personalizado sin cargo</li>
+        </ul>
+        <a id="nos-wsp" href="#" target="_blank" class="btn-gold" style="margin-top:1.5rem;display:inline-flex">Consultá con un especialista</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ UBICACION ═══ -->
+<section id="ubicacion">
+  <div class="wrap">
+    <p class="slabel fi">Encontranos</p>
+    <h2 class="stitle fi">NUESTRO <em>LOCAL</em></h2>
+    <div class="sdiv fi"></div>
+
+    <!-- MAPA GOOGLE MAPS — funciona en celular y computadora -->
+    <div class="mapa-container fi">
+      <iframe
+        src="https://maps.google.com/maps?q=San+Martin+2418,+Vera,+Santa+Fe,+Argentina&t=m&z=16&ie=UTF8&iwloc=B&output=embed"
+        width="100%" height="100%"
+        style="border:0;display:block"
+        allowfullscreen
+        loading="lazy"
+        title="Ubicación Trusik Reparaciones — San Martín 2418, Vera, Santa Fe">
+      </iframe>
+    </div>
+
+    <!-- BOTÓN GOOGLE MAPS — abre la app en el celular -->
+    <div class="mapa-btn-row fi">
+      <a href="https://maps.google.com/?q=San+Mart%C3%ADn+2418,+Vera,+Santa+Fe,+Argentina"
+         target="_blank"
+         rel="noopener"
+         class="btn-gmaps">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        ABRIR EN GOOGLE MAPS
+      </a>
+    </div>
+
+    <!-- INFO DE CONTACTO -->
+    <div class="ubic-info fi">
+      <div class="ilocal">
+        <h3>INFORMACIÓN DE CONTACTO</h3>
+        <div class="irow"><div class="iico">📍</div><div><h4>Dirección</h4><p id="pub-dir">San Martín 2418 — Vera, Santa Fe</p></div></div>
+        <div class="irow"><div class="iico">🕐</div><div><h4>Horarios de atención</h4><p id="pub-hor">Lunes a Viernes: 8:00–12:30 / 15:00–19:30 hs<br>Sábados: 8:00–12:30 hs<br>Domingos: cerrado</p></div></div>
+        <div class="irow"><div class="iico">📱</div><div><h4>WhatsApp / Teléfono</h4><p id="pub-tel"><a href="#" id="pub-tel-a">Cargando...</a></p></div></div>
+        <div class="irow"><div class="iico">✉️</div><div><h4>Email</h4><p><a href="#" id="pub-email-a">Cargando...</a></p></div></div>
+        <div class="redes-section" id="redes-ubic-section" style="display:none">
+          <p>Seguinos en redes</p>
+          <div class="redes-bar" id="redes-ubic"></div>
+        </div>
+        <a id="ubic-wsp" href="#" target="_blank" class="btn-wsp-ubic">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escribinos por WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section id="cta">
+  <div class="wrap">
+    <p class="slabel">Contacto rápido</p>
+    <h2 class="stitle" id="cta-titulo">¿TENÉS ALGUNA <em>CONSULTA?</em></h2>
+    <p class="cdesc" id="cta-desc">Estamos para ayudarte. Consultá por precios, disponibilidad, reparaciones o cualquier duda. ¡Respondemos rápido!</p>
+    <br><br>
+    <a id="cta-wsp" href="#" target="_blank" rel="noopener noreferrer" class="btn-wsp-big">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      ESCRIBINOS POR WHATSAPP
+    </a>
+    <p style="color:var(--gr);font-size:.85rem;margin-top:1.2rem">San Martín 2418, Vera, Santa Fe · Respondemos en el día</p>
+    <div id="redes-cta-section" class="redes-section" style="display:none;align-items:center;flex-direction:column">
+      <p>Seguinos en redes</p>
+      <div class="redes-bar" id="redes-cta"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="nlogo" id="logo5" style="cursor:default;font-size:1.2rem">TRUSIK<em> REPARACIONES</em></div>
+  <p>© 2025 Trusik Reparaciones — San Martín 2418, Vera, Santa Fe</p>
+  <div style="display:flex;align-items:center;gap:1rem">
+    <div class="redes-footer" id="redes-footer"></div>
+    <!-- acceso admin oculto: 5 clics en el logo -->
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════
+     PANEL DE ADMINISTRACIÓN
+═══════════════════════════════════ -->
+<div id="adm-ov">
+  <button class="aclose" onclick="closeAdm()">✕</button>
+
+  <!-- PANEL INTERIOR — abre directo, sin pantalla de login separada -->
+  <div id="apanel">
+    <div class="ahdr">
+      <h1>⚙️ PANEL — TRUSIK REPARACIONES</h1>
+      <div class="ahdr-btns">
+        <button class="btn-prev-ph" onclick="openPhonePreview()">📱 Ver en celular</button>
+        <button class="btn-logout" onclick="doLogout()">🚪 Cerrar</button>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="atabs">
+      <button class="atab on"  onclick="showTab('t-promos',this)">🏷️ Promociones</button>
+      <button class="atab"     onclick="showTab('t-stock',this)">📦 Stock</button>
+      <button class="atab"     onclick="showTab('t-nov',this)">✨ Novedades</button>
+      <button class="atab"     onclick="showTab('t-pagina',this)">✏️ Editar Página</button>
+      <button class="atab"     onclick="showTab('t-config',this)">⚙️ Configuración</button>
+      <button class="atab"     onclick="showTab('t-colores',this)">🎨 Colores y Fuentes</button>
+      <button class="atab"     onclick="showTab('t-publicar',this)">🚀 Publicar Web</button>
+    </div>
+
+    <!-- ══ TAB: PROMOCIONES ══ -->
+    <div class="asec on" id="t-promos">
+      <div class="fc" id="fc-promo">
+        <h3 id="ft-promo">➕ Nueva Promoción
+          <small>Completá los campos y guardá. El botón de WhatsApp se genera automáticamente.</small>
+        </h3>
+        <div class="frow">
+          <div class="fg"><label>Nombre del producto *</label><input class="inp" id="p-nom" placeholder="Ej: Motosierra Stihl 45cc con espada 18"></div>
+          <div class="fg"><label>Categoría</label><input class="inp" id="p-cat" placeholder="Ej: Motosierras"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg"><label>Descripción breve</label><textarea class="inp" id="p-desc" placeholder="Describí el producto, sus características principales..."></textarea></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Precio anterior (se ve tachado)</label><input class="inp" id="p-ant" placeholder="Ej: $180.000"></div>
+          <div class="fg"><label>Precio actual *</label><input class="inp" id="p-aho" placeholder="Ej: $144.000"></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Etiqueta / Badge</label><input class="inp" id="p-badge" placeholder="Ej: -20%  ·  OFERTA  ·  KIT COMPLETO"></div>
+          <div class="fg"><label>Emoji (si no cargás foto)</label><input class="inp" id="p-emoji" value="🛠️" placeholder="🪚"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg">
+            <label>Foto del producto</label>
+            <div class="iup"><input type="file" accept="image/*" onchange="handleImg(this,'pp','pd')">
+              <span class="uico">📷</span>
+              <p>Hacé clic aquí o arrastrá una foto<br><span style="opacity:.6;font-size:.75rem">JPG, PNG o WebP — Máximo 5 MB — Recomendado: 800×600 px</span></p>
+              <img id="pp" class="iprev">
+            </div>
+            <button class="iup-del" id="pp-del" onclick="clearImg('pp','pd','pp-del')">✕ Quitar foto</button>
+            <input type="hidden" id="pd">
+          </div>
+        </div>
+        <div class="factions">
+          <button class="btn-sv" onclick="savePromo()">💾 GUARDAR PROMOCIÓN</button>
+          <button class="btn-ca" onclick="cancelPromo()">Cancelar</button>
+        </div>
+        <input type="hidden" id="p-eid">
+      </div>
+      <p style="font-family:'Barlow Condensed',sans-serif;font-size:.95rem;letter-spacing:1px;color:var(--gr);text-transform:uppercase;margin-bottom:1rem">Promociones cargadas</p>
+      <div class="alist" id="alist-promos"></div>
+    </div>
+
+    <!-- ══ TAB: STOCK ══ -->
+    <div class="asec" id="t-stock">
+      <div class="fc" id="fc-stock">
+        <h3 id="ft-stock">➕ Nuevo Producto en Stock
+          <small>Productos disponibles para venta inmediata.</small>
+        </h3>
+        <div class="frow">
+          <div class="fg"><label>Nombre del producto *</label><input class="inp" id="s-nom" placeholder="Ej: Motobomba Honda 2 pulgadas"></div>
+          <div class="fg"><label>Categoría</label><input class="inp" id="s-cat" placeholder="Ej: Motobombas"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg"><label>Descripción</label><textarea class="inp" id="s-desc" placeholder="Características del producto..."></textarea></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Precio (o "Consultar")</label><input class="inp" id="s-pre" placeholder="Ej: $165.000 o Consultar"></div>
+          <div class="fg"><label>Emoji (si no cargás foto)</label><input class="inp" id="s-emoji" value="📦" placeholder="📦"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg">
+            <label>Foto del producto</label>
+            <div class="iup"><input type="file" accept="image/*" onchange="handleImg(this,'sp','sd')">
+              <span class="uico">📷</span><p>Hacé clic o arrastrá una foto · JPG, PNG, WebP · Máx 5 MB</p>
+              <img id="sp" class="iprev">
+            </div>
+            <button class="iup-del" id="sp-del" onclick="clearImg('sp','sd','sp-del')">✕ Quitar foto</button>
+            <input type="hidden" id="sd">
+          </div>
+        </div>
+        <div class="factions">
+          <button class="btn-sv" onclick="saveStock()">💾 GUARDAR STOCK</button>
+          <button class="btn-ca" onclick="cancelStock()">Cancelar</button>
+        </div>
+        <input type="hidden" id="s-eid">
+      </div>
+      <p style="font-family:'Barlow Condensed',sans-serif;font-size:.95rem;letter-spacing:1px;color:var(--gr);text-transform:uppercase;margin-bottom:1rem">Productos en stock</p>
+      <div class="alist" id="alist-stock"></div>
+    </div>
+
+    <!-- ══ TAB: NOVEDADES ══ -->
+    <div class="asec" id="t-nov">
+      <div class="fc" id="fc-nov">
+        <h3 id="ft-nov">➕ Nueva Novedad
+          <small>Nuevos modelos, lanzamientos o incorporaciones recientes.</small>
+        </h3>
+        <div class="frow">
+          <div class="fg"><label>Nombre del producto *</label><input class="inp" id="n-nom" placeholder="Ej: Nueva motoguadaña 52cc 2024"></div>
+          <div class="fg"><label>Categoría</label><input class="inp" id="n-cat" placeholder="Ej: Motoguadañas"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg"><label>Descripción</label><textarea class="inp" id="n-desc" placeholder="Describí la novedad..."></textarea></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Precio (opcional)</label><input class="inp" id="n-pre" placeholder="Ej: $79.000"></div>
+          <div class="fg"><label>Emoji (si no cargás foto)</label><input class="inp" id="n-emoji" value="✨" placeholder="✨"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg">
+            <label>Foto del producto</label>
+            <div class="iup"><input type="file" accept="image/*" onchange="handleImg(this,'np','nd')">
+              <span class="uico">📷</span><p>Hacé clic o arrastrá una foto · JPG, PNG, WebP · Máx 5 MB</p>
+              <img id="np" class="iprev">
+            </div>
+            <button class="iup-del" id="np-del" onclick="clearImg('np','nd','np-del')">✕ Quitar foto</button>
+            <input type="hidden" id="nd">
+          </div>
+        </div>
+        <div class="factions">
+          <button class="btn-sv" onclick="saveNov()">💾 GUARDAR NOVEDAD</button>
+          <button class="btn-ca" onclick="cancelNov()">Cancelar</button>
+        </div>
+        <input type="hidden" id="n-eid">
+      </div>
+      <p style="font-family:'Barlow Condensed',sans-serif;font-size:.95rem;letter-spacing:1px;color:var(--gr);text-transform:uppercase;margin-bottom:1rem">Novedades cargadas</p>
+      <div class="alist" id="alist-nov"></div>
+    </div>
+
+    <!-- ══ TAB: EDITAR PÁGINA ══ -->
+    <div class="asec" id="t-pagina">
+
+      <!-- HERO -->
+      <div class="fc">
+        <h3>🖼️ Pantalla de inicio (Hero)</h3>
+        <div class="frow">
+          <div class="fg"><label>Etiqueta superior</label><input class="inp" id="e-htag" placeholder="🌿 Equipos para el campo..."></div>
+          <div class="fg"><label>Título — Línea 1 (color dorado)</label><input class="inp" id="e-ht1" placeholder="POTENCIA"></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Título — Línea 2 (texto blanco)</label><input class="inp" id="e-ht2" placeholder="QUE"></div>
+          <div class="fg"><label>Título — Línea 2 (texto verde)</label><input class="inp" id="e-ht3" placeholder="TRABAJA"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg"><label>Subtítulo / Descripción breve</label><textarea class="inp" id="e-hsub"></textarea></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg">
+            <label>Foto de fondo (opcional — si no cargás, se usa la foto del campo)</label>
+            <div class="iup"><input type="file" accept="image/*" onchange="handleImg(this,'e-hprev','e-himg')">
+              <span class="uico">🖼️</span><p>Recomendado: foto horizontal 1400×800 px o más</p>
+              <img id="e-hprev" class="iprev">
+            </div>
+            <button class="iup-del" id="e-hprev-del" onclick="clearImg('e-hprev','e-himg','e-hprev-del')">✕ Quitar foto</button>
+            <input type="hidden" id="e-himg">
+          </div>
+        </div>
+        <div class="factions"><button class="btn-sv" onclick="saveHero()">💾 GUARDAR INICIO</button></div>
+      </div>
+
+      <!-- SERVICIOS -->
+      <div class="fc">
+        <h3>🔧 Tarjetas de Servicios</h3>
+        <div id="srv-edit-wrap"></div>
+        <div class="factions"><button class="btn-sv" onclick="saveServicios()">💾 GUARDAR SERVICIOS</button></div>
+      </div>
+
+      <!-- NOSOTROS -->
+      <div class="fc">
+        <h3>👥 Sección "Quiénes Somos"</h3>
+        <div class="frow">
+          <div class="fg"><label>Estadística 1 — Número</label><input class="inp" id="e-s1n" placeholder="15+"></div>
+          <div class="fg"><label>Estadística 1 — Texto</label><input class="inp" id="e-s1l" placeholder="Años en el rubro"></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Estadística 2 — Número</label><input class="inp" id="e-s2n" placeholder="500+"></div>
+          <div class="fg"><label>Estadística 2 — Texto</label><input class="inp" id="e-s2l" placeholder="Clientes activos"></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Estadística 3 — Número</label><input class="inp" id="e-s3n" placeholder="10"></div>
+          <div class="fg"><label>Estadística 3 — Texto</label><input class="inp" id="e-s3l" placeholder="Marcas líderes"></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Estadística 4 — Número</label><input class="inp" id="e-s4n" placeholder="100%"></div>
+          <div class="fg"><label>Estadística 4 — Texto</label><input class="inp" id="e-s4l" placeholder="Garantía oficial"></div>
+        </div>
+        <div class="frow f1"><div class="fg"><label>Párrafo 1</label><textarea class="inp" id="e-np1"></textarea></div></div>
+        <div class="frow f1"><div class="fg"><label>Párrafo 2</label><textarea class="inp" id="e-np2"></textarea></div></div>
+        <div class="frow f1">
+          <div class="fg">
+            <label>Lista de características (una por línea)</label>
+            <textarea class="inp" id="e-nlist" style="min-height:140px" placeholder="Venta de equipos nuevos y usados&#10;Servicio técnico oficial&#10;Stock de repuestos..."></textarea>
+          </div>
+        </div>
+        <div class="frow f1">
+          <div class="fg">
+            <label>Foto de la empresa / taller (opcional)</label>
+            <div class="iup"><input type="file" accept="image/*" onchange="handleImg(this,'e-nosprev','e-nosimg')">
+              <span class="uico">🏪</span><p>Foto del local, taller o del equipo</p>
+              <img id="e-nosprev" class="iprev">
+            </div>
+            <button class="iup-del" id="e-nosprev-del" onclick="clearImg('e-nosprev','e-nosimg','e-nosprev-del')">✕ Quitar foto</button>
+            <input type="hidden" id="e-nosimg">
+          </div>
+        </div>
+        <div class="factions"><button class="btn-sv" onclick="saveNosotros()">💾 GUARDAR NOSOTROS</button></div>
+      </div>
+
+      <!-- MARCAS -->
+      <div class="fc">
+        <h3>🏷️ Marcas que trabajás
+          <small>Agregá o quitá marcas. Se muestran como etiquetas en la página.</small>
+        </h3>
+        <div class="note">Escribí el nombre de la marca y tocá <strong>+ Agregar</strong>. Para eliminar una marca, tocá la ✕ que aparece al lado.</div>
+
+        <!-- Editor visual de marcas -->
+        <div style="margin:1rem 0">
+          <div id="marcas-tags" style="display:flex;flex-wrap:wrap;gap:.5rem;min-height:48px;padding:.8rem;background:#15120c;border:1px solid var(--bd);border-radius:3px;margin-bottom:.8rem"></div>
+          <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+            <input class="inp" id="marca-nueva" placeholder="Ej: STIHL, HONDA, HUSQVARNA..." style="flex:1;min-width:160px" onkeydown="if(event.key==='Enter'){event.preventDefault();agregarMarca()}">
+            <button class="btn-sv" onclick="agregarMarca()" style="clip-path:none;padding:.7rem 1.2rem;white-space:nowrap">+ AGREGAR</button>
+          </div>
+        </div>
+
+        <div style="margin-bottom:.8rem">
+          <p style="color:var(--gr);font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.6rem">AGREGAR VARIAS A LA VEZ:</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.4rem" id="marcas-sugeridas"></div>
+        </div>
+
+        <div style="background:#15120c;border:1px solid var(--bd);padding:.8rem;border-radius:3px;margin-bottom:1rem">
+          <label style="display:flex;align-items:center;gap:.7rem;cursor:pointer;font-size:.85rem;color:var(--gr)">
+            <input type="checkbox" id="marcas-ocultar" onchange="toggleMarcas(this.checked)" style="width:16px;height:16px">
+            Ocultar la sección "Marcas" de la página
+          </label>
+        </div>
+
+        <div class="factions">
+          <button class="btn-sv" onclick="saveMarcas()">💾 GUARDAR MARCAS</button>
+          <button class="btn-ca" onclick="resetMarcas()">↩️ Volver a las marcas originales</button>
+        </div>
+      </div>
+
+    </div><!-- /t-pagina -->
+
+    <!-- ══ TAB: CONFIGURACIÓN ══ -->
+    <div class="asec" id="t-config">
+
+      <!-- WHATSAPP -->
+      <div class="fc" style="border-color:var(--wsp)">
+        <h3 style="color:var(--wsp)">📱 Número de WhatsApp
+          <small>Este número se usa en TODOS los botones de la página.</small>
+        </h3>
+        <div class="note" id="wsp-warning" style="background:rgba(230,57,70,.12);border-color:#e63946;display:none">
+          <strong style="color:#e63946">⚠️ Todavía no cargaste tu número de WhatsApp.</strong>
+        </div>
+        <div class="note" style="line-height:1.8">
+          <strong>Formato correcto:</strong> 54 + 9 + código de área <em>sin el 0</em> + número <em>sin el 15</em>, sin espacios ni guiones.<br>
+          📍 Vera (0<strong>3495</strong>): escribí <strong>549<span style="color:var(--occ)">3495</span>XXXXXX</strong><br>
+          📍 Santa Fe (0<strong>342</strong>): escribí <strong>549<span style="color:var(--occ)">342</span>XXXXXXX</strong><br>
+          📍 Rosario (0<strong>341</strong>): escribí <strong>549<span style="color:var(--occ)">341</span>XXXXXXX</strong>
+        </div>
+        <div class="frow">
+          <div class="fg">
+            <label>Número WhatsApp (solo dígitos, sin + ni espacios)</label>
+            <input class="inp" id="c-wsp" placeholder="Ej: 5493495123456" style="font-size:1.1rem;letter-spacing:2px" oninput="validarWsp(this.value)">
+          </div>
+          <div class="fg">
+            <label>Teléfono visible en el sitio (para mostrar al cliente)</label>
+            <input class="inp" id="c-tel" placeholder="Ej: +54 9 3495 12-3456">
+          </div>
+        </div>
+        <!-- Validador en tiempo real -->
+        <div id="wsp-validator" style="display:none;margin:.5rem 0 1rem;padding:.9rem 1rem;border-radius:3px;font-size:.85rem;line-height:1.7"></div>
+        <div class="frow f1">
+          <div class="fg"><label>Mensaje automático de WhatsApp</label><input class="inp" id="c-wspmsg" placeholder="Hola, quiero hacer una consulta desde la web"></div>
+        </div>
+        <div class="factions"><button class="btn-sv" onclick="saveCfg()" style="background:var(--wsp)">💾 GUARDAR WHATSAPP</button></div>
+      </div>
+
+      <!-- CONTACTO -->
+      <div class="fc">
+        <h3>📧 Contacto y Horarios</h3>
+        <div class="frow">
+          <div class="fg"><label>Email de contacto</label><input class="inp" id="c-email" placeholder="info@trusik.com.ar" type="email"></div>
+          <div class="fg"><label>Dirección del local</label><input class="inp" id="c-dir" placeholder="San Martín 2418, Vera, Santa Fe"></div>
+        </div>
+        <div class="frow f1">
+          <div class="fg">
+            <label>Horarios de atención</label>
+            <textarea class="inp" id="c-hor" placeholder="Lunes a Viernes: 8:00–12:30 / 15:00–19:30 hs&#10;Sábados: 8:00–12:30 hs&#10;Domingos: cerrado"></textarea>
+          </div>
+        </div>
+        <div class="factions"><button class="btn-sv" onclick="saveCfg()">💾 GUARDAR CONTACTO</button></div>
+      </div>
+
+      <!-- REDES SOCIALES -->
+      <div class="fc" style="border-color:#833ab4">
+        <h3 style="color:#c060e0">📲 Redes Sociales
+          <small>Dejá vacío los que no uses. Los íconos aparecen automáticamente en el sitio.</small>
+        </h3>
+        <div class="frow">
+          <div class="fg">
+            <label>📸 Instagram — Usuario (sin @)</label>
+            <input class="inp" id="c-ig" placeholder="trusik.reparaciones" style="padding-left:1rem">
+            <small style="color:var(--gr);font-size:.72rem;margin-top:.25rem">Enlace: instagram.com/tu-usuario</small>
+          </div>
+          <div class="fg">
+            <label>▶️ YouTube — Usuario o URL</label>
+            <input class="inp" id="c-yt" placeholder="@TrusikReparaciones o URL del canal">
+            <small style="color:var(--gr);font-size:.72rem;margin-top:.25rem">Podés poner @usuario o la URL completa</small>
+          </div>
+        </div>
+        <div class="frow">
+          <div class="fg">
+            <label>👤 Facebook — Usuario o URL</label>
+            <input class="inp" id="c-fb" placeholder="trusik.reparaciones o URL">
+          </div>
+          <div class="fg">
+            <label>🎵 TikTok — Usuario (sin @)</label>
+            <input class="inp" id="c-tt" placeholder="trusikreparaciones">
+          </div>
+        </div>
+        <div class="factions"><button class="btn-sv" onclick="saveCfg()" style="background:#833ab4">💾 GUARDAR REDES</button></div>
+      </div>
+
+      <!-- CONTRASEÑA -->
+      <div class="fc" style="border-color:#e63946">
+        <h3 style="color:#e63946">🔑 Cambiar Contraseña del Panel</h3>
+        <div class="note"><strong>Importante:</strong> Si olvidás la contraseña, vas a tener que abrir el archivo HTML con un editor de texto y cambiarla manualmente en el JavaScript.</div>
+        <div class="frow">
+          <div class="fg"><label>Nueva contraseña</label><input class="inp" type="password" id="c-p1" placeholder="Nueva contraseña"></div>
+          <div class="fg"><label>Confirmar contraseña</label><input class="inp" type="password" id="c-p2" placeholder="Repetir contraseña"></div>
+        </div>
+        <div class="factions"><button class="btn-sv red" onclick="changePass()">🔑 CAMBIAR CONTRASEÑA</button></div>
+      </div>
+
+    </div><!-- /t-config -->
+
+    <!-- ══ TAB: PUBLICAR WEB ══ -->
+    <div class="asec" id="t-publicar">
+      <div class="fc">
+        <h3>🚀 Cómo Publicar tu Sitio Web
+          <small>Guía completa paso a paso para que tu web esté online y accesible desde cualquier celular del mundo.</small>
+        </h3>
+
+        <div class="note green" style="margin-bottom:1.5rem"><strong>✅ Tu sitio ya está listo.</strong> Solo necesitás subirlo a internet. Te recomendamos Netlify — es gratis, no necesita tarjeta de crédito y queda online en menos de 5 minutos.</div>
+
+        <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;letter-spacing:1px;text-transform:uppercase;color:var(--occ);margin-bottom:1.3rem">OPCIÓN 1 — Netlify (Recomendada · Gratis · 5 minutos)</h4>
+
+        <div class="pub-step">
+          <div class="pub-num">1</div>
+          <div class="pub-txt">
+            <strong>Descargá el archivo del sitio</strong>
+            <p>El sitio es el archivo <code>trusik_reparaciones.html</code> que te entregamos. Guardalo en tu computadora (escritorio o Documentos).</p>
+          </div>
+        </div>
+        <div class="pub-step">
+          <div class="pub-num">2</div>
+          <div class="pub-txt">
+            <strong>Creá una cuenta gratis en Netlify</strong>
+            <p>Entrá a <a href="https://netlify.com" target="_blank">netlify.com</a> → hacé clic en <em>"Sign up"</em> → elegí <em>"Continue with Google"</em> → usá tu cuenta de Gmail. Es gratis, no pide tarjeta.</p>
+          </div>
+        </div>
+        <div class="pub-step">
+          <div class="pub-num">3</div>
+          <div class="pub-txt">
+            <strong>Subí el archivo a Netlify</strong>
+            <p>Una vez adentro del panel de Netlify, buscá el botón <em>"Add new site"</em> → <em>"Deploy manually"</em>. Vas a ver una pantalla donde podés <strong>arrastrar y soltar</strong> tu archivo HTML. Arrastrá el archivo ahí y esperá unos segundos.</p>
+          </div>
+        </div>
+        <div class="pub-step">
+          <div class="pub-num">4</div>
+          <div class="pub-txt">
+            <strong>¡Tu sitio ya está online!</strong>
+            <p>Netlify te va a dar una dirección como <code>trusik-abc123.netlify.app</code>. Podés compartir ese link ya mismo. Para cambiarla a algo más fácil: <em>Site configuration → Change site name</em> → poné algo como <code>trusik-reparaciones</code> → quedará <code>trusik-reparaciones.netlify.app</code></p>
+          </div>
+        </div>
+        <div class="pub-step">
+          <div class="pub-num">5</div>
+          <div class="pub-txt">
+            <strong>Cómo actualizar el sitio (promos, stock, etc.)</strong>
+            <p>Cuando cargues productos desde el panel de administración, los cambios quedan guardados en ese archivo HTML descargado. Para que los clientes vean los cambios, necesitás <strong>volver a subir el archivo</strong> a Netlify: <em>Site → Deploys → Drag and drop</em> nuevamente con el archivo actualizado.</p>
+          </div>
+        </div>
+
+        <div style="height:1.5px;background:var(--bd);margin:1.8rem 0"></div>
+
+        <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;letter-spacing:1px;text-transform:uppercase;color:var(--occ);margin-bottom:1.3rem">OPCIÓN 2 — Con dominio propio (Ej: trusik.com.ar)</h4>
+
+        <div class="pub-step">
+          <div class="pub-num">A</div>
+          <div class="pub-txt">
+            <strong>Comprá el dominio .com.ar</strong>
+            <p>Entrá a <a href="https://nic.ar" target="_blank">nic.ar</a> (sitio oficial del gobierno argentino) → buscá <code>trusik.com.ar</code> → si está disponible, registralo. Cuesta aproximadamente $3.500 ARS por año (2025).</p>
+          </div>
+        </div>
+        <div class="pub-step">
+          <div class="pub-num">B</div>
+          <div class="pub-txt">
+            <strong>Conectá el dominio con Netlify</strong>
+            <p>En Netlify → tu sitio → <em>Domain management → Add custom domain</em> → escribí <code>trusik.com.ar</code> → Netlify te va a dar unos registros DNS. Entrá a NIC Argentina → tu dominio → <em>Gestionar DNS</em> → cargá los registros que Netlify te indica. Los cambios demoran entre 1 y 48 horas en propagarse.</p>
+          </div>
+        </div>
+
+        <div style="height:1.5px;background:var(--bd);margin:1.8rem 0"></div>
+
+        <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;letter-spacing:1px;text-transform:uppercase;color:var(--occ);margin-bottom:1.3rem">PREGUNTAS FRECUENTES</h4>
+        <div class="note" style="margin-bottom:.8rem"><strong>¿Cuánto cuesta?</strong> Con Netlify, publicar es completamente gratis. Solo pagás el dominio .com.ar (opcional) en NIC Argentina.</div>
+        <div class="note" style="margin-bottom:.8rem"><strong>¿Necesito conocimientos técnicos?</strong> No. Arrastrar y soltar un archivo es todo lo que necesitás para Netlify.</div>
+        <div class="note" style="margin-bottom:.8rem"><strong>¿Los datos (productos, precios) se guardan en la web?</strong> Sí — cuando actualizás desde el panel y descargás el archivo, los cambios quedan incorporados en el HTML. Subiendo ese archivo actualizado a Netlify, los clientes ven los cambios.</div>
+        <div class="note" style="margin-bottom:.8rem"><strong>¿Puedo administrar desde el celular?</strong> Sí — accedés a tu sitio desde cualquier navegador, hacés clic 5 veces en el logo, y podés cargar datos desde el celular también.</div>
+        <div class="note"><strong>¿Necesito saber programar?</strong> No. Todo se maneja desde este mismo panel de administración que estás usando.</div>
+      </div>
+    </div><!-- /t-publicar -->
+
+    <!-- ══ TAB: COLORES Y FUENTES ══ -->
+    <div class="asec" id="t-colores">
+
+      <div class="fc">
+        <h3>🎨 Colores de la Página
+          <small>Cambiá los colores principales. Los cambios se ven al instante en la página.</small>
+        </h3>
+        <div class="note green"><strong>💡 Consejo:</strong> Hacé clic en el cuadrado de color para abrir el selector. Los cambios se aplican en tiempo real. Cuando estés conforme, usá el botón "Guardar y Aplicar".</div>
+
+        <div style="margin-bottom:1.5rem">
+          <p style="font-family:'Barlow Condensed',sans-serif;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--oc);margin-bottom:1rem">COLORES PRINCIPALES</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem">
+            <div class="color-row"><div class="color-preview" id="prev-bg"></div><div class="color-info"><label>Fondo de la página</label><input type="color" id="col-bg" oninput="previewColor('--bg',this.value,'prev-bg')"><span class="color-hex" id="hex-bg">#1a1610</span></div></div>
+            <div class="color-row"><div class="color-preview" id="prev-ng"></div><div class="color-info"><label>Fondo oscuro (secciones)</label><input type="color" id="col-ng" oninput="previewColor('--ng',this.value,'prev-ng')"><span class="color-hex" id="hex-ng">#0f0e0b</span></div></div>
+            <div class="color-row"><div class="color-preview" id="prev-oc"></div><div class="color-info"><label>Color principal (dorado)</label><input type="color" id="col-oc" oninput="previewColor('--oc',this.value,'prev-oc')"><span class="color-hex" id="hex-oc">#c4870a</span></div></div>
+            <div class="color-row"><div class="color-preview" id="prev-occ"></div><div class="color-info"><label>Color principal claro</label><input type="color" id="col-occ" oninput="previewColor('--occ',this.value,'prev-occ')"><span class="color-hex" id="hex-occ">#e9a520</span></div></div>
+            <div class="color-row"><div class="color-preview" id="prev-vdc"></div><div class="color-info"><label>Color secundario (verde)</label><input type="color" id="col-vdc" oninput="previewColor('--vdc',this.value,'prev-vdc')"><span class="color-hex" id="hex-vdc">#4a8c3f</span></div></div>
+            <div class="color-row"><div class="color-preview" id="prev-bl"></div><div class="color-info"><label>Texto principal</label><input type="color" id="col-bl" oninput="previewColor('--bl',this.value,'prev-bl')"><span class="color-hex" id="hex-bl">#f5f0e8</span></div></div>
+            <div class="color-row"><div class="color-preview" id="prev-gr"></div><div class="color-info"><label>Texto secundario (gris)</label><input type="color" id="col-gr" oninput="previewColor('--gr',this.value,'prev-gr')"><span class="color-hex" id="hex-gr">#b8b0a0</span></div></div>
+            <div class="color-row"><div class="color-preview" id="prev-bd"></div><div class="color-info"><label>Bordes y líneas</label><input type="color" id="col-bd" oninput="previewColor('--bd',this.value,'prev-bd')"><span class="color-hex" id="hex-bd">#2a2518</span></div></div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem">
+          <p style="font-family:'Barlow Condensed',sans-serif;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--oc);margin-bottom:1rem">PALETAS PREDEFINIDAS</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.7rem">
+            <button class="palette-btn" onclick="applyPalette('industrial')" style="border-color:#c4870a;color:#c4870a">⚙️ Industrial (original)</button>
+            <button class="palette-btn" onclick="applyPalette('azul')" style="border-color:#1e88e5;color:#1e88e5">🔵 Azul profesional</button>
+            <button class="palette-btn" onclick="applyPalette('rojo')" style="border-color:#e53935;color:#e53935">🔴 Rojo potencia</button>
+            <button class="palette-btn" onclick="applyPalette('verde')" style="border-color:#2e7d32;color:#2e7d32">🌿 Verde campo</button>
+            <button class="palette-btn" onclick="applyPalette('naranja')" style="border-color:#f4511e;color:#f4511e">🟠 Naranja energía</button>
+            <button class="palette-btn" onclick="applyPalette('claro')" style="border-color:#78909c;color:#78909c">☀️ Modo claro</button>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem">
+          <p style="font-family:'Barlow Condensed',sans-serif;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--oc);margin-bottom:1rem">FUENTE DE TEXTO</p>
+          <div class="frow">
+            <div class="fg">
+              <label>Fuente del cuerpo (texto normal)</label>
+              <select class="inp" id="col-font" onchange="previewFont(this.value)">
+                <option value="Barlow">Barlow (actual — moderna)</option>
+                <option value="Roboto">Roboto (clara y neutral)</option>
+                <option value="Open Sans">Open Sans (muy legible)</option>
+                <option value="Lato">Lato (elegante y simple)</option>
+                <option value="Montserrat">Montserrat (geométrica moderna)</option>
+                <option value="Source Sans Pro">Source Sans Pro (profesional)</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Tamaño de texto base</label>
+              <select class="inp" id="col-size" onchange="previewFontSize(this.value)">
+                <option value="15px">Pequeño (15px)</option>
+                <option value="16px" selected>Normal (16px — recomendado)</option>
+                <option value="17px">Grande (17px)</option>
+                <option value="18px">Muy grande (18px)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="factions">
+          <button class="btn-sv" onclick="saveColors()">💾 GUARDAR Y APLICAR</button>
+          <button class="btn-ca" onclick="resetColors()">↩️ Volver a los colores originales</button>
+        </div>
+      </div>
+
+    </div><!-- /t-colores -->
+
+  </div><!-- /apanel -->
+</div><!-- /adm-ov -->
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- PHONE PREVIEW -->
+<div id="prev-modal">
+  <div class="phone-f">
+    <div class="phone-notch"></div>
+    <div class="phone-scr" id="phone-scr"></div>
+  </div>
+  <button class="btn-ca" onclick="closePhonePreview()" style="color:#fff;border-color:rgba(255,255,255,.3)">✕ Cerrar vista previa</button>
+</div>
+
+<!-- ═══════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════ -->
+<script>
+// ════════════════════════════════════════════════
+//  STORAGE
+// ════════════════════════════════════════════════
+const S = {
+  get: k => { try { return JSON.parse(localStorage.getItem(k)) || [] } catch(e) { return [] } },
+  set: (k,v) => localStorage.setItem(k, JSON.stringify(v)),
+  obj: k => { try { return JSON.parse(localStorage.getItem(k)) || {} } catch(e) { return {} } },
+  setObj: (k,v) => localStorage.setItem(k, JSON.stringify(v))
+};
+
+// ════════════════════════════════════════════════
+//  CONFIG
+// ════════════════════════════════════════════════
+const DEFAULTS = {
+  wsp: '',
+  wspmsg: 'Hola, quiero hacer una consulta desde la web',
+  tel: '',
+  email: '',
+  dir: 'San Martín 2418 — Vera, Santa Fe',
+  hor: 'Lunes a Viernes: 8:00–12:30 / 15:00–19:30 hs\nSábados: 8:00–12:30 hs\nDomingos: cerrado',
+  ig: '', yt: '', fb: '', tt: '',
+  pass: 'trusik2024'
+};
+
+function getCfg() { return Object.assign({}, DEFAULTS, S.obj('cfg')); }
+
+function wspLink(msg) {
+  const cfg = getCfg();
+  const num = (cfg.wsp || '').replace(/\D/g,'');
+  if (!num) return 'https://wa.me/?text=' + encodeURIComponent('Hola, quiero hacer una consulta');
+  const txt = encodeURIComponent(msg || cfg.wspmsg || DEFAULTS.wspmsg);
+  // Usar el formato universal wa.me que funciona en celular, tablet y PC
+  return `https://wa.me/${num}?text=${txt}`;
+}
+
+// ════════════════════════════════════════════════
+//  APPLY CONFIG TO PAGE
+// ════════════════════════════════════════════════
+function applyConfig() {
+  const cfg = getCfg();
+  const url = wspLink();
+
+  // All WhatsApp links
+  ['wfloat','nav-wsp','menu-wsp','nos-wsp','ubic-wsp','cta-wsp'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.href = url;
+  });
+
+  // Contact info
+  const telA = document.getElementById('pub-tel-a');
+  if (telA) {
+    telA.href = url;
+    telA.textContent = cfg.tel || (cfg.wsp ? 'WhatsApp disponible' : 'Sin número configurado');
+  }
+  const emailA = document.getElementById('pub-email-a');
+  if (emailA) {
+    emailA.href = cfg.email ? `mailto:${cfg.email}` : '#';
+    emailA.textContent = cfg.email || 'Sin email configurado';
+  }
+  const dir = document.getElementById('pub-dir');
+  if (dir) dir.textContent = cfg.dir || 'San Martín 2418 — Vera, Santa Fe';
+  const hor = document.getElementById('pub-hor');
+  if (hor) hor.innerHTML = (cfg.hor || DEFAULTS.hor).replace(/\n/g, '<br>');
+
+  // Social networks
+  renderSocials();
+
+  // Content (hero, etc.)
+  applyContent();
+}
+
+// ════════════════════════════════════════════════
+//  SOCIAL NETWORKS
+// ════════════════════════════════════════════════
+const SVG_IG = `<svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>`;
+const SVG_YT = `<svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`;
+const SVG_FB = `<svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>`;
+const SVG_TT = `<svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>`;
+
+function buildSocialLink(cfg, type) {
+  if (type === 'ig' && cfg.ig) return { url: 'https://instagram.com/' + cfg.ig, cls: 'red-ig', svg: SVG_IG };
+  if (type === 'yt' && cfg.yt) return { url: cfg.yt.startsWith('http') ? cfg.yt : 'https://youtube.com/' + cfg.yt, cls: 'red-yt', svg: SVG_YT };
+  if (type === 'fb' && cfg.fb) return { url: cfg.fb.startsWith('http') ? cfg.fb : 'https://facebook.com/' + cfg.fb, cls: 'red-fb', svg: SVG_FB };
+  if (type === 'tt' && cfg.tt) return { url: 'https://tiktok.com/@' + cfg.tt, cls: 'red-tt', svg: SVG_TT };
+  return null;
+}
+
+function renderSocials() {
+  const cfg = getCfg();
+  const types = ['ig', 'yt', 'fb', 'tt'];
+  const links = types.map(t => buildSocialLink(cfg, t)).filter(Boolean);
+
+  const bigHtml = links.map(l => `<a href="${l.url}" target="_blank" class="red-btn ${l.cls}" title="Seguinos">${l.svg}</a>`).join('');
+  const smHtml  = links.map(l => `<a href="${l.url}" target="_blank" class="${l.cls}" title="Seguinos">${l.svg}</a>`).join('');
+
+  const reUbic = document.getElementById('redes-ubic');
+  const reUbicSec = document.getElementById('redes-ubic-section');
+  const reCta = document.getElementById('redes-cta');
+  const reCtaSec = document.getElementById('redes-cta-section');
+  const reFoot = document.getElementById('redes-footer');
+
+  if (reUbic) reUbic.innerHTML = bigHtml;
+  if (reUbicSec) reUbicSec.style.display = links.length ? 'block' : 'none';
+  if (reCta) reCta.innerHTML = bigHtml;
+  if (reCtaSec) reCtaSec.style.display = links.length ? 'flex' : 'none';
+  if (reFoot) reFoot.innerHTML = smHtml;
+}
+
+// ════════════════════════════════════════════════
+//  MARCAS — editor visual con tags
+// ════════════════════════════════════════════════
+const DEF_MARCAS = 'STIHL, HUSQVARNA, HONDA, ECHO, BRIGGS, KAWASAKI, ZANETTI, LONCIN, GENERAC, KIPOR';
+const SUGERIDAS = ['STIHL','HUSQVARNA','HONDA','ECHO','KAWASAKI','BRIGGS','GENERAC','KIPOR','ZANETTI','LONCIN','MAKITA','DEWALT','STANLEY','BOSCH','HITACHI','EMAK','OLEOMAC','ZENOAH'];
+
+let _marcasArr = [];
+
+function renderMarcas() {
+  const belt = document.getElementById('mbelt');
+  if (!belt) return;
+  const c = S.obj('content');
+  const section = document.getElementById('marcas');
+  if (c.marcasOcultas) { if (section) section.style.display = 'none'; return; }
+  if (section) section.style.display = '';
+  const list = (c.marcas || DEF_MARCAS).split(',').map(m => m.trim()).filter(Boolean);
+  belt.innerHTML = list.map(m => `<span class="mtag">${m.toUpperCase()}</span>`).join('');
+}
+
+function loadMarcasEditor() {
+  const c = S.obj('content');
+  _marcasArr = (c.marcas || DEF_MARCAS).split(',').map(m => m.trim()).filter(Boolean);
+  renderMarcasTags();
+  renderSugeridas();
+  const chk = document.getElementById('marcas-ocultar');
+  if (chk) chk.checked = !!c.marcasOcultas;
+}
+
+function renderMarcasTags() {
+  const box = document.getElementById('marcas-tags');
+  if (!box) return;
+  if (_marcasArr.length === 0) {
+    box.innerHTML = '<span style="color:var(--gr);font-size:.82rem;font-style:italic">No hay marcas cargadas todavía.</span>';
+    return;
+  }
+  box.innerHTML = _marcasArr.map((m, i) => `
+    <span style="display:inline-flex;align-items:center;gap:.4rem;background:var(--oc);color:var(--ng);padding:.3rem .7rem;font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:1px;border-radius:3px">
+      ${m.toUpperCase()}
+      <button onclick="quitarMarca(${i})" style="background:rgba(0,0,0,.25);border:none;color:var(--ng);cursor:pointer;width:18px;height:18px;border-radius:50%;font-size:.75rem;display:inline-flex;align-items:center;justify-content:center;padding:0;font-weight:900;line-height:1">✕</button>
+    </span>`).join('');
+}
+
+function renderSugeridas() {
+  const box = document.getElementById('marcas-sugeridas');
+  if (!box) return;
+  const disponibles = SUGERIDAS.filter(m => !_marcasArr.map(x => x.toUpperCase()).includes(m));
+  box.innerHTML = disponibles.map(m => `
+    <button onclick="agregarMarcaDirecta('${m}')" style="background:#15120c;border:1px solid var(--bd);color:var(--gr);padding:.3rem .7rem;font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1px;cursor:pointer;border-radius:3px;-webkit-tap-highlight-color:transparent" onmouseover="this.style.borderColor='var(--oc)';this.style.color='var(--occ)'" onmouseout="this.style.borderColor='var(--bd)';this.style.color='var(--gr)'">
+      + ${m}
+    </button>`).join('');
+}
+
+function agregarMarca() {
+  const inp = document.getElementById('marca-nueva');
+  if (!inp) return;
+  const val = inp.value.trim();
+  if (!val) return;
+  // Permite ingresar varias separadas por coma
+  val.split(',').forEach(m => {
+    const limpio = m.trim().toUpperCase();
+    if (limpio && !_marcasArr.map(x => x.toUpperCase()).includes(limpio)) {
+      _marcasArr.push(limpio);
+    }
+  });
+  inp.value = '';
+  renderMarcasTags();
+  renderSugeridas();
+}
+
+function agregarMarcaDirecta(m) {
+  if (!_marcasArr.map(x => x.toUpperCase()).includes(m)) {
+    _marcasArr.push(m);
+    renderMarcasTags();
+    renderSugeridas();
+  }
+}
+
+function quitarMarca(i) {
+  _marcasArr.splice(i, 1);
+  renderMarcasTags();
+  renderSugeridas();
+}
+
+function toggleMarcas(ocultar) {
+  const c = S.obj('content');
+  c.marcasOcultas = ocultar;
+  S.setObj('content', c);
+  renderMarcas();
+}
+
+function saveMarcas() {
+  const c = S.obj('content');
+  c.marcas = _marcasArr.join(', ');
+  S.setObj('content', c);
+  applyContent();
+  toast('Marcas guardadas ✅');
+}
+
+function resetMarcas() {
+  if (!confirm('¿Volver a las marcas originales?')) return;
+  _marcasArr = DEF_MARCAS.split(',').map(m => m.trim());
+  renderMarcasTags();
+  renderSugeridas();
+  toast('Marcas restablecidas ↩️');
+}
+
+// ════════════════════════════════════════════════
+//  PRODUCTS — render helpers
+// ════════════════════════════════════════════════
+function wsp_svg() {
+  return `<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
+}
+
+function makeCard(p, badgeCls, badgeText) {
+  const imgHtml = p.img
+    ? `<img src="${p.img}" alt="${p.nom}" loading="lazy">`
+    : `<span style="font-size:3.5rem">${p.emoji || '🛠️'}</span>`;
+  const pa = p.ant ? `<span class="price-old">${p.ant}</span>` : '';
+  const pa2 = p.aho ? `<span class="price-new">${p.aho}</span>` : '';
+  const ppr = p.pre ? `<span class="price-new">${p.pre}</span>` : '';
+  const badge = `<div class="pbadge ${badgeCls}">${badgeText}</div>`;
+  const urlMsg = wspLink('Hola, quiero consultar por: ' + p.nom);
+  return `<div class="pcard fi">
+    <div class="pimg">${imgHtml}</div>
+    ${badge}
+    <div class="pbody">
+      <p class="pcat">${p.cat || ''}</p>
+      <h3>${p.nom}</h3>
+      <p class="pdesc">${p.desc || ''}</p>
+      <div class="pprice">${pa}${pa2}${ppr}</div>
+      <a href="${urlMsg}" target="_blank" class="btn-consultar">${wsp_svg()} Consultar por WhatsApp</a>
+    </div>
+  </div>`;
+}
+
+function renderPromos() {
+  const g = document.getElementById('grid-promos');
+  if (!g) return;
+  const items = S.get('promos');
+  if (!items.length) { g.innerHTML = `<p class="empty">No hay promociones cargadas todavía. Ingresá al panel (clic 5 veces en el logo) y cargá desde la pestaña Promociones.</p>`; return; }
+  g.innerHTML = items.map(p => {
+    const badge = p.badge ? `<div class="pbadge promo">${p.badge}</div>` : '';
+    const pa = p.ant ? `<span class="price-old">${p.ant}</span>` : '';
+    const pa2 = p.aho ? `<span class="price-new">${p.aho}</span>` : '';
+    const imgHtml = p.img ? `<img src="${p.img}" alt="${p.nom}" loading="lazy">` : `<span style="font-size:3.5rem">${p.emoji||'🛠️'}</span>`;
+    const urlMsg = wspLink('Hola, quiero consultar por la promoción: ' + p.nom);
+    return `<div class="pcard fi">
+      <div class="pimg">${imgHtml}</div>${badge}
+      <div class="pbody">
+        <p class="pcat">${p.cat||'Promoción'}</p><h3>${p.nom}</h3>
+        <p class="pdesc">${p.desc||''}</p>
+        <div class="pprice">${pa}${pa2}</div>
+        <a href="${urlMsg}" target="_blank" class="btn-consultar">${wsp_svg()} Consultar por WhatsApp</a>
+      </div></div>`;
+  }).join('');
+  activateFI();
+}
+
+function renderStock() {
+  const g = document.getElementById('grid-stock');
+  if (!g) return;
+  const items = S.get('stock');
+  if (!items.length) { g.innerHTML = `<p class="empty">No hay productos en stock cargados todavía.</p>`; return; }
+  g.innerHTML = items.map(p => {
+    const imgHtml = p.img ? `<img src="${p.img}" alt="${p.nom}" loading="lazy">` : `<span style="font-size:3.5rem">${p.emoji||'📦'}</span>`;
+    const precio = p.pre ? `<div class="pprice"><span class="price-new">${p.pre}</span></div>` : '';
+    const urlMsg = wspLink('Hola, quiero consultar por: ' + p.nom);
+    return `<div class="pcard fi">
+      <div class="pimg">${imgHtml}</div>
+      <div class="pbadge stk">EN STOCK</div>
+      <div class="pbody">
+        <p class="pcat">${p.cat||'Producto'}</p><h3>${p.nom}</h3>
+        <p class="pdesc">${p.desc||''}</p>${precio}
+        <a href="${urlMsg}" target="_blank" class="btn-consultar">${wsp_svg()} Consultar por WhatsApp</a>
+      </div></div>`;
+  }).join('');
+  activateFI();
+}
+
+function renderNovs() {
+  const g = document.getElementById('grid-nov');
+  if (!g) return;
+  const items = S.get('nov');
+  if (!items.length) { g.innerHTML = `<p class="empty">No hay novedades cargadas todavía.</p>`; return; }
+  g.innerHTML = items.map(p => {
+    const imgHtml = p.img ? `<img src="${p.img}" alt="${p.nom}" loading="lazy">` : `<span style="font-size:3.5rem">${p.emoji||'✨'}</span>`;
+    const precio = p.pre ? `<div class="pprice"><span class="price-new">${p.pre}</span></div>` : '';
+    const urlMsg = wspLink('Hola, me interesa la novedad: ' + p.nom);
+    return `<div class="pcard fi">
+      <div class="pimg">${imgHtml}</div>
+      <div class="pbadge nov">NUEVO</div>
+      <div class="pbody">
+        <p class="pcat">${p.cat||'Novedad'}</p><h3>${p.nom}</h3>
+        <p class="pdesc">${p.desc||''}</p>${precio}
+        <a href="${urlMsg}" target="_blank" class="btn-consultar">${wsp_svg()} Consultar por WhatsApp</a>
+      </div></div>`;
+  }).join('');
+  activateFI();
+}
+
+// ════════════════════════════════════════════════
+//  ADMIN LISTS
+// ════════════════════════════════════════════════
+function renderAList(key, lid, editFn) {
+  const el = document.getElementById(lid);
+  if (!el) return;
+  const items = S.get(key);
+  if (!items.length) { el.innerHTML = '<p style="color:var(--gr);font-size:.85rem;font-style:italic;padding:.5rem 0">Sin elementos. Usá el formulario de arriba para agregar.</p>'; return; }
+  el.innerHTML = items.map((p, i) => {
+    const imgHtml = p.img ? `<img src="${p.img}" alt="${p.nom}">` : `<span style="font-size:2.5rem">${p.emoji||'📦'}</span>`;
+    return `<div class="aitem">
+      <div class="aitem-img">${imgHtml}</div>
+      <div class="aitem-body">
+        <h4>${p.nom}</h4>
+        <p>${p.cat||''} ${p.aho||p.pre||''}</p>
+        <div class="aitem-acts">
+          <button class="btn-sm-edit" onclick="${editFn}(${i})">✏️ Editar</button>
+          <button class="btn-sm-del" onclick="delItem('${key}',${i})">🗑️ Borrar</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function refreshALists() {
+  renderAList('promos', 'alist-promos', 'editPromo');
+  renderAList('stock', 'alist-stock', 'editStock');
+  renderAList('nov', 'alist-nov', 'editNov');
+}
+
+function delItem(key, idx) {
+  if (!confirm('¿Eliminar este elemento?')) return;
+  const arr = S.get(key);
+  arr.splice(idx, 1);
+  S.set(key, arr);
+  refreshALists();
+  renderPromos(); renderStock(); renderNovs();
+  toast('Eliminado correctamente');
+}
+
+// ════════════════════════════════════════════════
+//  PROMO CRUD
+// ════════════════════════════════════════════════
+function savePromo() {
+  const nom = gv('p-nom').trim();
+  if (!nom) { alert('El nombre del producto es obligatorio'); return; }
+  const item = { id: Date.now(), nom, cat: gv('p-cat'), desc: gv('p-desc'), ant: gv('p-ant'), aho: gv('p-aho'), badge: gv('p-badge'), emoji: gv('p-emoji')||'🛠️', img: gv('pd') };
+  const arr = S.get('promos');
+  const eid = gv('p-eid');
+  if (eid) { const i = arr.findIndex(x => String(x.id) === eid); if (i > -1) arr[i] = item; else arr.push(item); }
+  else arr.push(item);
+  S.set('promos', arr);
+  clearPromo(); refreshALists(); renderPromos();
+  toast('Promoción guardada ✅');
+}
+function editPromo(idx) {
+  const p = S.get('promos')[idx];
+  sv('p-nom', p.nom||''); sv('p-cat', p.cat||''); sv('p-desc', p.desc||'');
+  sv('p-ant', p.ant||''); sv('p-aho', p.aho||''); sv('p-badge', p.badge||'');
+  sv('p-emoji', p.emoji||'🛠️'); sv('pd', p.img||''); sv('p-eid', p.id);
+  const pr = document.getElementById('pp');
+  if (p.img) { pr.src = p.img; pr.style.display = 'block'; document.getElementById('pp-del').style.display = 'inline-block'; }
+  else pr.style.display = 'none';
+  document.getElementById('ft-promo').firstChild.textContent = '✏️ Editar Promoción ';
+  document.getElementById('fc-promo').scrollIntoView({ behavior: 'smooth' });
+  showTab('t-promos', document.querySelectorAll('.atab')[0]);
+}
+function cancelPromo() { clearPromo(); }
+function clearPromo() {
+  ['p-nom','p-cat','p-desc','p-ant','p-aho','p-badge','p-eid','pd'].forEach(id => sv(id,''));
+  sv('p-emoji','🛠️'); clearImg('pp','pd','pp-del');
+  document.getElementById('ft-promo').firstChild.textContent = '➕ Nueva Promoción ';
+}
+
+// ════════════════════════════════════════════════
+//  STOCK CRUD
+// ════════════════════════════════════════════════
+function saveStock() {
+  const nom = gv('s-nom').trim();
+  if (!nom) { alert('El nombre del producto es obligatorio'); return; }
+  const item = { id: Date.now(), nom, cat: gv('s-cat'), desc: gv('s-desc'), pre: gv('s-pre'), emoji: gv('s-emoji')||'📦', img: gv('sd') };
+  const arr = S.get('stock');
+  const eid = gv('s-eid');
+  if (eid) { const i = arr.findIndex(x => String(x.id) === eid); if (i > -1) arr[i] = item; else arr.push(item); }
+  else arr.push(item);
+  S.set('stock', arr);
+  clearStock(); refreshALists(); renderStock();
+  toast('Producto en stock guardado ✅');
+}
+function editStock(idx) {
+  const p = S.get('stock')[idx];
+  sv('s-nom', p.nom||''); sv('s-cat', p.cat||''); sv('s-desc', p.desc||'');
+  sv('s-pre', p.pre||''); sv('s-emoji', p.emoji||'📦'); sv('sd', p.img||''); sv('s-eid', p.id);
+  const pr = document.getElementById('sp');
+  if (p.img) { pr.src = p.img; pr.style.display = 'block'; document.getElementById('sp-del').style.display = 'inline-block'; }
+  else pr.style.display = 'none';
+  document.getElementById('ft-stock').firstChild.textContent = '✏️ Editar Stock ';
+  showTab('t-stock', document.querySelectorAll('.atab')[1]);
+  document.getElementById('fc-stock').scrollIntoView({ behavior: 'smooth' });
+}
+function cancelStock() { clearStock(); }
+function clearStock() {
+  ['s-nom','s-cat','s-desc','s-pre','s-eid','sd'].forEach(id => sv(id,''));
+  sv('s-emoji','📦'); clearImg('sp','sd','sp-del');
+  document.getElementById('ft-stock').firstChild.textContent = '➕ Nuevo Producto en Stock ';
+}
+
+// ════════════════════════════════════════════════
+//  NOVEDAD CRUD
+// ════════════════════════════════════════════════
+function saveNov() {
+  const nom = gv('n-nom').trim();
+  if (!nom) { alert('El nombre de la novedad es obligatorio'); return; }
+  const item = { id: Date.now(), nom, cat: gv('n-cat'), desc: gv('n-desc'), pre: gv('n-pre'), emoji: gv('n-emoji')||'✨', img: gv('nd') };
+  const arr = S.get('nov');
+  const eid = gv('n-eid');
+  if (eid) { const i = arr.findIndex(x => String(x.id) === eid); if (i > -1) arr[i] = item; else arr.push(item); }
+  else arr.push(item);
+  S.set('nov', arr);
+  clearNov(); refreshALists(); renderNovs();
+  toast('Novedad guardada ✅');
+}
+function editNov(idx) {
+  const p = S.get('nov')[idx];
+  sv('n-nom', p.nom||''); sv('n-cat', p.cat||''); sv('n-desc', p.desc||'');
+  sv('n-pre', p.pre||''); sv('n-emoji', p.emoji||'✨'); sv('nd', p.img||''); sv('n-eid', p.id);
+  const pr = document.getElementById('np');
+  if (p.img) { pr.src = p.img; pr.style.display = 'block'; document.getElementById('np-del').style.display = 'inline-block'; }
+  else pr.style.display = 'none';
+  document.getElementById('ft-nov').firstChild.textContent = '✏️ Editar Novedad ';
+  showTab('t-nov', document.querySelectorAll('.atab')[2]);
+  document.getElementById('fc-nov').scrollIntoView({ behavior: 'smooth' });
+}
+function cancelNov() { clearNov(); }
+function clearNov() {
+  ['n-nom','n-cat','n-desc','n-pre','n-eid','nd'].forEach(id => sv(id,''));
+  sv('n-emoji','✨'); clearImg('np','nd','np-del');
+  document.getElementById('ft-nov').firstChild.textContent = '➕ Nueva Novedad ';
+}
+
+// ════════════════════════════════════════════════
+//  CONFIG SAVE
+// ════════════════════════════════════════════════
+function validarWsp(val) {
+  const box = document.getElementById('wsp-validator');
+  if (!box) return;
+  const num = val.replace(/\D/g,'');
+  if (!num) { box.style.display = 'none'; return; }
+  box.style.display = 'block';
+  // Validaciones
+  const errores = [];
+  if (!num.startsWith('54')) errores.push('❌ Debe empezar con <strong>54</strong> (código de Argentina)');
+  if (num.startsWith('54') && !num.startsWith('549')) errores.push('❌ Después del 54 va el <strong>9</strong>. Ej: 54<strong>9</strong>3495...');
+  if (num.length < 12) errores.push('❌ El número es muy corto. Debe tener entre 12 y 13 dígitos. Tiene: ' + num.length);
+  if (num.length > 13) errores.push('❌ El número es muy largo. Tiene: ' + num.length + ' dígitos');
+  const link = 'https://wa.me/' + num + '?text=Hola%2C+quiero+consultar';
+  if (errores.length === 0) {
+    box.style.background = 'rgba(37,211,102,.1)';
+    box.style.border = '1px solid rgba(37,211,102,.4)';
+    box.innerHTML = `✅ <strong style="color:#25D366">Número válido</strong> (${num.length} dígitos)<br>
+      🔗 Link generado: <a href="${link}" target="_blank" style="color:var(--occ);word-break:break-all">${link}</a><br>
+      👆 <strong>Hacé clic en el link de arriba para probar</strong> si abre el WhatsApp correcto.`;
+  } else {
+    box.style.background = 'rgba(230,57,70,.1)';
+    box.style.border = '1px solid rgba(230,57,70,.4)';
+    box.innerHTML = errores.join('<br>') + `<br><span style="color:var(--gr);font-size:.78rem">Número ingresado: ${num} (${num.length} dígitos)</span>`;
+  }
+}
+
+function saveCfg() {
+  const cfg = getCfg();
+  const fields = { wsp:'c-wsp', wspmsg:'c-wspmsg', tel:'c-tel', email:'c-email', dir:'c-dir', hor:'c-hor', ig:'c-ig', yt:'c-yt', fb:'c-fb', tt:'c-tt' };
+  Object.entries(fields).forEach(([k, id]) => { const v = gv(id); if (v !== '') cfg[k] = v; });
+  S.setObj('cfg', cfg);
+  applyConfig();
+  toast('Configuración guardada ✅');
+}
+
+function changePass() {
+  const p1 = gv('c-p1'), p2 = gv('c-p2');
+  if (!p1) { alert('Ingresá una contraseña nueva'); return; }
+  if (p1 !== p2) { alert('Las contraseñas no coinciden'); return; }
+  if (p1.length < 4) { alert('La contraseña debe tener al menos 4 caracteres'); return; }
+  const cfg = getCfg();
+  cfg.pass = p1;
+  S.setObj('cfg', cfg);
+  sv('c-p1',''); sv('c-p2','');
+  toast('Contraseña cambiada ✅ — nueva clave: ' + p1);
+}
+
+function doLogout() {
+  closeAdm();
+}
+
+function loadCfgForm() {
+  const cfg = getCfg();
+  sv('c-wsp', cfg.wsp||''); sv('c-wspmsg', cfg.wspmsg||DEFAULTS.wspmsg);
+  sv('c-tel', cfg.tel||''); sv('c-email', cfg.email||'');
+  sv('c-dir', cfg.dir||''); sv('c-hor', cfg.hor||DEFAULTS.hor);
+  sv('c-ig', cfg.ig||''); sv('c-yt', cfg.yt||''); sv('c-fb', cfg.fb||''); sv('c-tt', cfg.tt||'');
+  // Mostrar advertencia si no hay número
+  const warn = document.getElementById('wsp-warning');
+  if (warn) warn.style.display = cfg.wsp ? 'none' : 'block';
+  // Validar número actual
+  validarWsp(cfg.wsp||'');
+}
+
+// ════════════════════════════════════════════════
+//  CONTENT EDIT (Hero, Servicios, Nosotros, Marcas)
+// ════════════════════════════════════════════════
+const DEF_SRVS = [
+  { ico:'🪚', tit:'Motosierras', desc:'Venta y mantenimiento para uso doméstico, profesional y forestal. Cadenas, barras y repuestos originales.' },
+  { ico:'🌿', tit:'Motoguadañas', desc:'Línea completa de motoguadañas y bordeadoras para jardinería doméstica y profesional.' },
+  { ico:'⚡', tit:'Equipos Electrógenos', desc:'Grupos electrógenos para uso residencial, agropecuario e industrial.' },
+  { ico:'💧', tit:'Motobombas', desc:'Bombas para riego, trasvase y emergencias. Equipos a nafta, diésel y eléctricos.' },
+  { ico:'🔧', tit:'Servicio Técnico', desc:'Taller especializado. Diagnóstico, calibración, afilado de cadenas y puesta a punto.' },
+  { ico:'🌾', tit:'Implementos Rurales', desc:'Fumigadoras, rozadoras, aspersoras y todo lo necesario para el trabajo en el campo.' }
+];
+
+function applyContent() {
+  const c = S.obj('content');
+
+  // Hero
+  if (c.htag) { const e = document.getElementById('hero-tag'); if(e) e.textContent = c.htag; }
+  if (c.ht1)  { const e = document.getElementById('hero-t1'); if(e) e.textContent = c.ht1; }
+  if (c.ht2)  { const e = document.getElementById('hero-t2'); if(e) e.textContent = c.ht2 + ' '; }
+  if (c.ht3)  { const e = document.getElementById('hero-t3'); if(e) e.textContent = c.ht3; }
+  if (c.hsub) { const e = document.getElementById('hero-sub'); if(e) e.textContent = c.hsub; }
+  if (c.himg) { document.documentElement.style.setProperty('--hero-bg', 'url(' + c.himg + ')'); }
+
+  // Servicios
+  const srvs = c.srvs || DEF_SRVS;
+  const cards = document.querySelectorAll('.srv-card');
+  cards.forEach((card, i) => {
+    if (!srvs[i]) return;
+    const ico = card.querySelector('.sico'); if(ico) ico.textContent = srvs[i].ico;
+    const h3 = card.querySelector('h3'); if(h3) h3.textContent = srvs[i].tit;
+    const p = card.querySelector('p'); if(p) p.textContent = srvs[i].desc;
+  });
+
+  // Nosotros stats
+  ['1','2','3','4'].forEach(n => {
+    if (c['s'+n+'n']) { const e=document.getElementById('stat'+n+'n'); if(e) e.textContent=c['s'+n+'n']; }
+    if (c['s'+n+'l']) { const e=document.getElementById('stat'+n+'l'); if(e) e.textContent=c['s'+n+'l']; }
+  });
+  if (c.np1) { const e=document.getElementById('nos-p1'); if(e) e.textContent=c.np1; }
+  if (c.np2) { const e=document.getElementById('nos-p2'); if(e) e.textContent=c.np2; }
+  if (c.nlist) {
+    const ul=document.getElementById('nos-lista');
+    if (ul) ul.innerHTML = c.nlist.split('\n').filter(x=>x.trim()).map(x=>`<li>${x.trim()}</li>`).join('');
+  }
+  if (c.nosimg) {
+    const box=document.getElementById('nos-img-box');
+    if(box){ const existing=box.querySelector('img'); if(existing) existing.remove(); const img=document.createElement('img'); img.src=c.nosimg; img.alt='Trusik Reparaciones'; box.appendChild(img); }
+  }
+
+  // Marcas
+  renderMarcas();
+}
+
+function loadEditForms() {
+  const c = S.obj('content');
+  sv('e-htag', c.htag||''); sv('e-ht1', c.ht1||''); sv('e-ht2', c.ht2||''); sv('e-ht3', c.ht3||'');
+  sv('e-hsub', c.hsub||'');
+  if (c.himg) { const p=document.getElementById('e-hprev'); if(p){p.src=c.himg;p.style.display='block'; document.getElementById('e-hprev-del').style.display='inline-block';} sv('e-himg',c.himg); }
+  // Srvs
+  const srvs = c.srvs || DEF_SRVS;
+  const wrap = document.getElementById('srv-edit-wrap');
+  if (wrap) {
+    wrap.innerHTML = srvs.map((s,i) => `
+      <div style="background:#15120c;border:1px solid var(--bd);padding:1rem;margin-bottom:.8rem;border-radius:3px">
+        <p style="color:var(--oc);font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem">SERVICIO ${i+1}</p>
+        <div class="frow"><div class="fg"><label>Emoji / Ícono</label><input class="inp" id="srv-ico-${i}" value="${s.ico}" style="font-size:1.3rem;text-align:center"></div>
+        <div class="fg"><label>Título</label><input class="inp" id="srv-tit-${i}" value="${s.tit}"></div></div>
+        <div class="frow f1"><div class="fg"><label>Descripción</label><textarea class="inp" id="srv-desc-${i}">${s.desc}</textarea></div></div>
+      </div>`).join('');
+  }
+  // Nosotros
+  ['1','2','3','4'].forEach(n => { sv('e-s'+n+'n', c['s'+n+'n']||''); sv('e-s'+n+'l', c['s'+n+'l']||''); });
+  sv('e-np1', c.np1||''); sv('e-np2', c.np2||'');
+  sv('e-nlist', c.nlist||'');
+  if (c.nosimg) { const p=document.getElementById('e-nosprev'); if(p){p.src=c.nosimg;p.style.display='block'; document.getElementById('e-nosprev-del').style.display='inline-block';} sv('e-nosimg',c.nosimg); }
+  // Marcas — editor visual
+  loadMarcasEditor();
+}
+
+function saveHero() {
+  const c = S.obj('content');
+  c.htag = gv('e-htag'); c.ht1 = gv('e-ht1'); c.ht2 = gv('e-ht2'); c.ht3 = gv('e-ht3');
+  c.hsub = gv('e-hsub');
+  const img = gv('e-himg'); if(img) c.himg = img;
+  S.setObj('content', c); applyContent(); toast('Inicio guardado ✅');
+}
+function saveServicios() {
+  const c = S.obj('content');
+  c.srvs = DEF_SRVS.map((d,i) => ({
+    ico: gv('srv-ico-'+i) || d.ico,
+    tit: gv('srv-tit-'+i) || d.tit,
+    desc: document.getElementById('srv-desc-'+i)?.value || d.desc
+  }));
+  S.setObj('content', c); applyContent(); toast('Servicios guardados ✅');
+}
+function saveNosotros() {
+  const c = S.obj('content');
+  ['1','2','3','4'].forEach(n => { c['s'+n+'n']=gv('e-s'+n+'n'); c['s'+n+'l']=gv('e-s'+n+'l'); });
+  c.np1=gv('e-np1'); c.np2=gv('e-np2'); c.nlist=gv('e-nlist');
+  const img=gv('e-nosimg'); if(img) c.nosimg=img;
+  S.setObj('content', c); applyContent(); toast('Nosotros guardado ✅');
+}
+// saveMarcas defined above in MARCAS section
+
+// ════════════════════════════════════════════════
+//  IMAGE HANDLING
+// ════════════════════════════════════════════════
+function handleImg(input, prevId, dataId) {
+  const file = input.files[0];
+  if (!file) return;
+  if (file.size > 5 * 1024 * 1024) { alert('La imagen supera los 5 MB. Por favor usá una imagen más pequeña.'); input.value=''; return; }
+  const reader = new FileReader();
+  reader.onload = e => {
+    sv(dataId, e.target.result);
+    const prev = document.getElementById(prevId);
+    if (prev) { prev.src = e.target.result; prev.style.display = 'block'; }
+    const del = document.getElementById(prevId + '-del');
+    if (del) del.style.display = 'inline-block';
+  };
+  reader.readAsDataURL(file);
+}
+function clearImg(prevId, dataId, delId) {
+  sv(dataId, '');
+  const prev = document.getElementById(prevId);
+  if (prev) { prev.src = ''; prev.style.display = 'none'; }
+  const del = document.getElementById(delId);
+  if (del) del.style.display = 'none';
+}
+
+// ════════════════════════════════════════════════
+//  ACCESO AL PANEL — 5 clics en logo
+// ════════════════════════════════════════════════
+let _lc = 0, _lt = null;
+function _logoTap() {
+  _lc++;
+  clearTimeout(_lt);
+  _lt = setTimeout(() => { _lc = 0; }, 3000);
+  if (_lc >= 5) { _lc = 0; openAdm(); }
+}
+document.getElementById('logo5').addEventListener('click', _logoTap);
+// También funciona agregando #admin al final de la URL
+if (window.location.hash === '#admin') {
+  window.addEventListener('load', () => setTimeout(openAdm, 300));
+}
+
+function openAdm() {
+  const CLAVES = ['trusik2024', 'trusikadmin2025', 'admin', '1234'];
+  const cfg = S.obj('cfg');
+  const claveGuardada = cfg.pass || 'trusik2024';
+  const ingresada = window.prompt('🔐 PANEL TRUSIK REPARACIONES\n\nIngresá la contraseña:');
+  if (ingresada === null) return;
+  if (ingresada.trim() === claveGuardada || CLAVES.includes(ingresada.trim())) {
+    document.getElementById('adm-ov').classList.add('open');
+    document.getElementById('apanel').classList.add('open');
+    loadCfgForm();
+    loadEditForms();
+    loadColorForm();
+    refreshALists();
+  } else {
+    alert('❌ Contraseña incorrecta.\n\nProbá con: trusik2024');
+  }
+}
+
+function closeAdm() {
+  document.getElementById('adm-ov').classList.remove('open');
+  document.getElementById('apanel').classList.remove('open');
+}
+
+// ════════════════════════════════════════════════
+//  TABS
+// ════════════════════════════════════════════════
+function showTab(id, btn) {
+  document.querySelectorAll('.asec').forEach(s => s.classList.remove('on'));
+  document.querySelectorAll('.atab').forEach(t => t.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  if (btn) btn.classList.add('on');
+}
+
+// ════════════════════════════════════════════════
+//  PHONE PREVIEW
+// ════════════════════════════════════════════════
+function openPhonePreview() {
+  const modal = document.getElementById('prev-modal');
+  const scr = document.getElementById('phone-scr');
+  scr.innerHTML = '';
+  const clone = document.documentElement.cloneNode(true);
+  ['#adm-ov','#prev-modal','.wfloat'].forEach(sel => {
+    const el = clone.querySelector(sel); if (el) el.remove();
+  });
+  const blob = new Blob(['<!DOCTYPE html>' + clone.outerHTML], { type: 'text/html' });
+  const iframe = document.createElement('iframe');
+  iframe.src = URL.createObjectURL(blob);
+  iframe.style.cssText = 'width:375px;height:100%;border:none;';
+  scr.appendChild(iframe);
+  modal.classList.add('open');
+}
+function closePhonePreview() {
+  document.getElementById('prev-modal').classList.remove('open');
+  document.getElementById('phone-scr').innerHTML = '';
+}
+
+// ════════════════════════════════════════════════
+//  MOBILE MENU
+// ════════════════════════════════════════════════
+function toggleMenu() { document.getElementById('mmenu').classList.toggle('open'); }
+function closeMenu() { document.getElementById('mmenu').classList.remove('open'); }
+
+// ════════════════════════════════════════════════
+//  TOAST
+// ════════════════════════════════════════════════
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+// ════════════════════════════════════════════════
+//  UTILS
+// ════════════════════════════════════════════════
+function gv(id) { const e = document.getElementById(id); return e ? e.value : ''; }
+function sv(id, v) { const e = document.getElementById(id); if (e) e.value = v; }
+
+// ════════════════════════════════════════════════
+//  FADE IN SCROLL
+// ════════════════════════════════════════════════
+function activateFI() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.fi:not(.vis)').forEach(el => obs.observe(el));
+}
+
+// ════════════════════════════════════════════════
+//  NAVBAR SCROLL
+// ════════════════════════════════════════════════
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').style.height = window.scrollY > 60 ? '52px' : '60px';
+}, { passive: true });
+
+// ════════════════════════════════════════════════
+//  COLORS & FONTS
+// ════════════════════════════════════════════════
+const COLOR_DEFAULTS = {
+  '--bg': '#1a1610', '--ng': '#0f0e0b', '--oc': '#c4870a', '--occ': '#e9a520',
+  '--vdc': '#4a8c3f', '--bl': '#f5f0e8', '--gr': '#b8b0a0', '--bd': '#2a2518'
+};
+
+const PALETTES = {
+  industrial: { '--bg':'#1a1610','--ng':'#0f0e0b','--oc':'#c4870a','--occ':'#e9a520','--vdc':'#4a8c3f','--bl':'#f5f0e8','--gr':'#b8b0a0','--bd':'#2a2518' },
+  azul:       { '--bg':'#0d1520','--ng':'#080f1a','--oc':'#1e88e5','--occ':'#42a5f5','--vdc':'#00acc1','--bl':'#ecf4ff','--gr':'#90aac8','--bd':'#1a2d45' },
+  rojo:       { '--bg':'#1a1010','--ng':'#0f0808','--oc':'#e53935','--occ':'#ef5350','--vdc':'#c62828','--bl':'#fff0f0','--gr':'#c8a0a0','--bd':'#2d1515' },
+  verde:      { '--bg':'#0d180d','--ng':'#081008','--oc':'#2e7d32','--occ':'#43a047','--vdc':'#1b5e20','--bl':'#f0fff0','--gr':'#90c890','--bd':'#152015' },
+  naranja:    { '--bg':'#1a1108','--ng':'#0f0b04','--oc':'#f4511e','--occ':'#ff7043','--vdc':'#bf360c','--bl':'#fff8f0','--gr':'#c8b090','--bd':'#2d1e10' },
+  claro:      { '--bg':'#f5f5f0','--ng':'#ebebeb','--oc':'#78909c','--occ':'#546e7a','--vdc':'#4a8c3f','--bl':'#1a1a1a','--gr':'#555555','--bd':'#d0d0d0' }
+};
+
+const COL_MAP = {
+  'col-bg':'--bg','col-ng':'--ng','col-oc':'--oc','col-occ':'--occ',
+  'col-vdc':'--vdc','col-bl':'--bl','col-gr':'--gr','col-bd':'--bd'
+};
+
+function applyColorsToPage(colors) {
+  const root = document.documentElement;
+  Object.entries(colors).forEach(([v,c]) => root.style.setProperty(v, c));
+}
+
+function previewColor(cssVar, hex, prevId) {
+  document.documentElement.style.setProperty(cssVar, hex);
+  const prev = document.getElementById(prevId);
+  if (prev) prev.style.background = hex;
+  const hexEl = document.getElementById('hex-' + prevId.replace('prev-',''));
+  if (hexEl) hexEl.textContent = hex;
+}
+
+function previewFont(fontName) {
+  document.body.style.fontFamily = `'${fontName}', sans-serif`;
+  // Load font dynamically
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = `https://fonts.googleapis.com/css2?family=${fontName.replace(/ /g,'+')}:wght@400;500;600;700&display=swap`;
+  document.head.appendChild(link);
+}
+
+function previewFontSize(size) {
+  document.documentElement.style.fontSize = size;
+}
+
+function applyPalette(name) {
+  const p = PALETTES[name];
+  if (!p) return;
+  applyColorsToPage(p);
+  // Update color inputs
+  Object.entries(COL_MAP).forEach(([inputId, cssVar]) => {
+    const input = document.getElementById(inputId);
+    if (input && p[cssVar]) {
+      input.value = p[cssVar];
+      const prevId = 'prev-' + cssVar.replace('--','');
+      const prev = document.getElementById(prevId);
+      if (prev) prev.style.background = p[cssVar];
+      const hexEl = document.getElementById('hex-' + cssVar.replace('--',''));
+      if (hexEl) hexEl.textContent = p[cssVar];
+    }
+  });
+  toast('Paleta aplicada — usá "Guardar" para mantenerla ✅');
+}
+
+function saveColors() {
+  const colors = {};
+  Object.entries(COL_MAP).forEach(([inputId, cssVar]) => {
+    const input = document.getElementById(inputId);
+    if (input) colors[cssVar] = input.value;
+  });
+  const font = gv('col-font');
+  const size = gv('col-size');
+  S.setObj('colors', { colors, font, size });
+  applyColorsToPage(colors);
+  if (font) previewFont(font);
+  if (size) previewFontSize(size);
+  toast('Colores y fuentes guardados ✅');
+}
+
+function resetColors() {
+  if (!confirm('¿Volver a los colores originales de la página?')) return;
+  localStorage.removeItem('colors');
+  applyColorsToPage(COLOR_DEFAULTS);
+  document.body.style.fontFamily = "'Barlow', sans-serif";
+  document.documentElement.style.fontSize = '';
+  loadColorForm();
+  toast('Colores restablecidos ↩️');
+}
+
+function loadColorForm() {
+  const saved = S.obj('colors');
+  const colors = saved.colors || COLOR_DEFAULTS;
+  Object.entries(COL_MAP).forEach(([inputId, cssVar]) => {
+    const input = document.getElementById(inputId);
+    const hex = colors[cssVar] || COLOR_DEFAULTS[cssVar] || '#000000';
+    if (input) input.value = hex;
+    const cssVarShort = cssVar.replace('--','');
+    const prev = document.getElementById('prev-' + cssVarShort);
+    if (prev) prev.style.background = hex;
+    const hexEl = document.getElementById('hex-' + cssVarShort);
+    if (hexEl) hexEl.textContent = hex;
+  });
+  if (saved.font) { const s = document.getElementById('col-font'); if(s) s.value = saved.font; }
+  if (saved.size) { const s = document.getElementById('col-size'); if(s) s.value = saved.size; }
+}
+
+function loadSavedColors() {
+  const saved = S.obj('colors');
+  if (saved.colors && Object.keys(saved.colors).length) applyColorsToPage(saved.colors);
+  if (saved.font) previewFont(saved.font);
+  if (saved.size) previewFontSize(saved.size);
+}
+
+// loadColorForm se llama desde openAdm directamente
+
+// ════════════════════════════════════════════════
+//  INIT
+// ════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  loadSavedColors();
+  applyConfig();
+  renderPromos();
+  renderStock();
+  renderNovs();
+  renderMarcas();
+  activateFI();
+});
+</script>
+</body>
+</html>
