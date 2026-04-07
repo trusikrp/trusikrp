@@ -2084,42 +2084,18 @@ function descargarSitio() {
 
   // Script que inyecta los datos al cargar la página
   const scriptDatos = `
+  <script>(function(){const d=${JSON.stringify(datos)};Object.keys(d).forEach(function(k){if(d[k])localStorage.setItem(k,d[k]);});})();<\/script>`;
+    const htmlOrig = document.documentElement.outerHTML;
+    const htmlFinal = htmlOrig.replace('</body>', scriptDatos + '</body>');
+    const blob = new Blob([htmlFinal], { type: 'text/html' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'index.html';
+    document.body.appendChild(a);
+    a.click();
+    URL.revokeObjectURL(a.href);
+    toast('Sitio descargado con todos los datos.');
+}
 
 
 
-<script src="chrome-extension://lhannfkhjdhmibllojbbdjdbpegidojj/js/content/sm.js" data-pname="recorder-screenshot-v3" data-asset-path="chrome-extension://lhannfkhjdhmibllojbbdjdbpegidojj/"></script><deepl-input-controller translate="no"></deepl-input-controller><div class="glasp-extension-toaster" style="display: block; width: 320px; margin: unset; padding: unset; border: unset; border-radius: unset; outline: unset; background-color: unset; box-shadow: unset; position: fixed; top: 40px; right: 24px; z-index: 9999;"></div><div style="display: none" class="ubey-RecordingScreen-count-down ubey-RecordingScreen-count-down-container">
-          <style>
-              .ubey-RecordingScreen-count-down-container {
-                  position: fixed;
-                  height: 100vh;
-                  width: 100vw;
-                  top: 0;
-                  left: 0;
-                  z-index: 9999999999999;
-                  background-color: rgba(0, 0, 0, 0.2);
-              }
-      
-              .ubey-RecordingScreen-count-down-content {
-                  position: absolute;
-                  display: flex;
-                  top: 50%;
-                  left: 50%;
-                  justify-content: center;
-                  align-items: center;
-                  color: white;
-                  height: 15em;
-                  width: 15em;
-                  transform: translate(-50%, -100%);
-                  background-color: rgba(0, 0, 0, 0.6);
-                  border-radius: 50%;
-              }
-      
-              #ubey-RecordingScreen-count-count {
-                  font-size: 14em;
-                  transform: translateY(-2%);
-              }
-          </style>
-          <div class="ubey-RecordingScreen-count-down-content">
-              <span id="ubey-RecordingScreen-count-count"></span>
-          </div>
-      </div><a id="bottomBar" style="position: fixed; bottom: -40px; left: 0px; z-index: 9999; transform: translateX(-50%); background-color: transparent; border-radius: 5px 5px 0px 0px; opacity: 0.3; padding: 5px; transition: 0.3s; cursor: pointer; max-height: 100px; max-width: 45px;"><img src="chrome-extension://kobncfkmjelbefaoohoblamnbackjggk/icon/icon_32.png" style="width: 32px; height: 32px;"></a><span id="PING_CONTENT_DLS_POPUP" style="display: none;"></span><div style="background-color: transparent; border: none; bottom: 15px; display: block; margin: 0px; opacity: 1; padding: 0px; position: fixed; right: 15px; z-index: 2147483647;"></div></body><div class="glasp-extension" style="display: block; width: unset; margin: unset; padding: unset; border: unset; border-radius: unset; outline: unset; background-color: unset; box-shadow: unset; position: fixed; bottom: 16px; right: 16px; z-index: 9999;"><div class="glasp-extension" style="font-family: inherit;"></div></div><scispace-div id="scispace-extension-root"></scispace-div></html>
