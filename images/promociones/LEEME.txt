@@ -1,0 +1,10 @@
+Esta carpeta es para las fotos de PROMOCIONES.
+
+Como agregar una foto nueva:
+1) Toca el boton "Add file" > "Upload files" (arriba, en la carpeta images/promociones).
+2) Subi la foto (ejemplo: promo-verano-2026.jpg). Usa nombres simples, sin espacios ni acentos.
+3) Anda al archivo index.html, boton editar (lapiz), y busca el array PROMOCIONES.
+4) En la promo que corresponda, completa: imagen: "images/promociones/promo-verano-2026.jpg"
+5) Guarda los cambios (Commit changes). La foto va a aparecer sola en la web en un par de minutos.
+
+Recorda: para activar o desactivar una promo, cambia activa: true o activa: false. No hace falta borrarla.
