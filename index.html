@@ -10,9 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --dark:#11161c; --dark2:#171d24; --card:#1c232b; --border:#2a323b;
-  --amber:#ff8a1e; --amber-l:#ffa64d; --green:#3fa34d; --green-l:#57c268;
-  --wsp:#25D366; --wsph:#1ebe5a; --text:#eef2f5; --muted:#9aa7b0;
+--dark:#11161c; --dark2:#171d24; --card:#1c232b; --border:#2a323b;
+--amber:#ff8a1e; --amber-l:#ffa64d; --green:#3fa34d; --green-l:#57c268;
+--wsp:#25D366; --wsph:#1ebe5a; --text:#eef2f5; --muted:#9aa7b0;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -90,12 +90,34 @@ section{padding:5rem 0}
 .pq-card h4{font-size:.95rem;letter-spacing:.5px;margin-bottom:.4rem}
 .pq-card p{color:var(--muted);font-size:.82rem}
 
+/* PROMOCIONES */
+#promociones{background:var(--dark)}
+.promo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.promo-card{background:var(--card);border:1px solid var(--amber);border-radius:10px;overflow:hidden;position:relative}
+.promo-img-ico{width:100%;height:170px;display:flex;align-items:center;justify-content:center;font-size:3.6rem;background:var(--dark2);overflow:hidden}
+.promo-img-ico img{width:100%;height:100%;object-fit:cover}
+.promo-badge{position:absolute;top:.8rem;left:.8rem;background:var(--amber);color:#1a1105;font-weight:700;font-size:.7rem;letter-spacing:1px;text-transform:uppercase;padding:.35rem .7rem;border-radius:20px;z-index:2}
+.promo-body{padding:1.3rem 1.4rem}
+.promo-body h3{font-size:1.05rem;margin-bottom:.5rem}
+.promo-body p{color:var(--muted);font-size:.87rem;margin-bottom:.8rem;line-height:1.5}
+.promo-vigencia{color:var(--green-l);font-size:.76rem;font-weight:600;margin-bottom:1rem}
+.promo-empty{color:var(--muted);text-align:center;padding:1rem 0}
+
+/* FILTROS PRODUCTOS */
+.filtros{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.2rem}
+.filtro-btn{background:var(--card);border:1.5px solid var(--border);color:var(--muted);font-family:'Oswald',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:.55rem 1.1rem;border-radius:30px;cursor:pointer;transition:.2s}
+.filtro-btn:hover{border-color:var(--amber)}
+.filtro-btn.active{background:var(--amber);border-color:var(--amber);color:#1a1105}
+.filtros-marca{margin-bottom:2rem}
+.prod-marca{color:var(--muted);font-size:.72rem;font-weight:600;letter-spacing:1px;margin-bottom:.3rem}
+
 /* PRODUCTOS */
 #productos{background:var(--dark2)}
 .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
 .prod-card{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:transform .25s,border-color .25s}
 .prod-card:hover{transform:translateY(-5px);border-color:var(--amber)}
-.prod-img{width:100%;height:150px;display:flex;align-items:center;justify-content:center;font-size:3.6rem}
+.prod-img{width:100%;height:150px;display:flex;align-items:center;justify-content:center;font-size:3.6rem;overflow:hidden;background:var(--dark)}
+.prod-img img{width:100%;height:100%;object-fit:cover}
 .prod-body{padding:1.4rem}
 .prod-cat{color:var(--amber);font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.4rem}
 .prod-body h3{font-size:1.1rem;margin-bottom:.5rem}
@@ -185,26 +207,28 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:2.6rem
 
 /* RESPONSIVE */
 @media(max-width:960px){
-  .nav-links{display:none}
-  .burger{display:flex}
-  .srv-grid{grid-template-columns:repeat(2,1fr)}
-  .pq-grid{grid-template-columns:repeat(2,1fr)}
-  .prod-grid{grid-template-columns:repeat(2,1fr)}
-  .nos-grid{grid-template-columns:1fr}
-  .test-grid{grid-template-columns:1fr}
-  .ubic-grid{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr;gap:1.6rem}
-  .trust-strip{grid-template-columns:repeat(2,1fr)}
+.nav-links{display:none}
+.burger{display:flex}
+.srv-grid{grid-template-columns:repeat(2,1fr)}
+.pq-grid{grid-template-columns:repeat(2,1fr)}
+.prod-grid{grid-template-columns:repeat(2,1fr)}
+.promo-grid{grid-template-columns:repeat(2,1fr)}
+.nos-grid{grid-template-columns:1fr}
+.test-grid{grid-template-columns:1fr}
+.ubic-grid{grid-template-columns:1fr}
+.foot-grid{grid-template-columns:1fr;gap:1.6rem}
+.trust-strip{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:560px){
-  section{padding:3.2rem 0}
-  .srv-grid{grid-template-columns:1fr}
-  .pq-grid{grid-template-columns:1fr}
-  .prod-grid{grid-template-columns:1fr}
-  .hbtns{flex-direction:column}
-  .btn{width:100%;justify-content:center}
-  .trust-strip{grid-template-columns:1fr 1fr}
-  .foot-bottom{flex-direction:column;text-align:center}
+section{padding:3.2rem 0}
+.srv-grid{grid-template-columns:1fr}
+.pq-grid{grid-template-columns:1fr}
+.prod-grid{grid-template-columns:1fr}
+.promo-grid{grid-template-columns:1fr}
+.hbtns{flex-direction:column}
+.btn{width:100%;justify-content:center}
+.trust-strip{grid-template-columns:1fr 1fr}
+.foot-bottom{flex-direction:column;text-align:center}
 }
 </style>
 </head>
@@ -219,6 +243,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:2.6rem
 <div class="logo">TRUSIK <span>REPARACIONES</span></div>
 <ul class="nav-links">
 <li><a href="#servicios">Servicios</a></li>
+<li><a href="#promociones">Promociones</a></li>
 <li><a href="#productos">Productos</a></li>
 <li><a href="#nosotros">Nosotros</a></li>
 <li><a href="#testimonios">Opiniones</a></li>
@@ -231,6 +256,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:2.6rem
 </div>
 <div id="mmenu">
 <a href="#servicios">Servicios</a>
+<a href="#promociones">Promociones</a>
 <a href="#productos">Productos</a>
 <a href="#nosotros">Nosotros</a>
 <a href="#testimonios">Opiniones</a>
@@ -291,75 +317,25 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:2.6rem
 </div>
 </section>
 
+<section id="promociones">
+<div class="wrap">
+<p class="eyebrow reveal">Ofertas por tiempo limitado</p>
+<h2 class="h2 reveal">PROMOCIONES <em>ACTIVAS</em></h2>
+<div class="divider reveal"></div>
+<p class="lead reveal">Cargamos acá promociones para distintos momentos del año: temporada, fechas especiales o liquidaciones. Si en algún momento no ves ninguna, es porque no hay promociones activas.</p>
+<div class="promo-grid" id="promo-container"></div>
+</div>
+</section>
+
 <section id="productos">
 <div class="wrap">
 <p class="eyebrow reveal">Nuestro catálogo</p>
 <h2 class="h2 reveal">PRODUCTOS <em>DESTACADOS</em></h2>
 <div class="divider reveal"></div>
-<p class="lead reveal">Estas son nuestras principales líneas de productos. Consultanos disponibilidad, precios y stock actualizado por WhatsApp.</p>
-<div class="prod-grid">
-
-<div class="prod-card reveal">
-<div class="prod-img">🪚</div>
-<div class="prod-body">
-<p class="prod-cat">Motosierras</p>
-<h3>Motosierras a nafta y eléctricas</h3>
-<p>Para uso doméstico, profesional y forestal. Distintos tamaños de barra y cilindrada.</p>
-<a class="btn btn-wsp btn-block" href="https://wa.me/5493483445619?text=Hola%2C%20quiero%20consultar%20por%20motosierras" target="_blank" rel="noopener noreferrer">Consultar disponibilidad</a>
-</div>
-</div>
-
-<div class="prod-card reveal">
-<div class="prod-img">🌿</div>
-<div class="prod-body">
-<p class="prod-cat">Motoguadañas</p>
-<h3>Motoguadañas y bordeadoras</h3>
-<p>Ideales para jardines, quintas y espacios grandes. Modelos a nafta y eléctricos.</p>
-<a class="btn btn-wsp btn-block" href="https://wa.me/5493483445619?text=Hola%2C%20quiero%20consultar%20por%20motoguada%C3%B1as" target="_blank" rel="noopener noreferrer">Consultar disponibilidad</a>
-</div>
-</div>
-
-<div class="prod-card reveal">
-<div class="prod-img">⚡</div>
-<div class="prod-body">
-<p class="prod-cat">Grupos Electrógenos</p>
-<h3>Generadores residenciales e industriales</h3>
-<p>Distintas potencias para tu casa, comercio o campo. Instalación disponible.</p>
-<a class="btn btn-wsp btn-block" href="https://wa.me/5493483445619?text=Hola%2C%20quiero%20consultar%20por%20generadores" target="_blank" rel="noopener noreferrer">Consultar disponibilidad</a>
-</div>
-</div>
-
-<div class="prod-card reveal">
-<div class="prod-img">🌾</div>
-<div class="prod-body">
-<p class="prod-cat">Cortadoras de Césped</p>
-<h3>Cortadoras a nafta y eléctricas</h3>
-<p>Para jardines domésticos y espacios verdes de mayor superficie.</p>
-<a class="btn btn-wsp btn-block" href="https://wa.me/5493483445619?text=Hola%2C%20quiero%20consultar%20por%20cortadoras%20de%20c%C3%A9sped" target="_blank" rel="noopener noreferrer">Consultar disponibilidad</a>
-</div>
-</div>
-
-<div class="prod-card reveal">
-<div class="prod-img">💧</div>
-<div class="prod-body">
-<p class="prod-cat">Motobombas</p>
-<h3>Bombas para riego y trasvase</h3>
-<p>Equipos a nafta, diésel y eléctricos para riego, achique y emergencias.</p>
-<a class="btn btn-wsp btn-block" href="https://wa.me/5493483445619?text=Hola%2C%20quiero%20consultar%20por%20motobombas" target="_blank" rel="noopener noreferrer">Consultar disponibilidad</a>
-</div>
-</div>
-
-<div class="prod-card reveal">
-<div class="prod-img">⚙️</div>
-<div class="prod-body">
-<p class="prod-cat">Repuestos</p>
-<h3>Repuestos y accesorios originales</h3>
-<p>Cadenas, barras, filtros, bujías, hilos de nylon y más para todas las marcas.</p>
-<a class="btn btn-wsp btn-block" href="https://wa.me/5493483445619?text=Hola%2C%20quiero%20consultar%20por%20repuestos" target="_blank" rel="noopener noreferrer">Consultar disponibilidad</a>
-</div>
-</div>
-
-</div>
+<p class="lead reveal">Filtrá por rubro o por marca. Consultanos disponibilidad, precios y stock actualizado por WhatsApp.</p>
+<div class="filtros" id="filtro-rubro"></div>
+<div class="filtros filtros-marca" id="filtro-marca"></div>
+<div class="prod-grid" id="prod-container"></div>
 </div>
 </section>
 
@@ -507,6 +483,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:2.6rem
 <h4>Navegación</h4>
 <ul>
 <li><a href="#servicios">Servicios</a></li>
+<li><a href="#promociones">Promociones</a></li>
 <li><a href="#productos">Productos</a></li>
 <li><a href="#nosotros">Nosotros</a></li>
 <li><a href="#ubicacion">Ubicación</a></li>
@@ -527,44 +504,224 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:2.6rem
 </footer>
 
 <script>
+/* ======================================================================
+   ZONA DE EDICION FACIL - PROMOCIONES Y PRODUCTOS
+   ------------------------------------------------------------------------
+   Todo lo que necesitas cambiar (promos, productos, imagenes) esta ACA
+   ABAJO, en estas dos listas. No hace falta tocar el resto del archivo.
+
+   COMO AGREGAR UNA FOTO:
+   1) En GitHub, entra a la carpeta "images/productos" o
+      "images/promociones", boton "Add file" > "Upload files".
+   2) Subi la foto (ejemplo: motosierra-stihl-170.jpg).
+   3) En el campo "imagen" de abajo escribi la ruta completa, por ejemplo:
+      "images/productos/motosierra-stihl-170.jpg"
+   4) Si dejas "imagen" vacio (""), se muestra el icono/emoji de "icono".
+   ====================================================================== */
+
+  /* ---------------- PROMOCIONES ----------------
+     activa:   true = se muestra / false = queda guardada pero oculta
+     etiqueta: cartel corto (ej "VERANO 2026", "DIA DEL NIÑO", "OFERTA MES")
+     titulo, texto: contenido de la promo
+     imagen:   ruta de la foto (o "" para usar el icono)
+     icono:    emoji que se usa si no hay imagen
+     vigencia: texto libre (ej "Valido hasta el 31/08")
+     wsp:      mensaje de WhatsApp al tocar "Consultar"
+  --------------------------------------------- */
+  var PROMOCIONES = [
+    {
+      activa: true,
+      etiqueta: "EJEMPLO DE PROMO",
+      titulo: "Cargá acá tu primera promoción",
+      texto: "Reemplazá este texto por la promoción real: descuento de temporada, combo, 2x1, etc. Cuando ya no la uses, poné activa:false en vez de borrarla.",
+      imagen: "",
+      icono: "🏷️",
+      vigencia: "Editá esta fecha de vigencia",
+      wsp: "Hola, quiero consultar por la promoción"
+    },
+    {
+      activa: true,
+      etiqueta: "TEMPORADA",
+      titulo: "Espacio para promo de temporada",
+      texto: "Usá esta tarjeta para ofertas de una época del año (verano, otoño, fin de año, vuelta al campo, etc).",
+      imagen: "",
+      icono: "🌦️",
+      vigencia: "Editá esta fecha de vigencia",
+      wsp: "Hola, quiero consultar por la promoción"
+    }
+  ];
+
+  /* ---------------- PRODUCTOS ----------------
+     rubro:   categoria (ej "Motosierras", "Motoguadañas y Bordeadoras")
+     marca:   marca (ej "STIHL", "HUSQVARNA"). Si no aplica: "Varias marcas"
+     nombre, descripcion: contenido de la tarjeta
+     imagen:  ruta de la foto (o "" para usar el icono)
+     icono:   emoji que se usa si no hay imagen
+     wsp:     mensaje de WhatsApp al tocar "Consultar disponibilidad"
+
+     Para agregar un producto nuevo, copia un bloque { ... } completo,
+     pegalo antes del corchete final "]" y completa los datos.
+  --------------------------------------------- */
+  var PRODUCTOS = [
+    { rubro:"Motosierras", marca:"Varias marcas", nombre:"Motosierras a nafta y eléctricas", descripcion:"Para uso doméstico, profesional y forestal. Distintos tamaños de barra y cilindrada.", imagen:"", icono:"🪚", wsp:"Hola, quiero consultar por motosierras" },
+    { rubro:"Motoguadañas y Bordeadoras", marca:"Varias marcas", nombre:"Motoguadañas y bordeadoras", descripcion:"Ideales para jardines, quintas y espacios grandes. Modelos a nafta y eléctricos.", imagen:"", icono:"🌿", wsp:"Hola, quiero consultar por motoguadañas" },
+    { rubro:"Grupos Electrógenos", marca:"Varias marcas", nombre:"Generadores residenciales e industriales", descripcion:"Distintas potencias para tu casa, comercio o campo. Instalación disponible.", imagen:"", icono:"⚡", wsp:"Hola, quiero consultar por generadores" },
+    { rubro:"Cortadoras de Césped", marca:"Varias marcas", nombre:"Cortadoras a nafta y eléctricas", descripcion:"Para jardines domésticos y espacios verdes de mayor superficie.", imagen:"", icono:"🌾", wsp:"Hola, quiero consultar por cortadoras de césped" },
+    { rubro:"Motobombas", marca:"Varias marcas", nombre:"Bombas para riego y trasvase", descripcion:"Equipos a nafta, diésel y eléctricos para riego, achique y emergencias.", imagen:"", icono:"💧", wsp:"Hola, quiero consultar por motobombas" },
+    { rubro:"Repuestos y Accesorios", marca:"Varias marcas", nombre:"Repuestos y accesorios originales", descripcion:"Cadenas, barras, filtros, bujías, hilos de nylon y más para todas las marcas.", imagen:"", icono:"⚙️", wsp:"Hola, quiero consultar por repuestos" }
+  ];
+
+  function iconoOimg(imagen, icono, alt) {
+    if (imagen) { return '<img src="' + imagen + '" alt="' + alt + '">'; }
+    return icono;
+  }
+
+  function renderPromociones() {
+    var cont = document.getElementById('promo-container');
+    var seccion = document.getElementById('promociones');
+    if (!cont) { return; }
+    var activas = [];
+    for (var i = 0; i < PROMOCIONES.length; i++) { if (PROMOCIONES[i].activa) { activas.push(PROMOCIONES[i]); } }
+    if (activas.length === 0) {
+      if (seccion) { seccion.style.display = 'none'; }
+      return;
+    }
+    if (seccion) { seccion.style.display = ''; }
+    var html = '';
+    for (var j = 0; j < activas.length; j++) {
+      var p = activas[j];
+      var wspUrl = 'https://wa.me/5493483445619?text=' + encodeURIComponent(p.wsp);
+      html += '<div class="promo-card reveal on">';
+      html += '<span class="promo-badge">' + p.etiqueta + '</span>';
+      html += '<div class="promo-img-ico">' + iconoOimg(p.imagen, p.icono, p.titulo) + '</div>';
+      html += '<div class="promo-body">';
+      html += '<h3>' + p.titulo + '</h3>';
+      html += '<p>' + p.texto + '</p>';
+      html += '<p class="promo-vigencia">' + p.vigencia + '</p>';
+      html += '<a class="btn btn-wsp btn-block" href="' + wspUrl + '" target="_blank" rel="noopener noreferrer">Consultar</a>';
+      html += '</div></div>';
+    }
+    cont.innerHTML = html;
+  }
+
+  function renderProductos(filtroRubro, filtroMarca) {
+    var cont = document.getElementById('prod-container');
+    if (!cont) { return; }
+    var lista = [];
+    for (var i = 0; i < PRODUCTOS.length; i++) {
+      var p = PRODUCTOS[i];
+      var okRubro = (filtroRubro === 'Todos' || p.rubro === filtroRubro);
+      var okMarca = (filtroMarca === 'Todas' || p.marca === filtroMarca);
+      if (okRubro && okMarca) { lista.push(p); }
+    }
+    if (lista.length === 0) {
+      cont.innerHTML = '<p class="promo-empty">No hay productos para este filtro. Probá con otra combinación o consultanos por WhatsApp.</p>';
+      return;
+    }
+    var html = '';
+    for (var j = 0; j < lista.length; j++) {
+      var pr = lista[j];
+      var wspUrl = 'https://wa.me/5493483445619?text=' + encodeURIComponent(pr.wsp);
+      html += '<div class="prod-card reveal on">';
+      html += '<div class="prod-img">' + iconoOimg(pr.imagen, pr.icono, pr.nombre) + '</div>';
+      html += '<div class="prod-body">';
+      html += '<p class="prod-cat">' + pr.rubro + '</p>';
+      html += '<h3>' + pr.nombre + '</h3>';
+      html += '<p class="prod-marca">Marca: ' + pr.marca + '</p>';
+      html += '<p>' + pr.descripcion + '</p>';
+      html += '<a class="btn btn-wsp btn-block" href="' + wspUrl + '" target="_blank" rel="noopener noreferrer">Consultar disponibilidad</a>';
+      html += '</div></div>';
+    }
+    cont.innerHTML = html;
+  }
+
+  function renderFiltros() {
+    var fr = document.getElementById('filtro-rubro');
+    var fm = document.getElementById('filtro-marca');
+    if (!fr || !fm) { return; }
+    var rubros = ['Todos'];
+    var marcas = ['Todas'];
+    for (var i = 0; i < PRODUCTOS.length; i++) {
+      if (rubros.indexOf(PRODUCTOS[i].rubro) === -1) { rubros.push(PRODUCTOS[i].rubro); }
+      if (marcas.indexOf(PRODUCTOS[i].marca) === -1) { marcas.push(PRODUCTOS[i].marca); }
+    }
+    var estado = { rubro: 'Todos', marca: 'Todas' };
+
+    function pintar() {
+      var i;
+      for (i = 0; i < fr.children.length; i++) {
+        fr.children[i].classList.toggle('active', fr.children[i].getAttribute('data-val') === estado.rubro);
+      }
+      for (i = 0; i < fm.children.length; i++) {
+        fm.children[i].classList.toggle('active', fm.children[i].getAttribute('data-val') === estado.marca);
+      }
+      renderProductos(estado.rubro, estado.marca);
+    }
+
+    rubros.forEach(function (r) {
+      var b = document.createElement('button');
+      b.className = 'filtro-btn';
+      b.type = 'button';
+      b.textContent = r;
+      b.setAttribute('data-val', r);
+      b.addEventListener('click', function () { estado.rubro = this.getAttribute('data-val'); pintar(); });
+      fr.appendChild(b);
+    });
+    marcas.forEach(function (m) {
+      var b = document.createElement('button');
+      b.className = 'filtro-btn';
+      b.type = 'button';
+      b.textContent = m;
+      b.setAttribute('data-val', m);
+      b.addEventListener('click', function () { estado.marca = this.getAttribute('data-val'); pintar(); });
+      fm.appendChild(b);
+    });
+    pintar();
+  }
+
+  renderPromociones();
+  renderFiltros();
+</script>
+
+<script>
 var burger = document.getElementById('burger');
 var mmenu = document.getElementById('mmenu');
 if (burger) {
-  burger.addEventListener('click', function () {
-    mmenu.classList.toggle('open');
-  });
+burger.addEventListener('click', function () {
+mmenu.classList.toggle('open');
+});
 }
 var mlinks = mmenu ? mmenu.querySelectorAll('a') : [];
 for (var i = 0; i < mlinks.length; i++) {
-  mlinks[i].addEventListener('click', function () {
-    mmenu.classList.remove('open');
-  });
+mlinks[i].addEventListener('click', function () {
+mmenu.classList.remove('open');
+});
 }
 
 var faqItems = document.querySelectorAll('.faq-item');
 for (var j = 0; j < faqItems.length; j++) {
-  var q = faqItems[j].querySelector('.faq-q');
-  q.addEventListener('click', (function (item) {
-    return function () {
-      var wasOpen = item.classList.contains('open');
-      for (var k = 0; k < faqItems.length; k++) { faqItems[k].classList.remove('open'); }
-      if (!wasOpen) { item.classList.add('open'); }
-    };
-  })(faqItems[j]));
+var q = faqItems[j].querySelector('.faq-q');
+q.addEventListener('click', (function (item) {
+return function () {
+var wasOpen = item.classList.contains('open');
+for (var k = 0; k < faqItems.length; k++) { faqItems[k].classList.remove('open'); }
+if (!wasOpen) { item.classList.add('open'); }
+};
+})(faqItems[j]));
 }
 
 if ('IntersectionObserver' in window) {
-  var obs = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('on');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  document.querySelectorAll('.reveal').forEach(function (el) { obs.observe(el); });
+var obs = new IntersectionObserver(function (entries) {
+entries.forEach(function (entry) {
+if (entry.isIntersecting) {
+entry.target.classList.add('on');
+obs.unobserve(entry.target);
+}
+});
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal').forEach(function (el) { obs.observe(el); });
 } else {
-  document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('on'); });
+document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('on'); });
 }
 </script>
 </body>
