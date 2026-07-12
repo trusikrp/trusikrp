@@ -59,7 +59,8 @@ section{padding:5rem 0}
 
 /* HERO */
 #hero{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:68px;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(120deg,rgba(17,22,28,.95) 15%,rgba(17,22,28,.75) 55%,rgba(63,163,77,.35) 100%),url('https://images.unsplash.com/photo-1601758064878-3018eecc9295?w=1600&q=80') center/cover no-repeat;z-index:0}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(63,163,77,.28),transparent 55%),radial-gradient(circle at 10% 90%,rgba(255,138,30,.22),transparent 50%),linear-gradient(160deg,#0d1116 0%,#151b22 100%);z-index:0}
+.hero-bg::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.015) 0,rgba(255,255,255,.015) 2px,transparent 2px,transparent 12px)}
 .hero-in{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:2rem 1.5rem}
 .tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,138,30,.15);border:1px solid var(--amber);color:var(--amber-l);font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:.5rem 1rem;border-radius:30px;margin-bottom:1.6rem}
 .htitle{font-size:clamp(2.6rem,7vw,5.2rem);line-height:1.02;letter-spacing:1px;margin-bottom:1.3rem}
@@ -94,9 +95,7 @@ section{padding:5rem 0}
 .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
 .prod-card{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:transform .25s,border-color .25s}
 .prod-card:hover{transform:translateY(-5px);border-color:var(--amber)}
-.prod-img{width:100%;height:190px;overflow:hidden;background:#0e1319}
-.prod-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
-.prod-card:hover .prod-img img{transform:scale(1.06)}
+.prod-img{width:100%;height:150px;display:flex;align-items:center;justify-content:center;font-size:3.6rem}
 .prod-body{padding:1.4rem}
 .prod-cat{color:var(--amber);font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.4rem}
 .prod-body h3{font-size:1.1rem;margin-bottom:.5rem}
@@ -111,8 +110,7 @@ section{padding:5rem 0}
 /* NOSOTROS */
 #nosotros{background:var(--dark2)}
 .nos-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
-.nos-img{width:100%;aspect-ratio:4/3;border-radius:12px;overflow:hidden;border:1px solid var(--border)}
-.nos-img img{width:100%;height:100%;object-fit:cover}
+.nos-img{width:100%;aspect-ratio:4/3;border-radius:12px;overflow:hidden;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:6rem;background:radial-gradient(circle,rgba(255,138,30,.12),rgba(63,163,77,.1))}
 .nos-text p{color:var(--muted);margin-bottom:1.1rem;font-size:.96rem;line-height:1.7}
 .nos-list{margin:1.3rem 0}
 .nos-list li{padding:.5rem 0;border-bottom:1px solid var(--border);display:flex;gap:.6rem;font-size:.92rem}
@@ -302,7 +300,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:2.6rem
 <div class="prod-grid">
 
 <div class="prod-card reveal">
-<div class="prod-img"><img src="https://images.unsplash.com/photo-1610438235354-a6ae5528385c?w=600&q=80" alt="Motosierra"></div>
+<div class="prod-img">🪚</div>
 <div class="prod-body">
 <p class="prod-cat">Motosierras</p>
 <h3>Motosierras a nafta y eléctricas</h3>
@@ -312,7 +310,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:2.6rem
 </div>
 
 <div class="prod-card reveal">
-<div class="prod-img"><img src="https://images.unsplash.com/photo-1592840062661-a5a7f78e2056?w=600&q=80" alt="Motoguadaña"></div>
+<div class="prod-img">🌿</div>
 <div class="prod-body">
 <p class="prod-cat">Motoguadañas</p>
 <h3>Motoguadañas y bordeadoras</h3>
@@ -322,7 +320,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:2.6rem
 </div>
 
 <div class="prod-card reveal">
-<div class="prod-img"><img src="https://images.unsplash.com/photo-1620503374956-c942862f0372?w=600&q=80" alt="Generador"></div>
+<div class="prod-img">⚡</div>
 <div class="prod-body">
 <p class="prod-cat">Grupos Electrógenos</p>
 <h3>Generadores residenciales e industriales</h3>
@@ -332,7 +330,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:2.6rem
 </div>
 
 <div class="prod-card reveal">
-<div class="prod-img"><img src="https://images.unsplash.com/photo-1592842232655-e5f8d9c0a3f0?w=600&q=80" alt="Cortadora de cesped"></div>
+<div class="prod-img">🌾</div>
 <div class="prod-body">
 <p class="prod-cat">Cortadoras de Césped</p>
 <h3>Cortadoras a nafta y eléctricas</h3>
@@ -342,7 +340,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:2.6rem
 </div>
 
 <div class="prod-card reveal">
-<div class="prod-img"><img src="https://images.unsplash.com/photo-1620230874645-1cb4b8b03ba7?w=600&q=80" alt="Motobomba"></div>
+<div class="prod-img">💧</div>
 <div class="prod-body">
 <p class="prod-cat">Motobombas</p>
 <h3>Bombas para riego y trasvase</h3>
@@ -352,7 +350,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:2.6rem
 </div>
 
 <div class="prod-card reveal">
-<div class="prod-img"><img src="https://images.unsplash.com/photo-1581092160607-ee22731c9c8c?w=600&q=80" alt="Repuestos"></div>
+<div class="prod-img">⚙️</div>
 <div class="prod-body">
 <p class="prod-cat">Repuestos</p>
 <h3>Repuestos y accesorios originales</h3>
@@ -384,7 +382,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:2.6rem
 <section id="nosotros">
 <div class="wrap">
 <div class="nos-grid">
-<div class="nos-img reveal"><img src="https://images.unsplash.com/photo-1617104551722-3b2d51366400?w=700&q=80" alt="Taller Trusik Reparaciones"></div>
+<div class="nos-img reveal">🔧</div>
 <div class="nos-text reveal">
 <p class="eyebrow">Quiénes somos</p>
 <h2 class="h2">SOBRE <em>TRUSIK REPARACIONES</em></h2>
